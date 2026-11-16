@@ -1,0 +1,4475 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>史前臺灣時光機：360° 生存大挑戰｜國小社會領域數位教材</title>
+  <meta name="description" content="對應國小社會五上第三單元〈尋根探源話臺灣〉，透過 360° 全景沉浸式探索舊石器時代、新石器時代與金屬器時代生活，挑戰生存問答領取探險家證書！">
+
+  <!-- Google Fonts: Noto Sans TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Pannellum 360 Viewer CSS (本地優先，完全支援離線使用) -->
+  
+
+  <!-- 主樣式表 -->
+  <style>
+/* pannellum.css */
+/* Pannellum 2.5.6, https://github.com/mpetroff/pannellum */
+.pnlm-container{margin:0;padding:0;overflow:hidden;position:relative;cursor:default;width:100%;height:100%;font-family:Helvetica,"Nimbus Sans L","Liberation Sans",Arial,sans-serif;background:#f4f4f4 url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2267%22%20height%3D%22100%22%20viewBox%3D%220%200%2067%20100%22%3E%0A%3Cpath%20stroke%3D%22%23ccc%22%20fill%3D%22none%22%20d%3D%22M33.5%2C50%2C0%2C63%2C33.5%2C75%2C67%2C63%2C33.5%2C50m-33.5-50%2C67%2C25m-0.5%2C0%2C0%2C75m-66.5-75%2C67-25m-33.5%2C75%2C0%2C25m0-100%2C0%2C50%22%2F%3E%0A%3C%2Fsvg%3E%0A') repeat;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-o-user-select:none;-ms-user-select:none;user-select:none;outline:0;line-height:1.4;contain:content}.pnlm-container *{box-sizing:content-box}.pnlm-ui{position:absolute;width:100%;height:100%;z-index:1}.pnlm-grab{cursor:grab;cursor:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20width%3D%2226%22%3E%0A%3Cpath%20stroke%3D%22%23000%22%20stroke-width%3D%221px%22%20fill%3D%22%23fff%22%20d%3D%22m15.3%2020.5s6.38-6.73%204.64-8.24-3.47%201.01-3.47%201.01%203.61-5.72%201.41-6.49c-2.2-0.769-3.33%204.36-3.33%204.36s0.873-5.76-1.06-5.76-1.58%205.39-1.58%205.39-0.574-4.59-2.18-4.12c-1.61%200.468-0.572%205.51-0.572%205.51s-1.58-4.89-2.93-3.79c-1.35%201.11%200.258%205.25%200.572%206.62%200.836%202.43%202.03%202.94%202.17%205.55%22%2F%3E%0A%3C%2Fsvg%3E%0A') 12 8,default}.pnlm-grabbing{cursor:grabbing;cursor:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2226%22%20width%3D%2226%22%3E%0A%3Cpath%20stroke%3D%22%23000%22%20stroke-width%3D%221px%22%20fill%3D%22%23fff%22%20d%3D%22m15.3%2020.5s5.07-5.29%203.77-6.74c-1.31-1.45-2.53%200.14-2.53%200.14s2.74-3.29%200.535-4.06c-2.2-0.769-2.52%201.3-2.52%201.3s0.81-2.13-1.12-2.13-1.52%201.77-1.52%201.77-0.261-1.59-1.87-1.12c-1.61%200.468-0.874%202.17-0.874%202.17s-0.651-1.55-2-0.445c-1.35%201.11-0.68%202.25-0.365%203.62%200.836%202.43%202.03%202.94%202.17%205.55%22%2F%3E%0A%3C%2Fsvg%3E%0A') 12 8,default}.pnlm-sprite{background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2226%22%20height%3D%22208%22%3E%0A%3Ccircle%20fill-opacity%3D%22.78%22%20cy%3D%22117%22%20cx%3D%2213%22%20r%3D%2211%22%20fill%3D%22%23fff%22%2F%3E%0A%3Ccircle%20fill-opacity%3D%22.78%22%20cy%3D%22143%22%20cx%3D%2213%22%20r%3D%2211%22%20fill%3D%22%23fff%22%2F%3E%0A%3Ccircle%20cy%3D%22169%22%20cx%3D%2213%22%20r%3D%227%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cy%3D%22195%22%20cx%3D%2213%22%20r%3D%227%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2213%22%20cy%3D%22195%22%20r%3D%222.5%22%2F%3E%0A%3Cpath%20d%3D%22m5%2083v6h2v-4h4v-2zm10%200v2h4v4h2v-6zm-5%205v6h6v-6zm-5%205v6h6v-2h-4v-4zm14%200v4h-4v2h6v-6z%22%2F%3E%0A%3Cpath%20d%3D%22m13%20110a7%207%200%200%200%20-7%207%207%207%200%200%200%207%207%207%207%200%200%200%207%20-7%207%207%200%200%200%20-7%20-7zm-1%203h2v2h-2zm0%203h2v5h-2z%22%2F%3E%0A%3Cpath%20d%3D%22m5%2057v6h2v-4h4v-2zm10%200v2h4v4h2v-6zm-10%2010v6h6v-2h-4v-4zm14%200v4h-4v2h6v-6z%22%2F%3E%0A%3Cpath%20d%3D%22m17%2038v2h-8v-2z%22%2F%3E%0A%3Cpath%20d%3D%22m12%209v3h-3v2h3v3h2v-3h3v-2h-3v-3z%22%2F%3E%0A%3Cpath%20d%3D%22m13%20136-6.125%206.125h4.375v7.875h3.5v-7.875h4.375z%22%2F%3E%0A%3Cpath%20d%3D%22m10.428%20173.33v-5.77l5-2.89v5.77zm1-1.73%203-1.73-3.001-1.74z%22%2F%3E%0A%3C%2Fsvg%3E%0A')}.pnlm-container:-moz-full-screen{height:100%!important;width:100%!important;position:static!important}.pnlm-container:-webkit-full-screen{height:100%!important;width:100%!important;position:static!important}.pnlm-container:-ms-fullscreen{height:100%!important;width:100%!important;position:static!important}.pnlm-container:fullscreen{height:100%!important;width:100%!important;position:static!important}.pnlm-render-container{cursor:inherit;position:absolute;height:100%;width:100%}.pnlm-controls{margin-top:4px;background-color:#fff;border:1px solid #999;border-color:rgba(0,0,0,0.4);border-radius:3px;cursor:pointer;z-index:2;-webkit-transform:translateZ(9999px);transform:translateZ(9999px)}.pnlm-control:hover{background-color:#f8f8f8}.pnlm-controls-container{position:absolute;top:0;left:4px;z-index:1}.pnlm-zoom-controls{width:26px;height:52px}.pnlm-zoom-in{width:100%;height:50%;position:absolute;top:0;border-radius:3px 3px 0 0}.pnlm-zoom-out{width:100%;height:50%;position:absolute;bottom:0;background-position:0 -26px;border-top:1px solid #ddd;border-top-color:rgba(0,0,0,0.10);border-radius:0 0 3px 3px}.pnlm-fullscreen-toggle-button,.pnlm-orientation-button,.pnlm-hot-spot-debug-indicator{width:26px;height:26px}.pnlm-hot-spot-debug-indicator{position:absolute;top:50%;left:50%;width:26px;height:26px;margin:-13px 0 0 -13px;background-color:rgba(255,255,255,0.5);border-radius:13px;display:none}.pnlm-orientation-button-inactive{background-position:0 -156px}.pnlm-orientation-button-active{background-position:0 -182px}.pnlm-fullscreen-toggle-button-inactive{background-position:0 -52px}.pnlm-fullscreen-toggle-button-active{background-position:0 -78px}.pnlm-panorama-info{position:absolute;bottom:4px;background-color:rgba(0,0,0,0.7);border-radius:0 3px 3px 0;padding-right:10px;color:#fff;text-align:left;display:none;z-index:2;-webkit-transform:translateZ(9999px);transform:translateZ(9999px)}.pnlm-title-box{position:relative;font-size:20px;display:table;padding-left:5px;margin-bottom:3px}.pnlm-author-box{position:relative;font-size:12px;display:table;padding-left:5px}.pnlm-load-box{position:absolute;top:50%;left:50%;width:200px;height:150px;margin:-75px 0 0 -100px;background-color:rgba(0,0,0,0.7);border-radius:3px;text-align:center;font-size:20px;display:none;color:#fff}.pnlm-load-box p{margin:20px 0}.pnlm-lbox{position:absolute;top:50%;left:50%;width:20px;height:20px;margin:-10px 0 0 -10px;display:none}.pnlm-loading{animation-duration:1.5s;-webkit-animation-duration:1.5s;animation-name:pnlm-mv;-webkit-animation-name:pnlm-mv;animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;animation-timing-function:linear;-webkit-animation-timing-function:linear;height:10px;width:10px;background-color:#fff;position:relative}@keyframes pnlm-mv{from{left:0;top:0}25%{left:10px;top:0}50%{left:10px;top:10px}75%{left:0;top:10px}to{left:0;top:0}}@-webkit-keyframes pnlm-mv{from{left:0;top:0}25%{left:10px;top:0}50%{left:10px;top:10px}75%{left:0;top:10px}to{left:0;top:0}}.pnlm-load-button{position:absolute;top:50%;left:50%;width:200px;height:100px;margin:-50px 0 0 -100px;background-color:rgba(0,0,0,.7);border-radius:3px;text-align:center;font-size:20px;display:table;color:#fff;cursor:pointer}.pnlm-load-button:hover{background-color:rgba(0,0,0,.8)}.pnlm-load-button p{display:table-cell;vertical-align:middle}.pnlm-info-box{font-size:15px;position:absolute;top:50%;left:50%;width:200px;height:150px;margin:-75px 0 0 -100px;background-color:#000;border-radius:3px;display:table;text-align:center;color:#fff;table-layout:fixed}.pnlm-info-box a,.pnlm-author-box a{color:#fff;word-wrap:break-word;overflow-wrap:break-word}.pnlm-info-box p{display:table-cell;vertical-align:middle;padding:0 5px 0 5px}.pnlm-error-msg{display:none}.pnlm-about-msg{font-size:11px;line-height:11px;color:#fff;padding:5px 8px 5px 8px;background:rgba(0,0,0,0.7);border-radius:3px;position:absolute;top:50px;left:50px;display:none;opacity:0;-moz-transition:opacity .3s ease-in-out;-webkit-transition:opacity .3s ease-in-out;-o-transition:opacity .3s ease-in-out;-ms-transition:opacity .3s ease-in-out;transition:opacity .3s ease-in-out;z-index:1}.pnlm-about-msg a:link,.pnlm-about-msg a:visited{color:#fff}.pnlm-about-msg a:hover,.pnlm-about-msg a:active{color:#eee}.pnlm-hotspot-base{position:absolute;visibility:hidden;cursor:default;vertical-align:middle;top:0;z-index:1}.pnlm-hotspot{height:26px;width:26px;border-radius:13px}.pnlm-hotspot:hover{background-color:rgba(255,255,255,0.2)}.pnlm-hotspot.pnlm-info{background-position:0 -104px}.pnlm-hotspot.pnlm-scene{background-position:0 -130px}div.pnlm-tooltip span{visibility:hidden;position:absolute;border-radius:3px;background-color:rgba(0,0,0,0.7);color:#fff;text-align:center;max-width:200px;padding:5px 10px;margin-left:-220px;cursor:default}div.pnlm-tooltip:hover span{visibility:visible}div.pnlm-tooltip:hover span:after{content:'';position:absolute;width:0;height:0;border-width:10px;border-style:solid;border-color:rgba(0,0,0,0.7) transparent transparent transparent;bottom:-20px;left:-10px;margin:0 50%}.pnlm-compass{position:absolute;width:50px;height:50px;right:4px;bottom:4px;border-radius:25px;background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2250%22%20width%3D%2250%22%3E%0A%3Cpath%20d%3D%22m24.5078%206-3.2578%2018h7.5l-3.25781-18h-0.984376zm-3.2578%2020%203.2578%2018h0.9844l3.2578-18h-7.5zm1.19531%200.9941h5.10938l-2.5547%2014.1075-2.5547-14.1075z%22%2F%3E%0A%3C%2Fsvg%3E%0A');cursor:default;display:none}.pnlm-world{position:absolute;left:50%;top:50%}.pnlm-face{position:absolute;-webkit-transform-origin:0 0;transform-origin:0 0}.pnlm-dragfix,.pnlm-preview-img{position:absolute;height:100%;width:100%}.pnlm-preview-img{background-size:cover;background-position:center}.pnlm-lbar{width:150px;margin:0 auto;border:#fff 1px solid;height:6px}.pnlm-lbar-fill{background:#fff;height:100%;width:0}.pnlm-lmsg{font-size:12px}.pnlm-fade-img{position:absolute;top:0;left:0}.pnlm-pointer{cursor:pointer}
+/* style.css */
+/* ==========================================================================
+   史前臺灣 360° 時光探險 - 主樣式表 (CSS)
+   設計風格：大地陶土色系、溫暖插畫風、高易讀性、無障礙觸控優化
+   ========================================================================== */
+
+:root {
+  --color-bg: #f8f3ea;
+  --color-card-bg: #fffdf9;
+  --color-primary: #bf360c;       /* 陶土橘紅 */
+  --color-primary-hover: #d84315;
+  --color-secondary: #2e7d32;     /* 葉綠色 */
+  --color-accent: #f57c00;        /* 亮橘金 */
+  --color-earth-dark: #3e2723;    /* 深木褐 */
+  --color-earth-medium: #5d4037;  /* 陶土褐 */
+  --color-earth-light: #efebe9;   /* 淺陶灰 */
+  --color-border: #d7ccc8;
+  --color-gold: #ffb300;
+  --font-main: "Noto Sans TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 2px 8px rgba(62, 39, 35, 0.08);
+  --shadow-md: 0 6px 18px rgba(62, 39, 35, 0.12);
+  --shadow-lg: 0 12px 32px rgba(62, 39, 35, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-earth-dark);
+  line-height: 1.6;
+  font-size: 18px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= 通用工具樣式 ================= */
+.hidden {
+  display: none !important;
+}
+
+button {
+  font-family: inherit;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #d84315 0%, #bf360c 100%);
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 14px rgba(191, 54, 12, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.primary-btn:hover {
+  background: linear-gradient(135deg, #e64a19 0%, #c62828 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(191, 54, 12, 0.45);
+}
+
+.secondary-btn {
+  background-color: #fff;
+  color: var(--color-earth-medium);
+  border: 2px solid var(--color-border);
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+}
+
+.secondary-btn:hover {
+  background-color: var(--color-earth-light);
+  border-color: var(--color-earth-medium);
+}
+
+.pulse-glow {
+  animation: pulse-glow-anim 1.8s infinite;
+}
+
+@keyframes pulse-glow-anim {
+  0% { box-shadow: 0 0 0 0 rgba(245, 124, 0, 0.7); }
+  70% { box-shadow: 0 0 0 16px rgba(245, 124, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(245, 124, 0, 0); }
+}
+
+/* ================= 頂部全域導覽列 ================= */
+.app-header {
+  background-color: #fff;
+  border-bottom: 2px solid var(--color-border);
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  font-size: 32px;
+}
+
+.brand-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+}
+
+.brand-tag {
+  font-size: 13px;
+  background-color: #efebe9;
+  color: var(--color-earth-medium);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sound-toggle-btn, .header-tool-btn {
+  background-color: #efebe9;
+  color: var(--color-earth-dark);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.sound-toggle-btn.muted {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+}
+
+/* ================= 畫面外框 ================= */
+.screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= 1. 首頁 (Home Screen) ================= */
+.home-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-mascot-wrap {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.hero-mascot-img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 20px rgba(62, 39, 35, 0.2));
+  animation: float-anim 3s ease-in-out infinite;
+}
+
+@keyframes float-anim {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.home-badge-tag {
+  background-color: #ffe082;
+  color: #b78103;
+  padding: 6px 18px;
+  border-radius: var(--radius-full);
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.home-title {
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.home-desc {
+  font-size: 20px;
+  color: var(--color-earth-medium);
+  max-width: 680px;
+  margin-bottom: 32px;
+}
+
+.home-login-card {
+  background-color: var(--color-card-bg);
+  border: 3px solid #ffcc80;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 24px;
+}
+
+.input-label {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-earth-dark);
+  margin-bottom: 14px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.name-input {
+  font-size: 22px;
+  padding: 14px 20px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-weight: bold;
+  background-color: #fff;
+  color: var(--color-primary);
+}
+
+.name-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(191, 54, 12, 0.15);
+}
+
+.home-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.progress-notify-tag {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  font-weight: bold;
+  margin-bottom: 20px;
+  border: 1px solid #a5d6a7;
+}
+
+/* ================= 2. 時光機選單 (Timeline Screen) ================= */
+.timeline-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.timeline-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.timeline-header h2 {
+  font-size: 34px;
+  color: var(--color-primary);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.timeline-header p {
+  color: var(--color-earth-medium);
+  font-size: 20px;
+}
+
+.timeline-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #8d6e63, #d79b5c, #2e7d32, #1565c0);
+  height: 8px;
+  border-radius: var(--radius-full);
+  margin: 40px 20px 50px 20px;
+  position: relative;
+}
+
+.timeline-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-node .node-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 4px solid var(--color-primary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-node .node-label {
+  position: absolute;
+  top: 26px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--color-earth-dark);
+}
+
+/* 三個時代卡片列表 */
+.era-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.era-card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  border: 3px solid var(--color-border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+
+.era-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.era-card.completed {
+  border-color: #66bb6a;
+}
+
+.era-card.unlocked {
+  border-color: var(--color-accent);
+}
+
+.era-card.locked {
+  opacity: 0.65;
+  filter: grayscale(0.5);
+  cursor: not-allowed;
+}
+
+.era-card-thumb {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  background-color: #37474f;
+}
+
+.era-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.era-card:hover .era-card-thumb img {
+  transform: scale(1.06);
+}
+
+.era-years-pill {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  font-weight: 700;
+  backdrop-filter: blur(4px);
+}
+
+.era-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.era-card-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.era-card-title-row h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-earth-dark);
+}
+
+.era-culture {
+  font-size: 15px;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.era-site {
+  font-size: 15px;
+  color: var(--color-earth-medium);
+  margin-bottom: 12px;
+}
+
+.era-intro-short {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.era-clue-stat {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--color-earth-medium);
+  margin-bottom: 14px;
+}
+
+.era-status-badge {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.era-status-badge.completed {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.era-status-badge.unlocked {
+  background-color: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ffe0b2;
+}
+
+.era-status-badge.locked {
+  background-color: #eceff1;
+  color: #78909c;
+}
+
+.mini-badge-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* 通關大彩帶與證書按鈕 */
+.cert-banner {
+  background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+  border: 3px dashed #ffa000;
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow-sm);
+}
+
+.cert-banner-text h3 {
+  font-size: 26px;
+  color: #bf360c;
+  margin-bottom: 6px;
+}
+
+.cert-banner-text p {
+  color: #5d4037;
+  font-size: 17px;
+}
+
+/* ================= 3. 360° 探索畫面 (Viewer Screen - 全螢幕沉浸化) ================= */
+#viewer-screen.viewer-maximized {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #10141c;
+}
+
+#viewer-screen #panorama {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1;
+}
+
+/* 頂部浮動抬頭顯示列 (Top HUD) */
+.hud-top-bar {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.hud-top-left,
+.hud-top-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  pointer-events: auto;
+}
+
+/* 浮動 HUD 共通按鈕風格 */
+.hud-btn {
+  background: rgba(20, 26, 38, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  user-select: none;
+}
+
+.hud-btn:hover {
+  background: rgba(35, 45, 65, 0.95);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.hud-btn:active {
+  transform: translateY(0);
+}
+
+/* 返回時光機選單按鈕 */
+.hud-back-btn:hover {
+  background: #c2410c;
+  border-color: #fb923c;
+  color: #fff;
+}
+
+/* 時代遺址資訊膠囊 */
+.hud-era-pill {
+  background: rgba(18, 22, 32, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(255, 183, 77, 0.5);
+  padding: 9px 18px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  pointer-events: auto;
+}
+
+.hud-era-title {
+  font-size: 17px;
+  font-weight: 900;
+  color: #ffb74d;
+  letter-spacing: 0.5px;
+}
+
+.hud-pill-divider {
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 300;
+}
+
+.hud-era-info {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+/* 線索雷達下拉選單容器 */
+.clue-radar-dropdown {
+  position: relative;
+}
+
+/* 雷達觸發按鈕 */
+.hud-radar-btn {
+  background: linear-gradient(135deg, rgba(230, 81, 0, 0.92) 0%, rgba(191, 54, 12, 0.95) 100%);
+  border: 1.5px solid #ffe082;
+  color: #ffffff;
+  padding: 9px 18px;
+  box-shadow: 0 6px 20px rgba(191, 54, 12, 0.45);
+}
+
+.hud-radar-btn:hover {
+  background: linear-gradient(135deg, #f57c00 0%, #d84315 100%);
+  border-color: #ffffff;
+  box-shadow: 0 8px 26px rgba(230, 81, 0, 0.6);
+}
+
+.radar-btn-icon {
+  font-size: 17px;
+}
+
+.radar-btn-text {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.radar-progress-badge {
+  background: rgba(0, 0, 0, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 800;
+  color: #ffe082;
+}
+
+.radar-arrow {
+  font-size: 13px;
+  color: #ffe082;
+  transition: transform 0.25s ease;
+}
+
+.hud-radar-btn[aria-expanded="true"] .radar-arrow {
+  transform: rotate(180deg);
+}
+
+/* 浮動線索雷達選單面板 */
+.clue-radar-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 340px;
+  max-width: 90vw;
+  max-height: calc(100vh - 120px);
+  background: rgba(18, 24, 36, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid #ffb74d;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  animation: radarMenuAppear 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes radarMenuAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.radar-menu-header {
+  padding: 14px 18px 10px 18px;
+  background: rgba(255, 183, 77, 0.1);
+  border-bottom: 1px solid rgba(255, 183, 77, 0.2);
+}
+
+.radar-menu-title {
+  font-size: 15px;
+  font-weight: 900;
+  color: #ffb74d;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 3px;
+}
+
+.radar-menu-subtitle {
+  font-size: 12px;
+  color: #b0bec5;
+}
+
+.clue-radar-items-list {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  max-height: 55vh;
+}
+
+/* 單個線索清單按鈕項目 */
+.menu-clue-item {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.menu-clue-item:hover {
+  background: rgba(255, 183, 77, 0.18);
+  border-color: #ffb74d;
+  transform: translateX(-3px);
+}
+
+.clue-item-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.clue-status-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.clue-item-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.clue-item-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #eceff1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clue-item-tag {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+}
+
+.menu-clue-item.unread .clue-item-tag {
+  background: rgba(230, 81, 0, 0.35);
+  border: 1px solid rgba(255, 183, 77, 0.6);
+  color: #ffcc80;
+}
+
+.menu-clue-item.read {
+  background: rgba(46, 125, 50, 0.12);
+  border-color: rgba(76, 175, 80, 0.3);
+}
+
+.menu-clue-item.read .clue-item-title {
+  color: #c8e6c9;
+}
+
+.menu-clue-item.read .clue-item-tag {
+  background: rgba(46, 125, 50, 0.35);
+  border: 1px solid rgba(129, 199, 132, 0.6);
+  color: #a5d6a7;
+}
+
+.hud-clue-counter {
+  display: none;
+}
+
+/* ================= Pannellum 360° 金色生活線索地標 ================= */
+.pnlm-hotspot-base {
+  visibility: visible !important;
+  z-index: 25 !important;
+  pointer-events: auto !important;
+}
+
+.clue-hotspot {
+  cursor: pointer !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* 讓內部地標相對於 Pannellum 的座標中心置中，絕不干擾父層 style.transform */
+.golden-marker {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  transform: translate(-50%, -50%);
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 6px !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  user-select: none !important;
+  z-index: 30 !important;
+}
+
+/* 外層脈動發光擴散光環 */
+.marker-pulse-ring {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.golden-marker.unread .marker-pulse-ring {
+  border: 3px solid #ffb300;
+  animation: pulse-ring-anim 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring-anim {
+  0% { transform: translateX(-50%) scale(0.6); opacity: 1; }
+  100% { transform: translateX(-50%) scale(1.7); opacity: 0; }
+}
+
+/* 金色發光核心圓鈕 */
+.marker-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  border: 3.5px solid #ffffff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.golden-marker:hover .marker-icon-box {
+  transform: scale(1.18);
+}
+
+.golden-marker.unread .marker-icon-box {
+  background: radial-gradient(circle, #fff9c4 0%, #ffb300 45%, #ff6f00 100%);
+  box-shadow: 0 0 25px rgba(255, 179, 0, 1), 0 0 50px rgba(255, 111, 0, 0.7);
+  animation: marker-glow 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes marker-glow {
+  0% { box-shadow: 0 0 16px rgba(255, 179, 0, 0.8), 0 0 35px rgba(255, 111, 0, 0.4); }
+  100% { box-shadow: 0 0 35px rgba(255, 238, 88, 1), 0 0 70px rgba(255, 111, 0, 0.9); }
+}
+
+.golden-marker.read .marker-icon-box {
+  background: radial-gradient(circle, #c8e6c9 0%, #43a047 60%, #1b5e20 100%);
+  box-shadow: 0 0 14px rgba(46, 125, 50, 0.8);
+  opacity: 0.92;
+}
+
+/* 線索標題常駐標籤 */
+.marker-label-tag {
+  background: linear-gradient(135deg, rgba(30, 20, 15, 0.95) 0%, rgba(50, 30, 20, 0.95) 100%);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 800;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+  border: 2px solid #ffcc80;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.golden-marker.read .marker-label-tag {
+  border-color: #81c784;
+  background: rgba(20, 40, 25, 0.92);
+}
+
+.golden-marker:hover .marker-label-tag {
+  background: #bf360c;
+  border-color: #ffe082;
+  color: #fff;
+}
+
+@keyframes hotspot-pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 111, 0, 0.8); }
+  70% { transform: scale(1.15); box-shadow: 0 0 0 16px rgba(255, 111, 0, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 111, 0, 0); }
+}
+
+.hotspot-bubble {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(33, 33, 33, 0.88);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 場景浮動控制列 (Bottom HUD) */
+.scene-bottom-bar {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 50;
+  gap: 16px;
+}
+
+.captain-helper-box {
+  pointer-events: auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  max-width: 540px;
+}
+
+.captain-avatar-img {
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
+  flex-shrink: 0;
+  animation: mascot-bounce 3s ease-in-out infinite;
+}
+
+@keyframes mascot-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.speech-bubble {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2.5px solid #ff9800;
+  border-radius: var(--radius-lg);
+  border-bottom-left-radius: 4px;
+  padding: 12px 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  color: var(--color-earth-dark);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.captain-speaker-name {
+  color: #e65100;
+  font-weight: 900;
+  display: block;
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.scene-actions-right {
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.compass-guide-btn {
+  background: rgba(20, 26, 38, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffecb3;
+  border: 2px solid #ffb74d;
+  padding: 11px 20px;
+  border-radius: var(--radius-full);
+  font-size: 16px;
+  font-weight: 800;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.compass-guide-btn:hover {
+  background: #e65100;
+  color: #ffffff;
+  border-color: #ffe082;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(230, 81, 0, 0.55);
+}
+
+.compass-guide-btn:active {
+  transform: translateY(0);
+}
+
+.challenge-start-btn {
+  background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+  color: #fff;
+  font-size: 19px;
+  font-weight: 900;
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  border: 2px solid #81c784;
+  box-shadow: 0 8px 24px rgba(46, 125, 50, 0.5);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.challenge-start-btn:not(.disabled):hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(46, 125, 50, 0.7);
+  border-color: #a5d6a7;
+}
+
+.challenge-start-btn.disabled {
+  background: rgba(60, 68, 78, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #90a4ae;
+  border: 2px solid #546e7a;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+/* ================= 4. 線索小卡彈窗 (Clue Modal) ================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 20, 30, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 2000;
+}
+
+.clue-modal-card {
+  background-color: var(--color-card-bg);
+  border: 4px solid #ffb74d;
+  border-radius: var(--radius-lg);
+  max-width: 540px;
+  width: 100%;
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  position: relative;
+  animation: pop-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0.85); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.clue-icon-huge {
+  font-size: 64px;
+  margin-bottom: 12px;
+}
+
+.clue-modal-title {
+  font-size: 28px;
+  color: var(--color-primary);
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.clue-modal-text {
+  font-size: 20px;
+  line-height: 1.7;
+  color: var(--color-earth-dark);
+  text-align: left;
+  background-color: #fff;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.speak-btn {
+  background-color: #fff3e0;
+  color: #e65100;
+  border: 2px solid #ffb74d;
+  padding: 12px 20px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ================= 5. 問答挑戰畫面 (Quiz Screen) ================= */
+.quiz-container {
+  max-width: 820px;
+  margin: 30px auto;
+  padding: 0 20px;
+  width: 100%;
+  flex: 1;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.quiz-header h2 {
+  font-size: 26px;
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.quiz-progress-pill {
+  background-color: #efebe9;
+  color: var(--color-earth-medium);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.quiz-card {
+  background-color: var(--color-card-bg);
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 24px;
+}
+
+.quiz-question-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.quiz-question-text {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-earth-dark);
+  line-height: 1.5;
+}
+
+.quiz-options-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.quiz-option-btn {
+  background-color: #ffffff;
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-earth-dark);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.2s ease;
+}
+
+.quiz-option-btn:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  background-color: #fff8f5;
+  transform: translateX(4px);
+}
+
+.option-letter {
+  background-color: #efebe9;
+  color: var(--color-earth-medium);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.quiz-option-btn.correct {
+  background-color: #e8f5e9;
+  border-color: #2e7d32;
+  color: #1b5e20;
+}
+
+.quiz-option-btn.correct .option-letter {
+  background-color: #2e7d32;
+  color: #fff;
+}
+
+.quiz-option-btn.wrong {
+  background-color: #ffebee;
+  border-color: #c62828;
+  color: #b71c1c;
+}
+
+.quiz-option-btn.shake {
+  animation: shake-anim 0.5s ease;
+}
+
+@keyframes shake-anim {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+/* 反饋卡片 */
+.quiz-feedback-box {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.quiz-feedback-box.success-box {
+  background-color: #e8f5e9;
+  border: 2px solid #81c784;
+  color: #1b5e20;
+}
+
+.quiz-feedback-box.hint-box {
+  background-color: #fff3e0;
+  border: 2px solid #ffb74d;
+  color: #e65100;
+}
+
+.feedback-badge-tag {
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.hint-small {
+  display: block;
+  font-size: 15px;
+  color: #795548;
+  margin-top: 8px;
+}
+
+.quiz-footer-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+/* ================= 6. 過關勝利彈窗 (Victory Modal) ================= */
+.victory-card {
+  background-color: #fff;
+  border: 4px solid #ffb300;
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.victory-badge-large {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  animation: badge-bounce 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes badge-bounce {
+  0% { transform: scale(0.2) rotate(-30deg); opacity: 0; }
+  60% { transform: scale(1.15) rotate(10deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.victory-title {
+  font-size: 32px;
+  color: var(--color-primary);
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.victory-badge-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f57c00;
+  margin-bottom: 18px;
+}
+
+.victory-speech-box {
+  background-color: #fff8e1;
+  border: 2px solid #ffe082;
+  border-radius: var(--radius-md);
+  padding: 16px;
+  font-size: 18px;
+  color: var(--color-earth-dark);
+  margin-bottom: 28px;
+}
+
+/* ================= 7. 證書畫面 (Certificate Screen) ================= */
+.cert-page-container {
+  max-width: 1050px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cert-page-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.cert-page-header h2 {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.cert-canvas-wrap {
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 16px 40px rgba(62, 39, 35, 0.25);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  background-color: #fff;
+}
+
+#certificate-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cert-actions-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* ================= 8. 時代比較表彈窗 (Comparison Modal) ================= */
+.comparison-card {
+  background-color: #fff;
+  border-radius: var(--radius-lg);
+  max-width: 900px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+}
+
+.comparison-card h2 {
+  font-size: 28px;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.comparison-table th, .comparison-table td {
+  border: 2px solid var(--color-border);
+  padding: 12px 14px;
+  text-align: left;
+}
+
+.comparison-table th {
+  background-color: #efebe9;
+  color: var(--color-earth-dark);
+  font-weight: bold;
+}
+
+.comparison-table tr:nth-child(even) td {
+  background-color: #faf8f5;
+}
+
+/* ================= 9. Markdown 格式化預覽與內容渲染樣式 ================= */
+.md-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 16px 0;
+  border-radius: var(--radius-md);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+}
+
+.md-table th {
+  background-color: #5d4037;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 14px;
+  border: 1px solid #4e342e;
+  letter-spacing: 0.5px;
+}
+
+.md-table td {
+  padding: 11px 14px;
+  border: 1px solid var(--color-border);
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+
+.md-table tr:nth-child(even) td {
+  background-color: #fbf9f6;
+}
+
+.md-table tr:hover td {
+  background-color: #fff8e1;
+}
+
+.md-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin: 16px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.md-alert.info {
+  background-color: #e8f5e9;
+  border-left: 5px solid #2e7d32;
+  color: #1b5e20;
+}
+
+.md-alert.warning {
+  background-color: #fff3e0;
+  border-left: 5px solid #ef6c00;
+  color: #b73e00;
+}
+
+.md-alert-icon {
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.md-blockquote {
+  border-left: 4px solid #ff9800;
+  background-color: #fff8e1;
+  padding: 10px 16px;
+  margin: 14px 0;
+  border-radius: 0 8px 8px 0;
+  color: #5d4037;
+  font-style: normal;
+}
+
+.md-h1, .md-h2, .md-h3, .md-h4 {
+  color: #3e2723;
+  margin: 16px 0 10px;
+  font-weight: 800;
+}
+
+.md-h1 { font-size: 22px; border-bottom: 2px solid #ffcc80; padding-bottom: 6px; }
+.md-h2 { font-size: 19px; }
+.md-h3 { font-size: 17px; }
+
+.md-ul, .md-ol {
+  padding-left: 24px;
+  margin: 10px 0;
+  line-height: 1.7;
+  color: #4e342e;
+}
+
+.md-p {
+  margin: 10px 0;
+  line-height: 1.7;
+  color: #4e342e;
+}
+
+.md-hr {
+  border: none;
+  border-top: 2px dashed #d7ccc8;
+  margin: 18px 0;
+}
+
+.md-inline-code {
+  background: #efebe9;
+  color: #c62828;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+/* ================= 列印專用樣式 (Print CSS) ================= */
+@media print {
+  body {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .app-header, .cert-actions-bar, .cert-page-header, .screen:not(#certificate-screen) {
+    display: none !important;
+  }
+  #certificate-screen {
+    display: block !important;
+  }
+  .cert-page-container {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+  .cert-canvas-wrap {
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+}
+
+/* ================= 響應式優化 (Mobile & Tablet) ================= */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 28px;
+  }
+  .home-desc {
+    font-size: 17px;
+  }
+  .hero-mascot-img {
+    width: 160px;
+    height: 160px;
+  }
+  .hud-top-bar {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .hud-top-left,
+  .hud-top-right {
+    justify-content: space-between;
+    width: 100%;
+    gap: 8px;
+  }
+  .hud-era-pill {
+    padding: 6px 12px;
+  }
+  .hud-era-title {
+    font-size: 14px;
+  }
+  .hud-era-info {
+    font-size: 12px;
+  }
+  .hud-btn {
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+  .clue-radar-menu {
+    width: 100%;
+    right: 0;
+  }
+  .scene-bottom-bar {
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .captain-avatar-img {
+    width: 60px;
+    height: 60px;
+  }
+  .speech-bubble {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+  .captain-helper-box {
+    max-width: 100%;
+  }
+  .scene-actions-right {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+  .compass-guide-btn,
+  .challenge-start-btn {
+    flex: 1;
+    justify-content: center;
+    font-size: 14px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- ================= 頂部全域功能列 ================= -->
+  <header class="app-header">
+    <div class="brand-wrap">
+      <span class="brand-icon">🏺</span>
+      <div>
+        <h1 class="brand-title">史前臺灣時光機</h1>
+      </div>
+      <span class="brand-tag">社會五上・第 66～75 頁</span>
+    </div>
+    <div class="header-actions">
+      <button type="button" class="header-tool-btn open-comparison-btn" title="查看三個時代生活比較表">
+        📊 時代生活比較表
+      </button>
+      <button type="button" class="sound-toggle-btn" title="切換音效開關">
+        🔊 音效開
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= 畫面 1：首頁 (Home Screen) ================= -->
+  <main id="home-screen" class="screen">
+    <div class="home-container">
+      <div class="hero-mascot-wrap">
+        <img src="assets/1d29b181514e9d63.png" alt="考古小隊長" class="hero-mascot-img">
+      </div>
+
+      <span class="home-badge-tag">🌟 國小社會五上 數位 360° 互動教材</span>
+      <h2 class="home-title">史前臺灣時光機<br>360° 生存大挑戰</h2>
+      <p class="home-desc">
+        搭乘時光機穿越五萬年！前往八仙洞、卑南與十三行，轉動 360° 全景畫面尋找史前生活線索，回答生存挑戰，贏得專屬探險家證書！
+      </p>
+
+      <div id="home-progress-tag" class="progress-notify-tag hidden"></div>
+
+      <div class="home-login-card">
+        <label for="player-name-input" class="input-label">請輸入探險家姓名：</label>
+        <div class="input-group">
+          <input type="text" id="player-name-input" class="name-input" placeholder="例如：林小明 或 座號 12 號" maxlength="10" autocomplete="off">
+          <button type="button" id="start-adventure-btn" class="primary-btn pulse-glow">
+            🚀 啟動時光機
+          </button>
+        </div>
+      </div>
+
+      <div class="home-actions">
+        <button type="button" id="reset-progress-btn" class="secondary-btn">
+          🔄 重新探險（清除進度）
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= 畫面 2：時光機選單 (Timeline Screen) ================= -->
+  <main id="timeline-screen" class="screen hidden">
+    <div class="timeline-container">
+      <div class="timeline-header">
+        <h2>⏱️ 時光機儀表板</h2>
+        <p>歡迎探險家 <strong id="timeline-player-name" style="color: var(--color-primary);"></strong>！請依序前往三個史前時代探索：</p>
+      </div>
+
+      <!-- 時間軸視覺軸線 -->
+      <div class="timeline-bar">
+        <div class="timeline-node" style="left: 5%;">
+          <div class="node-dot"></div>
+          <span class="node-label">50,000 年前</span>
+        </div>
+        <div class="timeline-node" style="left: 40%;">
+          <div class="node-dot"></div>
+          <span class="node-label">7,000 年前</span>
+        </div>
+        <div class="timeline-node" style="left: 75%;">
+          <div class="node-dot"></div>
+          <span class="node-label">2,000 年前</span>
+        </div>
+        <div class="timeline-node" style="left: 98%;">
+          <div class="node-dot" style="border-color: #1976d2;"></div>
+          <span class="node-label">現代（我們）</span>
+        </div>
+      </div>
+
+      <!-- 三個時代關卡卡片 -->
+      <div id="era-cards-container" class="era-cards-grid"></div>
+
+      <!-- 三關全通關時出現的大魔王與證書彩帶 -->
+      <div id="timeline-cert-banner" class="cert-banner hidden">
+        <div class="cert-banner-text">
+          <h3>🎉 恭喜完成三大時代生存挑戰！</h3>
+          <p>你已經具備完整的臺灣史前生活知識，準備好領取探險家證書了嗎？</p>
+        </div>
+        <button type="button" id="view-final-cert-btn" class="primary-btn pulse-glow">
+          🏆 前往領取探險家證書
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= 畫面 3：360° 探索畫面 (Viewer Screen) ================= -->
+  <main id="viewer-screen" class="screen hidden viewer-maximized">
+    <!-- Pannellum 檢視器全景畫布 (100% 滿版無黑邊) -->
+    <div id="panorama"></div>
+
+    <!-- 頂部浮動儀表列 (Floating Top HUD) -->
+    <div class="hud-top-bar">
+      <!-- 左上角：返回按鈕 + 時代遺址資訊膠囊 -->
+      <div class="hud-top-left">
+        <button type="button" id="back-to-timeline-btn" class="hud-btn hud-back-btn" title="返回時光機儀表板">
+          <span class="hud-btn-icon">⬅</span>
+          <span class="hud-btn-text">回時光機選單</span>
+        </button>
+        <div class="hud-era-pill">
+          <span id="scene-era-title" class="hud-era-title">舊石器時代</span>
+          <span class="hud-pill-divider">·</span>
+          <span id="scene-era-info" class="hud-era-info">八仙洞遺址（約 50,000 年前）</span>
+        </div>
+      </div>
+
+      <!-- 右上角：浮動線索雷達選單 + 探索進度 + 音效開關 -->
+      <div class="hud-top-right">
+        <!-- 線索雷達下拉選單 -->
+        <div class="clue-radar-dropdown" id="clue-radar-dropdown">
+          <button type="button" id="clue-radar-toggle-btn" class="hud-btn hud-radar-btn" aria-expanded="false" title="開啟本關生活線索清單">
+            <span class="radar-btn-icon">🧭</span>
+            <span class="radar-btn-text">線索雷達</span>
+            <span id="radar-progress-badge" class="radar-progress-badge">0 / 6</span>
+            <span class="radar-arrow">▾</span>
+          </button>
+
+          <!-- 浮動線索清單卡片 -->
+          <div id="clue-radar-menu" class="clue-radar-menu hidden">
+            <div class="radar-menu-header">
+              <div class="radar-menu-title">🧭 生活線索快速雷達</div>
+              <div class="radar-menu-subtitle">點擊線索可自動轉向並開啟內容</div>
+            </div>
+            <div id="clue-radar-items" class="clue-radar-items-list">
+              <!-- 由 JS 動態注入線索按鈕 -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 探索計數相容標籤 -->
+        <div id="clue-counter" class="hud-clue-counter hidden">
+          <span>🔍 線索</span> <strong>0 / 6</strong>
+        </div>
+
+        <!-- 音效切換 -->
+        <button type="button" class="hud-btn sound-toggle-btn" title="切換音效開關">
+          🔊 音效開
+        </button>
+      </div>
+    </div>
+
+    <!-- 畫面底端引導與生存挑戰列 (Floating Bottom HUD) -->
+    <div class="scene-bottom-bar">
+      <!-- 考古小隊長語音提示盒 -->
+      <div class="captain-helper-box">
+        <img src="assets/1d29b181514e9d63.png" alt="考古小隊長" class="captain-avatar-img">
+        <div class="speech-bubble">
+          <span class="captain-speaker-name">考古小隊長：</span>
+          <span id="captain-speech-text">轉動畫面看看四周，發光的金色圓點就是線索喔！</span>
+        </div>
+      </div>
+
+      <!-- 右下角功能按鈕組 -->
+      <div class="scene-actions-right">
+        <button type="button" id="guide-clue-btn" class="compass-guide-btn" title="把鏡頭轉向尚未發現的線索">
+          🧭 找不到線索？指引我！
+        </button>
+        <button type="button" id="start-challenge-btn" class="challenge-start-btn disabled" disabled title="找齊所有線索後即可開啟生存挑戰">
+          ⚔️ 開始生存挑戰
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= 畫面 4：問答挑戰畫面 (Quiz Screen) ================= -->
+  <main id="quiz-screen" class="screen hidden">
+    <div class="quiz-container">
+      <div class="quiz-header">
+        <h2 id="quiz-era-name">舊石器時代・生存問答挑戰</h2>
+        <span id="quiz-progress" class="quiz-progress-pill">第 1 / 4 題</span>
+      </div>
+
+      <div class="quiz-card">
+        <div class="quiz-question-row">
+          <div id="quiz-question-text" class="quiz-question-text">題目載入中...</div>
+          <button type="button" id="quiz-speak-btn" class="speak-btn" title="朗讀題目與選項">
+            🔊 唸給我聽
+          </button>
+        </div>
+
+        <!-- 選項按鈕列表 -->
+        <div id="quiz-options-container" class="quiz-options-list"></div>
+
+        <!-- 答題反饋與提示區 -->
+        <div id="quiz-feedback" class="quiz-feedback-box hidden">
+          <div id="quiz-feedback-text"></div>
+        </div>
+      </div>
+
+      <div class="quiz-footer-actions">
+        <button type="button" id="quiz-back-to-scene-btn" class="secondary-btn">
+          🔍 回 360° 場景看一下線索
+        </button>
+        <button type="button" id="quiz-next-btn" class="primary-btn hidden">
+          下一題 ➔
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= 畫面 5：證書頁 (Certificate Screen) ================= -->
+  <main id="certificate-screen" class="screen hidden">
+    <div class="cert-page-container">
+      <div class="cert-page-header">
+        <h2>🎉 恭喜榮獲探險家證書！</h2>
+        <p>你已經完成三個史前時代的探索，表現卓越，快下載或列印你的榮譽證書吧！</p>
+      </div>
+
+      <!-- 證書 Canvas 預覽 -->
+      <div class="cert-canvas-wrap">
+        <canvas id="certificate-canvas"></canvas>
+      </div>
+
+      <!-- 證書操作功能列 -->
+      <div class="cert-actions-bar">
+        <button type="button" id="download-cert-btn" class="primary-btn pulse-glow">
+          📥 下載證書圖片 (PNG)
+        </button>
+        <button type="button" id="print-cert-btn" class="secondary-btn">
+          🖨️ 列印證書 (A4)
+        </button>
+        <button type="button" class="secondary-btn open-comparison-btn">
+          📊 時代生活比較表
+        </button>
+        <button type="button" id="cert-back-home-btn" class="secondary-btn">
+          🏠 回時光機選單
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= 彈窗 1：線索小卡 (Clue Modal) ================= -->
+  <div id="clue-modal" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="clue-modal-card">
+      <div id="clue-icon" class="clue-icon-huge">🏠</div>
+      <h3 id="clue-title" class="clue-modal-title">海邊的天然岩洞</h3>
+      <div id="clue-text" class="clue-modal-text">
+        這裡的人住在海邊的岩洞裡。岩洞可以遮風避雨，旁邊又有河流，喝水、取水都很方便！
+      </div>
+      <div class="modal-actions">
+        <button type="button" id="clue-speak-btn" class="speak-btn">
+          🔊 唸給我聽
+        </button>
+        <button type="button" id="clue-close-btn" class="primary-btn">
+          我知道了！
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 彈窗 2：過關勝利徽章彈窗 (Victory Modal) ================= -->
+  <div id="victory-modal" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="victory-card">
+      <img id="victory-badge-img" src="assets/18feb4174533dbe4.png" alt="過關徽章" class="victory-badge-large">
+      <h3 class="victory-title">闖關成功！</h3>
+      <div id="victory-badge-title" class="victory-badge-name">🔥 榮獲「生火打石小達人」徽章！</div>
+      <div class="victory-speech-box">
+        <p id="victory-speech-text">恭喜你學會了舊石器時代的生存技能！</p>
+      </div>
+      <button type="button" id="victory-next-btn" class="primary-btn pulse-glow">
+        前往下一個時代 ➔
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= 彈窗 3：三個時代比較表 (Comparison Modal) ================= -->
+  <div id="comparison-modal" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="comparison-card">
+      <h2>📊 臺灣三大史前時代生活比較總表</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>比較項目</th>
+            <th>舊石器時代（八仙洞）</th>
+            <th>新石器時代（卑南）</th>
+            <th>金屬器時代（十三行）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>代表年代</strong></td>
+            <td>約 50,000 ～ 5,000 年前</td>
+            <td>約 7,000 ～ 2,000 年前</td>
+            <td>約 2,000 ～ 400 年前</td>
+          </tr>
+          <tr>
+            <td><strong>居住方式</strong></td>
+            <td>住在海邊天然岩洞（遮風避雨、靠近水源）</td>
+            <td>以竹子、茅草蓋屋，以板岩為牆與石柱，形成<strong>聚落定居</strong></td>
+            <td>通風涼爽、防潮防獸的<strong>架高干欄式木屋</strong></td>
+          </tr>
+          <tr>
+            <td><strong>食物取得</strong></td>
+            <td>採集野果、狩獵野生動物、河海捕魚（向大自然索取）</td>
+            <td><strong>開始農耕</strong>（種植小米與稻米）、<strong>畜養家畜</strong>（狗、雞）</td>
+            <td>農耕、捕魚，並與外地商人貿易獲得更多資源</td>
+          </tr>
+          <tr>
+            <td><strong>主要工具</strong></td>
+            <td><strong>打製石器</strong>（用石頭敲打出尖銳邊緣）</td>
+            <td><strong>磨製石器</strong>（研磨石刀、石斧）、<strong>陶器</strong>、紡織器具</td>
+            <td><strong>鐵器</strong>（高溫煉鐵、鍛造鐵刀鐵鋤）、石器種類大幅減少</td>
+          </tr>
+          <tr>
+            <td><strong>工藝與技能</strong></td>
+            <td>已知<strong>用火</strong>（燒烤熟食、取暖照明、驅獸）</td>
+            <td><strong>製作陶器</strong>（烹煮與儲存）、<strong>雕刻精美玉器</strong>、織布做衣服</td>
+            <td><strong>高溫煉鐵</strong>、燒製<strong>人面陶罐</strong>與動物陶偶</td>
+          </tr>
+          <tr>
+            <td><strong>對外交流</strong></td>
+            <td>小範圍活動</td>
+            <td>使用花蓮豐田玉，並與<strong>東南亞有海外交流</strong></td>
+            <td>以獸皮與陶器，與海外交換<strong>玻璃飾品、瑪瑙珠與銅幣</strong></td>
+          </tr>
+          <tr>
+            <td><strong>文化核心特質</strong></td>
+            <td colspan="3" style="text-align: center; color: var(--color-primary); font-weight: bold; background: #fff8e1;">
+              💡 <strong>技術與技能具有深厚的「延續性」</strong>：後來的文明在前人的智慧基礎上不斷發明與進步！
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="text-align: center;">
+        <button type="button" id="close-comparison-btn" class="primary-btn">
+          關閉比較表
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pannellum 360 Viewer JS (本地優先，完全支援離線使用與 file:/// 免 CORS) -->
+  
+
+  <!-- 核心資料與模組腳本 -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<script>
+// Pannellum 2.5.6, https://github.com/mpetroff/pannellum
+window.libpannellum=function(E,g,p){function Ba(K){function ja(a,e){return 1==a.level&&1!=e.level?-1:1==e.level&&1!=a.level?1:e.timestamp-a.timestamp}function Q(a,e){return a.level!=e.level?a.level-e.level:a.diff-e.diff}function ka(a,e,c,g,l,h){this.vertices=a;this.side=e;this.level=c;this.x=g;this.y=l;this.path=h.replace("%s",e).replace("%l",c).replace("%x",g).replace("%y",l)}function Ja(a,e,g,p,l){var h;var d=e.vertices;h=la(a,d.slice(0,3));var u=la(a,d.slice(3,6)),x=la(a,d.slice(6,9)),d=la(a,d.slice(9,
+12)),t=h[0]+u[0]+x[0]+d[0];-4==t||4==t?h=!1:(t=h[1]+u[1]+x[1]+d[1],h=-4==t||4==t?!1:4!=h[2]+u[2]+x[2]+d[2]);if(h){h=e.vertices;u=h[0]+h[3]+h[6]+h[9];x=h[1]+h[4]+h[7]+h[10];d=h[2]+h[5]+h[8]+h[11];t=Math.sqrt(u*u+x*x+d*d);d=Math.asin(d/t);u=Math.atan2(x,u)-p;u+=u>Math.PI?-2*Math.PI:u<-Math.PI?2*Math.PI:0;u=Math.abs(u);e.diff=Math.acos(Math.sin(g)*Math.sin(d)+Math.cos(g)*Math.cos(d)*Math.cos(u));u=!1;for(x=0;x<c.nodeCache.length;x++)if(c.nodeCache[x].path==e.path){u=!0;c.nodeCache[x].timestamp=c.nodeCacheTimestamp++;
+c.nodeCache[x].diff=e.diff;c.currentNodes.push(c.nodeCache[x]);break}u||(e.timestamp=c.nodeCacheTimestamp++,c.currentNodes.push(e),c.nodeCache.push(e));if(e.level<c.level){var d=m.cubeResolution*Math.pow(2,e.level-m.maxLevel),u=Math.ceil(d*m.invTileResolution)-1,x=d%m.tileResolution*2,k=2*d%m.tileResolution;0===k&&(k=m.tileResolution);0===x&&(x=2*m.tileResolution);t=0.5;if(e.x==u||e.y==u)t=1-m.tileResolution/(m.tileResolution+k);var y=1-t,d=[],s=t,z=t,D=t,I=y,A=y,B=y;if(k<m.tileResolution)if(e.x==
+u&&e.y!=u){if(A=z=0.5,"d"==e.side||"u"==e.side)B=D=0.5}else e.x!=u&&e.y==u&&(I=s=0.5,"l"==e.side||"r"==e.side)&&(B=D=0.5);x<=m.tileResolution&&(e.x==u&&(s=0,I=1,"l"==e.side||"r"==e.side)&&(D=0,B=1),e.y==u&&(z=0,A=1,"d"==e.side||"u"==e.side)&&(D=0,B=1));k=[h[0],h[1],h[2],h[0]*s+h[3]*I,h[1]*t+h[4]*y,h[2]*D+h[5]*B,h[0]*s+h[6]*I,h[1]*z+h[7]*A,h[2]*D+h[8]*B,h[0]*t+h[9]*y,h[1]*z+h[10]*A,h[2]*D+h[11]*B];k=new ka(k,e.side,e.level+1,2*e.x,2*e.y,m.fullpath);d.push(k);e.x==u&&x<=m.tileResolution||(k=[h[0]*s+
+h[3]*I,h[1]*t+h[4]*y,h[2]*D+h[5]*B,h[3],h[4],h[5],h[3]*t+h[6]*y,h[4]*z+h[7]*A,h[5]*D+h[8]*B,h[0]*s+h[6]*I,h[1]*z+h[7]*A,h[2]*D+h[8]*B],k=new ka(k,e.side,e.level+1,2*e.x+1,2*e.y,m.fullpath),d.push(k));e.x==u&&x<=m.tileResolution||e.y==u&&x<=m.tileResolution||(k=[h[0]*s+h[6]*I,h[1]*z+h[7]*A,h[2]*D+h[8]*B,h[3]*t+h[6]*y,h[4]*z+h[7]*A,h[5]*D+h[8]*B,h[6],h[7],h[8],h[9]*s+h[6]*I,h[10]*t+h[7]*y,h[11]*D+h[8]*B],k=new ka(k,e.side,e.level+1,2*e.x+1,2*e.y+1,m.fullpath),d.push(k));e.y==u&&x<=m.tileResolution||
+(k=[h[0]*t+h[9]*y,h[1]*z+h[10]*A,h[2]*D+h[11]*B,h[0]*s+h[6]*I,h[1]*z+h[7]*A,h[2]*D+h[8]*B,h[9]*s+h[6]*I,h[10]*t+h[7]*y,h[11]*D+h[8]*B,h[9],h[10],h[11]],k=new ka(k,e.side,e.level+1,2*e.x,2*e.y+1,m.fullpath),d.push(k));for(e=0;e<d.length;e++)Ja(a,d[e],g,p,l)}}}function ta(){return[-1,1,-1,1,1,-1,1,-1,-1,-1,-1,-1,1,1,1,-1,1,1,-1,-1,1,1,-1,1,-1,1,1,1,1,1,1,1,-1,-1,1,-1,-1,-1,-1,1,-1,-1,1,-1,1,-1,-1,1,-1,1,1,-1,1,-1,-1,-1,-1,-1,-1,1,1,1,-1,1,1,1,1,-1,1,1,-1,-1]}function ua(a,e,c){var g=Math.sin(e);e=Math.cos(e);
+if("x"==c)return[a[0],e*a[1]+g*a[2],e*a[2]-g*a[1],a[3],e*a[4]+g*a[5],e*a[5]-g*a[4],a[6],e*a[7]+g*a[8],e*a[8]-g*a[7]];if("y"==c)return[e*a[0]-g*a[2],a[1],e*a[2]+g*a[0],e*a[3]-g*a[5],a[4],e*a[5]+g*a[3],e*a[6]-g*a[8],a[7],e*a[8]+g*a[6]];if("z"==c)return[e*a[0]+g*a[1],e*a[1]-g*a[0],a[2],e*a[3]+g*a[4],e*a[4]-g*a[3],a[5],e*a[6]+g*a[7],e*a[7]-g*a[6],a[8]]}function ma(a){return[a[0],a[4],a[8],a[12],a[1],a[5],a[9],a[13],a[2],a[6],a[10],a[14],a[3],a[7],a[11],a[15]]}function Ka(a){La(a,a.path+"."+m.extension,
+function(e,c){a.texture=e;a.textureLoaded=c?2:1},va.crossOrigin)}function la(a,e){var c=[a[0]*e[0]+a[1]*e[1]+a[2]*e[2],a[4]*e[0]+a[5]*e[1]+a[6]*e[2],a[11]+a[8]*e[0]+a[9]*e[1]+a[10]*e[2],1/(a[12]*e[0]+a[13]*e[1]+a[14]*e[2])],g=c[0]*c[3],l=c[1]*c[3],c=c[2]*c[3],h=[0,0,0];-1>g&&(h[0]=-1);1<g&&(h[0]=1);-1>l&&(h[1]=-1);1<l&&(h[1]=1);if(-1>c||1<c)h[2]=1;return h}function Ea(){console.log("Reducing canvas size due to error 1286!");A.width=Math.round(A.width/2);A.height=Math.round(A.height/2)}var A=g.createElement("canvas");
+A.style.width=A.style.height="100%";K.appendChild(A);var c,a,U,V,$,R,wa,ga,m,z,F,ca,Fa,Y,na,va;this.init=function(L,e,Ca,H,l,h,d,u){function x(a){if(E){var e=a*a*4,h=new Uint8ClampedArray(e),c=u.backgroundColor?u.backgroundColor:[0,0,0];c[0]*=255;c[1]*=255;c[2]*=255;for(var b=0;b<e;b++)h[b++]=c[0],h[b++]=c[1],h[b++]=c[2];a=new ImageData(h,a,a);for(t=0;6>t;t++)0==m[t].width&&(m[t]=a)}}e===p&&(e="equirectangular");if("equirectangular"!=e&&"cubemap"!=e&&"multires"!=e)throw console.log("Error: invalid image type specified!"),
+{type:"config error"};z=e;m=L;F=Ca;va=u||{};if(c){U&&(a.detachShader(c,U),a.deleteShader(U));V&&(a.detachShader(c,V),a.deleteShader(V));a.bindBuffer(a.ARRAY_BUFFER,null);a.bindBuffer(a.ELEMENT_ARRAY_BUFFER,null);c.texture&&a.deleteTexture(c.texture);if(c.nodeCache)for(L=0;L<c.nodeCache.length;L++)a.deleteTexture(c.nodeCache[L].texture);a.deleteProgram(c);c=p}ga=p;var t,E=!1,y;if("cubemap"==z)for(t=0;6>t;t++)0<m[t].width?(y===p&&(y=m[t].width),y!=m[t].width&&console.log("Cube faces have inconsistent widths: "+
+y+" vs. "+m[t].width)):E=!0;"cubemap"==z&&0!==(y&y-1)&&(navigator.userAgent.toLowerCase().match(/(iphone|ipod|ipad).* os 8_/)||navigator.userAgent.toLowerCase().match(/(iphone|ipod|ipad).* os 9_/)||navigator.userAgent.toLowerCase().match(/(iphone|ipod|ipad).* os 10_/)||navigator.userAgent.match(/Trident.*rv[ :]*11\./))||(a||(a=A.getContext("experimental-webgl",{alpha:!1,depth:!1})),a&&1286==a.getError()&&Ea());if(!a&&("multires"==z&&m.hasOwnProperty("fallbackPath")||"cubemap"==z)&&("WebkitAppearance"in
+g.documentElement.style||navigator.userAgent.match(/Trident.*rv[ :]*11\./)||-1!==navigator.appVersion.indexOf("MSIE 10"))){R&&K.removeChild(R);R=g.createElement("div");R.className="pnlm-world";H=m.basePath?m.basePath+m.fallbackPath:m.fallbackPath;var Q="frblud".split(""),S=0;l=function(){var a=g.createElement("canvas");a.className="pnlm-face pnlm-"+Q[this.side]+"face";R.appendChild(a);var e=a.getContext("2d");a.style.width=this.width+4+"px";a.style.height=this.height+4+"px";a.width=this.width+4;a.height=
+this.height+4;e.drawImage(this,2,2);var h=e.getImageData(0,0,a.width,a.height),c=h.data,b,d;for(b=2;b<a.width-2;b++)for(d=0;4>d;d++)c[4*(b+a.width)+d]=c[4*(b+2*a.width)+d],c[4*(b+a.width*(a.height-2))+d]=c[4*(b+a.width*(a.height-3))+d];for(b=2;b<a.height-2;b++)for(d=0;4>d;d++)c[4*(b*a.width+1)+d]=c[4*(b*a.width+2)+d],c[4*((b+1)*a.width-2)+d]=c[4*((b+1)*a.width-3)+d];for(d=0;4>d;d++)c[4*(a.width+1)+d]=c[4*(2*a.width+2)+d],c[4*(2*a.width-2)+d]=c[4*(3*a.width-3)+d],c[4*(a.width*(a.height-2)+1)+d]=c[4*
+(a.width*(a.height-3)+2)+d],c[4*(a.width*(a.height-1)-2)+d]=c[4*(a.width*(a.height-2)-3)+d];for(b=1;b<a.width-1;b++)for(d=0;4>d;d++)c[4*b+d]=c[4*(b+a.width)+d],c[4*(b+a.width*(a.height-1))+d]=c[4*(b+a.width*(a.height-2))+d];for(b=1;b<a.height-1;b++)for(d=0;4>d;d++)c[b*a.width*4+d]=c[4*(b*a.width+1)+d],c[4*((b+1)*a.width-1)+d]=c[4*((b+1)*a.width-2)+d];for(d=0;4>d;d++)c[d]=c[4*(a.width+1)+d],c[4*(a.width-1)+d]=c[4*(2*a.width-2)+d],c[a.width*(a.height-1)*4+d]=c[4*(a.width*(a.height-2)+1)+d],c[4*(a.width*
+a.height-1)+d]=c[4*(a.width*(a.height-1)-2)+d];e.putImageData(h,0,0);D.call(this)};var D=function(){0<this.width?($===p&&($=this.width),$!=this.width&&console.log("Fallback faces have inconsistent widths: "+$+" vs. "+this.width)):E=!0;S++;6==S&&($=this.width,K.appendChild(R),d())},E=!1;for(t=0;6>t;t++)h=new Image,h.crossOrigin=va.crossOrigin?va.crossOrigin:"anonymous",h.side=t,h.onload=l,h.onerror=D,h.src="multires"==z?H.replace("%s",Q[t])+"."+m.extension:m[t].src;x($)}else{if(!a)throw console.log("Error: no WebGL support detected!"),
+{type:"no webgl"};"cubemap"==z&&x(y);m.fullpath=m.basePath?m.basePath+m.path:m.path;m.invTileResolution=1/m.tileResolution;L=ta();wa=[];for(t=0;6>t;t++)wa[t]=L.slice(12*t,12*t+12),L=ta();L=0;if("equirectangular"==z){if(L=a.getParameter(a.MAX_TEXTURE_SIZE),Math.max(m.width/2,m.height)>L)throw console.log("Error: The image is too big; it's "+m.width+"px wide, but this device's maximum supported size is "+2*L+"px."),{type:"webgl size error",width:m.width,maxWidth:2*L};}else if("cubemap"==z&&y>a.getParameter(a.MAX_CUBE_MAP_TEXTURE_SIZE))throw console.log("Error: The image is too big; it's "+
+y+"px wide, but this device's maximum supported size is "+L+"px."),{type:"webgl size error",width:y,maxWidth:L};u===p||u.horizonPitch===p&&u.horizonRoll===p||(ga=[u.horizonPitch==p?0:u.horizonPitch,u.horizonRoll==p?0:u.horizonRoll]);y=a.TEXTURE_2D;a.viewport(0,0,a.drawingBufferWidth,a.drawingBufferHeight);a.getShaderPrecisionFormat&&(e=a.getShaderPrecisionFormat(a.FRAGMENT_SHADER,a.HIGH_FLOAT))&&1>e.precision&&(oa=oa.replace("highp","mediump"));U=a.createShader(a.VERTEX_SHADER);e=s;"multires"==z&&
+(e=k);a.shaderSource(U,e);a.compileShader(U);V=a.createShader(a.FRAGMENT_SHADER);e=pa;"cubemap"==z?(y=a.TEXTURE_CUBE_MAP,e=qa):"multires"==z&&(e=bb);a.shaderSource(V,e);a.compileShader(V);c=a.createProgram();a.attachShader(c,U);a.attachShader(c,V);a.linkProgram(c);a.getShaderParameter(U,a.COMPILE_STATUS)||console.log(a.getShaderInfoLog(U));a.getShaderParameter(V,a.COMPILE_STATUS)||console.log(a.getShaderInfoLog(V));a.getProgramParameter(c,a.LINK_STATUS)||console.log(a.getProgramInfoLog(c));a.useProgram(c);
+c.drawInProgress=!1;e=u.backgroundColor?u.backgroundColor:[0,0,0];a.clearColor(e[0],e[1],e[2],1);a.clear(a.COLOR_BUFFER_BIT);c.texCoordLocation=a.getAttribLocation(c,"a_texCoord");a.enableVertexAttribArray(c.texCoordLocation);"multires"!=z?(ca||(ca=a.createBuffer()),a.bindBuffer(a.ARRAY_BUFFER,ca),a.bufferData(a.ARRAY_BUFFER,new Float32Array([-1,1,1,1,1,-1,-1,1,1,-1,-1,-1]),a.STATIC_DRAW),a.vertexAttribPointer(c.texCoordLocation,2,a.FLOAT,!1,0,0),c.aspectRatio=a.getUniformLocation(c,"u_aspectRatio"),
+a.uniform1f(c.aspectRatio,a.drawingBufferWidth/a.drawingBufferHeight),c.psi=a.getUniformLocation(c,"u_psi"),c.theta=a.getUniformLocation(c,"u_theta"),c.f=a.getUniformLocation(c,"u_f"),c.h=a.getUniformLocation(c,"u_h"),c.v=a.getUniformLocation(c,"u_v"),c.vo=a.getUniformLocation(c,"u_vo"),c.rot=a.getUniformLocation(c,"u_rot"),a.uniform1f(c.h,H/(2*Math.PI)),a.uniform1f(c.v,l/Math.PI),a.uniform1f(c.vo,h/Math.PI*2),"equirectangular"==z&&(c.backgroundColor=a.getUniformLocation(c,"u_backgroundColor"),a.uniform4fv(c.backgroundColor,
+e.concat([1]))),c.texture=a.createTexture(),a.bindTexture(y,c.texture),"cubemap"==z?(a.texImage2D(a.TEXTURE_CUBE_MAP_POSITIVE_X,0,a.RGB,a.RGB,a.UNSIGNED_BYTE,m[1]),a.texImage2D(a.TEXTURE_CUBE_MAP_NEGATIVE_X,0,a.RGB,a.RGB,a.UNSIGNED_BYTE,m[3]),a.texImage2D(a.TEXTURE_CUBE_MAP_POSITIVE_Y,0,a.RGB,a.RGB,a.UNSIGNED_BYTE,m[4]),a.texImage2D(a.TEXTURE_CUBE_MAP_NEGATIVE_Y,0,a.RGB,a.RGB,a.UNSIGNED_BYTE,m[5]),a.texImage2D(a.TEXTURE_CUBE_MAP_POSITIVE_Z,0,a.RGB,a.RGB,a.UNSIGNED_BYTE,m[0]),a.texImage2D(a.TEXTURE_CUBE_MAP_NEGATIVE_Z,
+0,a.RGB,a.RGB,a.UNSIGNED_BYTE,m[2])):m.width<=L?(a.uniform1i(a.getUniformLocation(c,"u_splitImage"),0),a.texImage2D(y,0,a.RGB,a.RGB,a.UNSIGNED_BYTE,m)):(a.uniform1i(a.getUniformLocation(c,"u_splitImage"),1),H=g.createElement("canvas"),H.width=m.width/2,H.height=m.height,H=H.getContext("2d"),H.drawImage(m,0,0),l=H.getImageData(0,0,m.width/2,m.height),a.texImage2D(y,0,a.RGB,a.RGB,a.UNSIGNED_BYTE,l),c.texture2=a.createTexture(),a.activeTexture(a.TEXTURE1),a.bindTexture(y,c.texture2),a.uniform1i(a.getUniformLocation(c,
+"u_image1"),1),H.drawImage(m,-m.width/2,0),l=H.getImageData(0,0,m.width/2,m.height),a.texImage2D(y,0,a.RGB,a.RGB,a.UNSIGNED_BYTE,l),a.texParameteri(y,a.TEXTURE_WRAP_S,a.CLAMP_TO_EDGE),a.texParameteri(y,a.TEXTURE_WRAP_T,a.CLAMP_TO_EDGE),a.texParameteri(y,a.TEXTURE_MIN_FILTER,a.LINEAR),a.texParameteri(y,a.TEXTURE_MAG_FILTER,a.LINEAR),a.activeTexture(a.TEXTURE0)),a.texParameteri(y,a.TEXTURE_WRAP_S,a.CLAMP_TO_EDGE),a.texParameteri(y,a.TEXTURE_WRAP_T,a.CLAMP_TO_EDGE),a.texParameteri(y,a.TEXTURE_MIN_FILTER,
+a.LINEAR),a.texParameteri(y,a.TEXTURE_MAG_FILTER,a.LINEAR)):(c.vertPosLocation=a.getAttribLocation(c,"a_vertCoord"),a.enableVertexAttribArray(c.vertPosLocation),Fa||(Fa=a.createBuffer()),Y||(Y=a.createBuffer()),na||(na=a.createBuffer()),a.bindBuffer(a.ARRAY_BUFFER,Y),a.bufferData(a.ARRAY_BUFFER,new Float32Array([0,0,1,0,1,1,0,1]),a.STATIC_DRAW),a.bindBuffer(a.ELEMENT_ARRAY_BUFFER,na),a.bufferData(a.ELEMENT_ARRAY_BUFFER,new Uint16Array([0,1,2,0,2,3]),a.STATIC_DRAW),c.perspUniform=a.getUniformLocation(c,
+"u_perspMatrix"),c.cubeUniform=a.getUniformLocation(c,"u_cubeMatrix"),c.level=-1,c.currentNodes=[],c.nodeCache=[],c.nodeCacheTimestamp=0);H=a.getError();if(0!==H)throw console.log("Error: Something went wrong with WebGL!",H),{type:"webgl error"};d()}};this.destroy=function(){K!==p&&(A!==p&&K.contains(A)&&K.removeChild(A),R!==p&&K.contains(R)&&K.removeChild(R));if(a){var c=a.getExtension("WEBGL_lose_context");c&&c.loseContext()}};this.resize=function(){var g=E.devicePixelRatio||1;A.width=A.clientWidth*
+g;A.height=A.clientHeight*g;a&&(1286==a.getError()&&Ea(),a.viewport(0,0,a.drawingBufferWidth,a.drawingBufferHeight),"multires"!=z&&a.uniform1f(c.aspectRatio,A.clientWidth/A.clientHeight))};this.resize();this.setPose=function(a,c){ga=[a,c]};this.render=function(g,e,k,s){var l,h=0;s===p&&(s={});s.roll&&(h=s.roll);if(ga!==p){l=ga[0];var d=ga[1],u=g,x=e,t=Math.cos(d)*Math.sin(g)*Math.sin(l)+Math.cos(g)*(Math.cos(l)*Math.cos(e)+Math.sin(d)*Math.sin(l)*Math.sin(e)),E=-Math.sin(g)*Math.sin(d)+Math.cos(g)*
+Math.cos(d)*Math.sin(e);g=Math.cos(d)*Math.cos(l)*Math.sin(g)+Math.cos(g)*(-Math.cos(e)*Math.sin(l)+Math.cos(l)*Math.sin(d)*Math.sin(e));g=Math.asin(Math.max(Math.min(g,1),-1));e=Math.atan2(E,t);l=[Math.cos(u)*(Math.sin(d)*Math.sin(l)*Math.cos(x)-Math.cos(l)*Math.sin(x)),Math.cos(u)*Math.cos(d)*Math.cos(x),Math.cos(u)*(Math.cos(l)*Math.sin(d)*Math.cos(x)+Math.sin(x)*Math.sin(l))];d=[-Math.cos(g)*Math.sin(e),Math.cos(g)*Math.cos(e)];d=Math.acos(Math.max(Math.min((l[0]*d[0]+l[1]*d[1])/(Math.sqrt(l[0]*
+l[0]+l[1]*l[1]+l[2]*l[2])*Math.sqrt(d[0]*d[0]+d[1]*d[1])),1),-1));0>l[2]&&(d=2*Math.PI-d);h+=d}if(a||"multires"!=z&&"cubemap"!=z){if("multires"!=z)k=2*Math.atan(Math.tan(0.5*k)/(a.drawingBufferWidth/a.drawingBufferHeight)),k=1/Math.tan(0.5*k),a.uniform1f(c.psi,e),a.uniform1f(c.theta,g),a.uniform1f(c.rot,h),a.uniform1f(c.f,k),!0===F&&"equirectangular"==z&&(a.bindTexture(a.TEXTURE_2D,c.texture),a.texImage2D(a.TEXTURE_2D,0,a.RGB,a.RGB,a.UNSIGNED_BYTE,m)),a.drawArrays(a.TRIANGLES,0,6);else{l=a.drawingBufferWidth/
+a.drawingBufferHeight;d=2*Math.atan(Math.tan(k/2)*a.drawingBufferHeight/a.drawingBufferWidth);d=1/Math.tan(d/2);l=[d/l,0,0,0,0,d,0,0,0,0,100.1/-99.9,20/-99.9,0,0,-1,0];for(d=1;d<m.maxLevel&&a.drawingBufferWidth>m.tileResolution*Math.pow(2,d-1)*Math.tan(k/2)*0.707;)d++;c.level=d;d=[1,0,0,0,1,0,0,0,1];d=ua(d,-h,"z");d=ua(d,-g,"x");d=ua(d,e,"y");d=[d[0],d[1],d[2],0,d[3],d[4],d[5],0,d[6],d[7],d[8],0,0,0,0,1];a.uniformMatrix4fv(c.perspUniform,!1,new Float32Array(ma(l)));a.uniformMatrix4fv(c.cubeUniform,
+!1,new Float32Array(ma(d)));h=[l[0]*d[0],l[0]*d[1],l[0]*d[2],0,l[5]*d[4],l[5]*d[5],l[5]*d[6],0,l[10]*d[8],l[10]*d[9],l[10]*d[10],l[11],-d[8],-d[9],-d[10],0];c.nodeCache.sort(ja);if(200<c.nodeCache.length&&c.nodeCache.length>c.currentNodes.length+50)for(l=c.nodeCache.splice(200,c.nodeCache.length-200),d=0;d<l.length;d++)a.deleteTexture(l[d].texture);c.currentNodes=[];d="fbudlr".split("");for(l=0;6>l;l++)u=new ka(wa[l],d[l],1,0,0,m.fullpath),Ja(h,u,g,e,k);c.currentNodes.sort(Q);for(g=S.length-1;0<=
+g;g--)-1===c.currentNodes.indexOf(S[g].node)&&(S[g].node.textureLoad=!1,S.splice(g,1));if(0===S.length)for(g=0;g<c.currentNodes.length;g++)if(e=c.currentNodes[g],!e.texture&&!e.textureLoad){e.textureLoad=!0;setTimeout(Ka,0,e);break}if(!c.drawInProgress){c.drawInProgress=!0;a.clear(a.COLOR_BUFFER_BIT);for(g=0;g<c.currentNodes.length;g++)1<c.currentNodes[g].textureLoaded&&(a.bindBuffer(a.ARRAY_BUFFER,Fa),a.bufferData(a.ARRAY_BUFFER,new Float32Array(c.currentNodes[g].vertices),a.STATIC_DRAW),a.vertexAttribPointer(c.vertPosLocation,
+3,a.FLOAT,!1,0,0),a.bindBuffer(a.ARRAY_BUFFER,Y),a.vertexAttribPointer(c.texCoordLocation,2,a.FLOAT,!1,0,0),a.bindTexture(a.TEXTURE_2D,c.currentNodes[g].texture),a.drawElements(a.TRIANGLES,6,a.UNSIGNED_SHORT,0));c.drawInProgress=!1}}if(s.returnImage!==p)return A.toDataURL("image/png")}else for(l=$/2,s={f:"translate3d(-"+(l+2)+"px, -"+(l+2)+"px, -"+l+"px)",b:"translate3d("+(l+2)+"px, -"+(l+2)+"px, "+l+"px) rotateX(180deg) rotateZ(180deg)",u:"translate3d(-"+(l+2)+"px, -"+l+"px, "+(l+2)+"px) rotateX(270deg)",
+d:"translate3d(-"+(l+2)+"px, "+l+"px, -"+(l+2)+"px) rotateX(90deg)",l:"translate3d(-"+l+"px, -"+(l+2)+"px, "+(l+2)+"px) rotateX(180deg) rotateY(90deg) rotateZ(180deg)",r:"translate3d("+l+"px, -"+(l+2)+"px, -"+(l+2)+"px) rotateY(270deg)"},k=1/Math.tan(k/2),k=k*A.clientWidth/2+"px",e="perspective("+k+") translateZ("+k+") rotateX("+g+"rad) rotateY("+e+"rad) ",k=Object.keys(s),g=0;6>g;g++)if(h=R.querySelector(".pnlm-"+k[g]+"face"))h.style.webkitTransform=e+s[k[g]],h.style.transform=e+s[k[g]]};this.isLoading=
+function(){if(a&&"multires"==z)for(var g=0;g<c.currentNodes.length;g++)if(!c.currentNodes[g].textureLoaded)return!0;return!1};this.getCanvas=function(){return A};var S=[],La=function(){function c(){var d=this;this.texture=this.callback=null;this.image=new Image;this.image.crossOrigin=l?l:"anonymous";var e=function(){if(0<d.image.width&&0<d.image.height){var c=d.image;a.bindTexture(a.TEXTURE_2D,d.texture);a.texImage2D(a.TEXTURE_2D,0,a.RGB,a.RGB,a.UNSIGNED_BYTE,c);a.texParameteri(a.TEXTURE_2D,a.TEXTURE_MAG_FILTER,
+a.LINEAR);a.texParameteri(a.TEXTURE_2D,a.TEXTURE_MIN_FILTER,a.LINEAR);a.texParameteri(a.TEXTURE_2D,a.TEXTURE_WRAP_S,a.CLAMP_TO_EDGE);a.texParameteri(a.TEXTURE_2D,a.TEXTURE_WRAP_T,a.CLAMP_TO_EDGE);a.bindTexture(a.TEXTURE_2D,null);d.callback(d.texture,!0)}else d.callback(d.texture,!1);S.length?(c=S.shift(),d.loadTexture(c.src,c.texture,c.callback)):k[g++]=d};this.image.addEventListener("load",e);this.image.addEventListener("error",e)}function e(a,c,e,g){this.node=a;this.src=c;this.texture=e;this.callback=
+g}var g=4,k={},l;c.prototype.loadTexture=function(a,c,e){this.texture=c;this.callback=e;this.image.src=a};for(var h=0;h<g;h++)k[h]=new c;return function(c,h,m,p){l=p;p=a.createTexture();g?k[--g].loadTexture(h,p,m):S.push(new e(c,h,p,m));return p}}()}var s="attribute vec2 a_texCoord;varying vec2 v_texCoord;void main() {gl_Position = vec4(a_texCoord, 0.0, 1.0);v_texCoord = a_texCoord;}",k="attribute vec3 a_vertCoord;attribute vec2 a_texCoord;uniform mat4 u_cubeMatrix;uniform mat4 u_perspMatrix;varying mediump vec2 v_texCoord;void main(void) {gl_Position = u_perspMatrix * u_cubeMatrix * vec4(a_vertCoord, 1.0);v_texCoord = a_texCoord;}",
+oa="precision highp float;\nuniform float u_aspectRatio;\nuniform float u_psi;\nuniform float u_theta;\nuniform float u_f;\nuniform float u_h;\nuniform float u_v;\nuniform float u_vo;\nuniform float u_rot;\nconst float PI = 3.14159265358979323846264;\nuniform sampler2D u_image0;\nuniform sampler2D u_image1;\nuniform bool u_splitImage;\nuniform samplerCube u_imageCube;\nvarying vec2 v_texCoord;\nuniform vec4 u_backgroundColor;\nvoid main() {\nfloat x = v_texCoord.x * u_aspectRatio;\nfloat y = v_texCoord.y;\nfloat sinrot = sin(u_rot);\nfloat cosrot = cos(u_rot);\nfloat rot_x = x * cosrot - y * sinrot;\nfloat rot_y = x * sinrot + y * cosrot;\nfloat sintheta = sin(u_theta);\nfloat costheta = cos(u_theta);\nfloat a = u_f * costheta - rot_y * sintheta;\nfloat root = sqrt(rot_x * rot_x + a * a);\nfloat lambda = atan(rot_x / root, a / root) + u_psi;\nfloat phi = atan((rot_y * costheta + u_f * sintheta) / root);",
+qa=oa+"float cosphi = cos(phi);\ngl_FragColor = textureCube(u_imageCube, vec3(cosphi*sin(lambda), sin(phi), cosphi*cos(lambda)));\n}",pa=oa+"lambda = mod(lambda + PI, PI * 2.0) - PI;\nvec2 coord = vec2(lambda / PI, phi / (PI / 2.0));\nif(coord.x < -u_h || coord.x > u_h || coord.y < -u_v + u_vo || coord.y > u_v + u_vo)\ngl_FragColor = u_backgroundColor;\nelse {\nif(u_splitImage) {\nif(coord.x < 0.0)\ngl_FragColor = texture2D(u_image0, vec2((coord.x + u_h) / u_h, (-coord.y + u_v + u_vo) / (u_v * 2.0)));\nelse\ngl_FragColor = texture2D(u_image1, vec2((coord.x + u_h) / u_h - 1.0, (-coord.y + u_v + u_vo) / (u_v * 2.0)));\n} else {\ngl_FragColor = texture2D(u_image0, vec2((coord.x + u_h) / (u_h * 2.0), (-coord.y + u_v + u_vo) / (u_v * 2.0)));\n}\n}\n}",
+bb="varying mediump vec2 v_texCoord;uniform sampler2D u_sampler;void main(void) {gl_FragColor = texture2D(u_sampler, v_texCoord);}";return{renderer:function(g,k,p,s){return new Ba(g,k,p,s)}}}(window,document);
+window.pannellum=function(E,g,p){function Ba(s,k){function oa(){var a=g.createElement("div");a.innerHTML="\x3c!--[if lte IE 9]><i></i><![endif]--\x3e";if(1==a.getElementsByTagName("i").length)K();else{ra=b.hfov;Ga=b.pitch;var f;if("cubemap"==b.type){P=[];for(a=0;6>a;a++)P.push(new Image),P[a].crossOrigin=b.crossOrigin;q.load.lbox.style.display="block";q.load.lbar.style.display="none"}else if("multires"==b.type)a=JSON.parse(JSON.stringify(b.multiRes)),b.basePath&&b.multiRes.basePath&&!/^(?:[a-z]+:)?\/\//i.test(b.multiRes.basePath)?
+a.basePath=b.basePath+b.multiRes.basePath:b.multiRes.basePath?a.basePath=b.multiRes.basePath:b.basePath&&(a.basePath=b.basePath),P=a;else if(!0===b.dynamic)P=b.panorama;else{if(b.panorama===p){K(b.strings.noPanoramaError);return}P=new Image}if("cubemap"==b.type)for(var n=6,c=function(){n--;0===n&&pa()},d=function(a){var ea=g.createElement("a");ea.href=a.target.src;ea.textContent=ea.href;K(b.strings.fileAccessError.replace("%s",ea.outerHTML))},a=0;a<P.length;a++)f=b.cubeMap[a],"null"==f?(console.log("Will use background instead of missing cubemap face "+
+a),c()):(b.basePath&&!qa(f)&&(f=b.basePath+f),P[a].onload=c,P[a].onerror=d,P[a].src=I(f));else if("multires"==b.type)pa();else if(f="",b.basePath&&(f=b.basePath),!0!==b.dynamic){f=qa(b.panorama)?b.panorama:f+b.panorama;if(f.indexOf("data:")===0){P.onload=function(){try{pa();}catch(e){};if(q.load&&q.load.box)q.load.box.style.display="none"};P.onerror=function(e){};P.src=f;return;}P.onload=function(){E.URL.revokeObjectURL(this.src);pa()};var e=new XMLHttpRequest;e.onloadend=function(){if(200!=e.status){var a=g.createElement("a");a.href=f;a.textContent=a.href;K(b.strings.fileAccessError.replace("%s",a.outerHTML))}Ba(this.response);q.load.msg.innerHTML=""};e.onprogress=
+function(a){if(a.lengthComputable){q.load.lbarFill.style.width=a.loaded/a.total*100+"%";var b,ea;1E6<a.total?(b="MB",ea=(a.loaded/1E6).toFixed(2),a=(a.total/1E6).toFixed(2)):1E3<a.total?(b="kB",ea=(a.loaded/1E3).toFixed(1),a=(a.total/1E3).toFixed(1)):(b="B",ea=a.loaded,a=a.total);q.load.msg.innerHTML=ea+" / "+a+" "+b}else q.load.lbox.style.display="block",q.load.lbar.style.display="none"};try{e.open("GET",f,!0)}catch(h){K(b.strings.malformedURLError)}e.responseType="blob";e.setRequestHeader("Accept",
+"image/*,*/*;q=0.9");e.withCredentials="use-credentials"===b.crossOrigin;e.send()}b.draggable&&J.classList.add("pnlm-grab");J.classList.remove("pnlm-grabbing");Ma=!0===b.dynamicUpdate;b.dynamic&&Ma&&(P=b.panorama,pa())}}function qa(a){return/^(?:[a-z]+:)?\/\//i.test(a)||"/"==a[0]||"blob:"==a.slice(0,5)}function pa(){C||(C=new libpannellum.renderer(M));Sa||(Sa=!0,W.addEventListener("mousedown",ka,!1),g.addEventListener("mousemove",ua,!1),g.addEventListener("mouseup",ma,!1),b.mouseZoom&&(J.addEventListener("mousewheel",
+U,!1),J.addEventListener("DOMMouseScroll",U,!1)),b.doubleClickZoom&&W.addEventListener("dblclick",Ja,!1),s.addEventListener("mozfullscreenchange",d,!1),s.addEventListener("webkitfullscreenchange",d,!1),s.addEventListener("msfullscreenchange",d,!1),s.addEventListener("fullscreenchange",d,!1),E.addEventListener("resize",z,!1),E.addEventListener("orientationchange",z,!1),b.disableKeyboardCtrl||(s.addEventListener("keydown",V,!1),s.addEventListener("keyup",R,!1),s.addEventListener("blur",$,!1)),g.addEventListener("mouseleave",
+ma,!1),""===g.documentElement.style.pointerAction&&""===g.documentElement.style.touchAction?(W.addEventListener("pointerdown",A,!1),W.addEventListener("pointermove",c,!1),W.addEventListener("pointerup",a,!1),W.addEventListener("pointerleave",a,!1)):(W.addEventListener("touchstart",Ka,!1),W.addEventListener("touchmove",la,!1),W.addEventListener("touchend",Ea,!1)),E.navigator.pointerEnabled&&(s.style.touchAction="none"));va();x(b.hfov);setTimeout(function(){},500)}function Ba(a){var f=new FileReader;
+f.addEventListener("loadend",function(){var n=f.result;if(navigator.userAgent.toLowerCase().match(/(iphone|ipod|ipad).* os 8_/)){var c=n.indexOf("\u00ff\u00c2");(0>c||65536<c)&&K(b.strings.iOS8WebGLError)}c=n.indexOf("<x:xmpmeta");if(-1<c&&!0!==b.ignoreGPanoXMP){var d=n.substring(c,n.indexOf("</x:xmpmeta>")+12),e=function(a){var b;0<=d.indexOf(a+'="')?(b=d.substring(d.indexOf(a+'="')+a.length+2),b=b.substring(0,b.indexOf('"'))):0<=d.indexOf(a+">")&&(b=d.substring(d.indexOf(a+">")+a.length+1),b=b.substring(0,
+b.indexOf("<")));return b!==p?Number(b):null},n=e("GPano:FullPanoWidthPixels"),c=e("GPano:CroppedAreaImageWidthPixels"),g=e("GPano:FullPanoHeightPixels"),h=e("GPano:CroppedAreaImageHeightPixels"),l=e("GPano:CroppedAreaTopPixels"),k=e("GPano:PoseHeadingDegrees"),m=e("GPano:PosePitchDegrees"),e=e("GPano:PoseRollDegrees");null!==n&&null!==c&&null!==g&&null!==h&&null!==l&&(0>aa.indexOf("haov")&&(b.haov=c/n*360),0>aa.indexOf("vaov")&&(b.vaov=h/g*180),0>aa.indexOf("vOffset")&&(b.vOffset=-180*((l+h/2)/g-
+0.5)),null!==k&&0>aa.indexOf("northOffset")&&(b.northOffset=k,!1!==b.compass&&(b.compass=!0)),null!==m&&null!==e&&(0>aa.indexOf("horizonPitch")&&(b.horizonPitch=m),0>aa.indexOf("horizonRoll")&&(b.horizonRoll=e)))}P.src=E.URL.createObjectURL(a)});f.readAsBinaryString!==p?f.readAsBinaryString(a):f.readAsText(a)}function K(a){a===p&&(a=b.strings.genericWebGLError);q.errorMsg.innerHTML="<p>"+a+"</p>";v.load.style.display="none";q.load.box.style.display="none";q.errorMsg.style.display="table";Na=!0;G=
+p;M.style.display="none";B("error",a)}function ja(a){var b=Q(a);fa.style.left=b.x+"px";fa.style.top=b.y+"px";clearTimeout(ja.t1);clearTimeout(ja.t2);fa.style.display="block";fa.style.opacity=1;ja.t1=setTimeout(function(){fa.style.opacity=0},2E3);ja.t2=setTimeout(function(){fa.style.display="none"},2500);a.preventDefault()}function Q(a){var b=s.getBoundingClientRect(),n={};n.x=(a.clientX||a.pageX)-b.left;n.y=(a.clientY||a.pageY)-b.top;return n}function ka(a){a.preventDefault();s.focus();if(G&&b.draggable){var f=
+Q(a);if(b.hotSpotDebug){var n=ta(a);console.log("Pitch: "+n[0]+", Yaw: "+n[1]+", Center Pitch: "+b.pitch+", Center Yaw: "+b.yaw+", HFOV: "+b.hfov)}t();Da();b.roll=0;w.hfov=0;ha=!0;N=Date.now();xa=f.x;ya=f.y;Oa=b.yaw;Pa=b.pitch;J.classList.add("pnlm-grabbing");J.classList.remove("pnlm-grab");B("mousedown",a);F()}}function Ja(a){b.minHfov===b.hfov?da.setHfov(ra,1E3):(a=ta(a),da.lookAt(a[0],a[1],b.minHfov,1E3))}function ta(a){var f=Q(a);a=C.getCanvas();var n=a.clientWidth,c=a.clientHeight;a=f.x/n*2-
+1;var c=(1-f.y/c*2)*c/n,e=1/Math.tan(b.hfov*Math.PI/360),d=Math.sin(b.pitch*Math.PI/180),g=Math.cos(b.pitch*Math.PI/180),f=e*g-c*d,n=Math.sqrt(a*a+f*f),c=180*Math.atan((c*g+e*d)/n)/Math.PI;a=180*Math.atan2(a/n,f/n)/Math.PI+b.yaw;-180>a&&(a+=360);180<a&&(a-=360);return[c,a]}function ua(a){if(ha&&G){N=Date.now();var f=C.getCanvas(),n=f.clientWidth,f=f.clientHeight;a=Q(a);var c=180*(Math.atan(xa/n*2-1)-Math.atan(a.x/n*2-1))/Math.PI*b.hfov/90+Oa;w.yaw=(c-b.yaw)%360*0.2;b.yaw=c;n=360*Math.atan(Math.tan(b.hfov/
+360*Math.PI)*f/n)/Math.PI;n=180*(Math.atan(a.y/f*2-1)-Math.atan(ya/f*2-1))/Math.PI*n/90+Pa;w.pitch=0.2*(n-b.pitch);b.pitch=n}}function ma(a){ha&&(ha=!1,15<Date.now()-N&&(w.pitch=w.yaw=0),J.classList.add("pnlm-grab"),J.classList.remove("pnlm-grabbing"),N=Date.now(),B("mouseup",a))}function Ka(a){if(G&&b.draggable){t();Da();b.roll=0;w.hfov=0;var f=Q(a.targetTouches[0]);xa=f.x;ya=f.y;if(2==a.targetTouches.length){var n=Q(a.targetTouches[1]);xa+=0.5*(n.x-f.x);ya+=0.5*(n.y-f.y);Ha=Math.sqrt((f.x-n.x)*
+(f.x-n.x)+(f.y-n.y)*(f.y-n.y))}ha=!0;N=Date.now();Oa=b.yaw;Pa=b.pitch;B("touchstart",a);F()}}function la(a){if(b.draggable&&(a.preventDefault(),G&&(N=Date.now()),ha&&G)){var f=Q(a.targetTouches[0]),n=f.x,c=f.y;2==a.targetTouches.length&&-1!=Ha&&(a=Q(a.targetTouches[1]),n+=0.5*(a.x-f.x),c+=0.5*(a.y-f.y),f=Math.sqrt((f.x-a.x)*(f.x-a.x)+(f.y-a.y)*(f.y-a.y)),x(b.hfov+0.1*(Ha-f)),Ha=f);f=b.hfov/360*b.touchPanSpeedCoeffFactor;n=(xa-n)*f+Oa;w.yaw=(n-b.yaw)%360*0.2;b.yaw=n;c=(c-ya)*f+Pa;w.pitch=0.2*(c-b.pitch);
+b.pitch=c}}function Ea(){ha=!1;150<Date.now()-N&&(w.pitch=w.yaw=0);Ha=-1;N=Date.now();B("touchend",event)}function A(a){"touch"==a.pointerType&&G&&b.draggable&&(ia.push(a.pointerId),za.push({clientX:a.clientX,clientY:a.clientY}),a.targetTouches=za,Ka(a),a.preventDefault())}function c(a){if("touch"==a.pointerType&&b.draggable)for(var f=0;f<ia.length;f++)if(a.pointerId==ia[f]){za[f].clientX=a.clientX;za[f].clientY=a.clientY;a.targetTouches=za;la(a);a.preventDefault();break}}function a(a){if("touch"==
+a.pointerType){for(var b=!1,n=0;n<ia.length;n++)a.pointerId==ia[n]&&(ia[n]=p),ia[n]&&(b=!0);b||(ia=[],za=[],Ea());a.preventDefault()}}function U(a){G&&("fullscreenonly"!=b.mouseZoom||Aa)&&(a.preventDefault(),t(),N=Date.now(),a.wheelDeltaY?(x(b.hfov-0.05*a.wheelDeltaY),w.hfov=0>a.wheelDelta?1:-1):a.wheelDelta?(x(b.hfov-0.05*a.wheelDelta),w.hfov=0>a.wheelDelta?1:-1):a.detail&&(x(b.hfov+1.5*a.detail),w.hfov=0<a.detail?1:-1),F())}function V(a){t();N=Date.now();Da();b.roll=0;var f=a.which||a.keycode;0>
+b.capturedKeyNumbers.indexOf(f)||(a.preventDefault(),27==f?Aa&&h():wa(f,!0))}function $(){for(var a=0;10>a;a++)r[a]=!1}function R(a){var f=a.which||a.keycode;0>b.capturedKeyNumbers.indexOf(f)||(a.preventDefault(),wa(f,!1))}function wa(a,b){var n=!1;switch(a){case 109:case 189:case 17:case 173:r[0]!=b&&(n=!0);r[0]=b;break;case 107:case 187:case 16:case 61:r[1]!=b&&(n=!0);r[1]=b;break;case 38:r[2]!=b&&(n=!0);r[2]=b;break;case 87:r[6]!=b&&(n=!0);r[6]=b;break;case 40:r[3]!=b&&(n=!0);r[3]=b;break;case 83:r[7]!=
+b&&(n=!0);r[7]=b;break;case 37:r[4]!=b&&(n=!0);r[4]=b;break;case 65:r[8]!=b&&(n=!0);r[8]=b;break;case 39:r[5]!=b&&(n=!0);r[5]=b;break;case 68:r[9]!=b&&(n=!0),r[9]=b}n&&b&&(ba="undefined"!==typeof performance&&performance.now()?performance.now():Date.now(),F())}function ga(){if(G){var a=!1,f=b.pitch,n=b.yaw,c=b.hfov,e;e="undefined"!==typeof performance&&performance.now()?performance.now():Date.now();ba===p&&(ba=e);var d=(e-ba)*b.hfov/1700,d=Math.min(d,1);r[0]&&!0===b.keyboardZoom&&(x(b.hfov+(0.8*w.hfov+
+0.5)*d),a=!0);r[1]&&!0===b.keyboardZoom&&(x(b.hfov+(0.8*w.hfov-0.2)*d),a=!0);if(r[2]||r[6])b.pitch+=(0.8*w.pitch+0.2)*d,a=!0;if(r[3]||r[7])b.pitch+=(0.8*w.pitch-0.2)*d,a=!0;if(r[4]||r[8])b.yaw+=(0.8*w.yaw-0.2)*d,a=!0;if(r[5]||r[9])b.yaw+=(0.8*w.yaw+0.2)*d,a=!0;a&&(N=Date.now());if(b.autoRotate){if(0.001<e-ba){var a=(e-ba)/1E3,g=(w.yaw/a*d-0.2*b.autoRotate)*a,g=(0<-b.autoRotate?1:-1)*Math.min(Math.abs(b.autoRotate*a),Math.abs(g));b.yaw+=g}b.autoRotateStopDelay&&(b.autoRotateStopDelay-=e-ba,0>=b.autoRotateStopDelay&&
+(b.autoRotateStopDelay=!1,Z=b.autoRotate,b.autoRotate=0))}O.pitch&&(m("pitch"),f=b.pitch);O.yaw&&(m("yaw"),n=b.yaw);O.hfov&&(m("hfov"),c=b.hfov);0<d&&!b.autoRotate&&(a=1-b.friction,r[4]||r[5]||r[8]||r[9]||O.yaw||(b.yaw+=w.yaw*d*a),r[2]||r[3]||r[6]||r[7]||O.pitch||(b.pitch+=w.pitch*d*a),r[0]||r[1]||O.hfov||x(b.hfov+w.hfov*d*a));ba=e;0<d&&(w.yaw=0.8*w.yaw+(b.yaw-n)/d*0.2,w.pitch=0.8*w.pitch+(b.pitch-f)/d*0.2,w.hfov=0.8*w.hfov+(b.hfov-c)/d*0.2,f=b.autoRotate?Math.abs(b.autoRotate):5,w.yaw=Math.min(f,
+Math.max(w.yaw,-f)),w.pitch=Math.min(f,Math.max(w.pitch,-f)),w.hfov=Math.min(f,Math.max(w.hfov,-f)));r[0]&&r[1]&&(w.hfov=0);(r[2]||r[6])&&(r[3]||r[7])&&(w.pitch=0);(r[4]||r[8])&&(r[5]||r[9])&&(w.yaw=0)}}function m(a){var f=O[a],n=Math.min(1,Math.max((Date.now()-f.startTime)/1E3/(f.duration/1E3),0)),n=f.startPosition+b.animationTimingFunction(n)*(f.endPosition-f.startPosition);if(f.endPosition>f.startPosition&&n>=f.endPosition||f.endPosition<f.startPosition&&n<=f.endPosition||f.endPosition===f.startPosition)n=
+f.endPosition,w[a]=0,delete O[a];b[a]=n}function z(){d("resize")}function F(){Ta||(Ta=!0,ca())}function ca(){if(!Za)if(Fa(),Qa&&clearTimeout(Qa),ha||!0===X)requestAnimationFrame(ca);else if(r[0]||r[1]||r[2]||r[3]||r[4]||r[5]||r[6]||r[7]||r[8]||r[9]||b.autoRotate||O.pitch||O.yaw||O.hfov||0.01<Math.abs(w.yaw)||0.01<Math.abs(w.pitch)||0.01<Math.abs(w.hfov))ga(),0<=b.autoRotateInactivityDelay&&Z&&Date.now()-N>b.autoRotateInactivityDelay&&!b.autoRotate&&(b.autoRotate=Z,da.lookAt(Ga,p,ra,3E3)),requestAnimationFrame(ca);
+else if(C&&(C.isLoading()||!0===b.dynamic&&Ma))requestAnimationFrame(ca);else{B("animatefinished",{pitch:da.getPitch(),yaw:da.getYaw(),hfov:da.getHfov()});Ta=!1;ba=p;var a=b.autoRotateInactivityDelay-(Date.now()-N);0<a?Qa=setTimeout(function(){b.autoRotate=Z;da.lookAt(Ga,p,ra,3E3);F()},a):0<=b.autoRotateInactivityDelay&&Z&&(b.autoRotate=Z,da.lookAt(Ga,p,ra,3E3),F())}}function Fa(){var a;if(G){var f=C.getCanvas();!1!==b.autoRotate&&(360<b.yaw?b.yaw-=360:-360>b.yaw&&(b.yaw+=360));a=b.yaw;var n=0;if(b.avoidShowingBackground){var c=
+b.hfov/2,d=180*Math.atan2(Math.tan(c/180*Math.PI),f.width/f.height)/Math.PI;b.vaov>b.haov?Math.min(Math.cos((b.pitch-c)/180*Math.PI),Math.cos((b.pitch+c)/180*Math.PI)):n=c*(1-Math.min(Math.cos((b.pitch-d)/180*Math.PI),Math.cos((b.pitch+d)/180*Math.PI)))}var c=b.maxYaw-b.minYaw,d=-180,e=180;360>c&&(d=b.minYaw+b.hfov/2+n,e=b.maxYaw-b.hfov/2-n,c<b.hfov&&(d=e=(d+e)/2),b.yaw=Math.max(d,Math.min(e,b.yaw)));!1===b.autoRotate&&(360<b.yaw?b.yaw-=360:-360>b.yaw&&(b.yaw+=360));!1!==b.autoRotate&&a!=b.yaw&&ba!==
+p&&(b.autoRotate*=-1);a=2*Math.atan(Math.tan(b.hfov/180*Math.PI*0.5)/(f.width/f.height))/Math.PI*180;f=b.minPitch+a/2;n=b.maxPitch-a/2;b.maxPitch-b.minPitch<a&&(f=n=(f+n)/2);isNaN(f)&&(f=-90);isNaN(n)&&(n=90);b.pitch=Math.max(f,Math.min(n,b.pitch));C.render(b.pitch*Math.PI/180,b.yaw*Math.PI/180,b.hfov*Math.PI/180,{roll:b.roll*Math.PI/180});b.hotSpots.forEach(Ca);b.compass&&(Ia.style.transform="rotate("+(-b.yaw-b.northOffset)+"deg)",Ia.style.webkitTransform="rotate("+(-b.yaw-b.northOffset)+"deg)")}}
+function Y(a,b,c,d){this.w=a;this.x=b;this.y=c;this.z=d}function na(a){var f;f=a.alpha;var c=a.beta;a=a.gamma;c=[c?c*Math.PI/180/2:0,a?a*Math.PI/180/2:0,f?f*Math.PI/180/2:0];f=[Math.cos(c[0]),Math.cos(c[1]),Math.cos(c[2])];c=[Math.sin(c[0]),Math.sin(c[1]),Math.sin(c[2])];f=new Y(f[0]*f[1]*f[2]-c[0]*c[1]*c[2],c[0]*f[1]*f[2]-f[0]*c[1]*c[2],f[0]*c[1]*f[2]+c[0]*f[1]*c[2],f[0]*f[1]*c[2]+c[0]*c[1]*f[2]);f=f.multiply(new Y(Math.sqrt(0.5),-Math.sqrt(0.5),0,0));c=E.orientation?-E.orientation*Math.PI/180/2:
+0;f=f.multiply(new Y(Math.cos(c),0,-Math.sin(c),0)).toEulerAngles();"number"==typeof X&&10>X?X+=1:10===X?($a=f[2]/Math.PI*180+b.yaw,X=!0,requestAnimationFrame(ca)):(b.pitch=f[0]/Math.PI*180,b.roll=-f[1]/Math.PI*180,b.yaw=-f[2]/Math.PI*180+$a)}function va(){try{var a={};b.horizonPitch!==p&&(a.horizonPitch=b.horizonPitch*Math.PI/180);b.horizonRoll!==p&&(a.horizonRoll=b.horizonRoll*Math.PI/180);b.backgroundColor!==p&&(a.backgroundColor=b.backgroundColor);C.init(P,b.type,b.dynamic,b.haov*Math.PI/180,
+b.vaov*Math.PI/180,b.vOffset*Math.PI/180,S,a);!0!==b.dynamic&&(P=p)}catch(f){if("webgl error"==f.type||"no webgl"==f.type)K();else if("webgl size error"==f.type)K(b.strings.textureSizeError.replace("%s",f.width).replace("%s",f.maxWidth));else throw K(b.strings.unknownError),f;}}function S(){if(b.sceneFadeDuration&&C.fadeImg!==p){C.fadeImg.style.opacity=0;var a=C.fadeImg;delete C.fadeImg;setTimeout(function(){M.removeChild(a);B("scenechangefadedone")},b.sceneFadeDuration)}Ia.style.display=b.compass?
+"inline":"none";L();q.load.box.style.display="none";sa!==p&&(M.removeChild(sa),sa=p);G=!0;B("load");F()}function La(a){a.pitch=Number(a.pitch)||0;a.yaw=Number(a.yaw)||0;var f=g.createElement("div");f.className="pnlm-hotspot-base";f.className=a.cssClass?f.className+(" "+a.cssClass):f.className+(" pnlm-hotspot pnlm-sprite pnlm-"+D(a.type));var c=g.createElement("span");a.text&&(c.innerHTML=D(a.text));var d;if(a.video){d=g.createElement("video");var e=a.video;b.basePath&&!qa(e)&&(e=b.basePath+e);d.src=
+I(e);d.controls=!0;d.style.width=a.width+"px";M.appendChild(f);c.appendChild(d)}else if(a.image){e=a.image;b.basePath&&!qa(e)&&(e=b.basePath+e);d=g.createElement("a");d.href=I(a.URL?a.URL:e,!0);d.target="_blank";c.appendChild(d);var h=g.createElement("img");h.src=I(e);h.style.width=a.width+"px";h.style.paddingTop="5px";M.appendChild(f);d.appendChild(h);c.style.maxWidth="initial"}else if(a.URL){d=g.createElement("a");d.href=I(a.URL,!0);if(a.attributes)for(e in a.attributes)d.setAttribute(e,a.attributes[e]);
+else d.target="_blank";M.appendChild(d);f.className+=" pnlm-pointer";c.className+=" pnlm-pointer";d.appendChild(f)}else a.sceneId&&(f.onclick=f.ontouchend=function(){f.clicked||(f.clicked=!0,y(a.sceneId,a.targetPitch,a.targetYaw,a.targetHfov));return!1},f.className+=" pnlm-pointer",c.className+=" pnlm-pointer"),M.appendChild(f);if(a.createTooltipFunc)a.createTooltipFunc(f,a.createTooltipArgs);else if(a.text||a.video||a.image)f.classList.add("pnlm-tooltip"),f.appendChild(c),c.style.width=c.scrollWidth-
+20+"px",c.style.marginLeft=-(c.scrollWidth-f.offsetWidth)/2+"px",c.style.marginTop=-c.scrollHeight-12+"px";a.clickHandlerFunc&&(f.addEventListener("click",function(b){a.clickHandlerFunc(b,a.clickHandlerArgs)},"false"),f.className+=" pnlm-pointer",c.className+=" pnlm-pointer");a.div=f}function L(){Ua||(b.hotSpots?(b.hotSpots=b.hotSpots.sort(function(a,b){return a.pitch<b.pitch}),b.hotSpots.forEach(La)):b.hotSpots=[],Ua=!0,b.hotSpots.forEach(Ca))}function e(){var a=b.hotSpots;Ua=!1;delete b.hotSpots;
+if(a)for(var f=0;f<a.length;f++){var c=a[f].div;if(c){for(;c.parentNode&&c.parentNode!=M;)c=c.parentNode;M.removeChild(c)}delete a[f].div}}function Ca(a){var f=Math.sin(a.pitch*Math.PI/180),c=Math.cos(a.pitch*Math.PI/180),d=Math.sin(b.pitch*Math.PI/180),e=Math.cos(b.pitch*Math.PI/180),g=Math.cos((-a.yaw+b.yaw)*Math.PI/180),h=f*d+c*g*e;if(90>=a.yaw&&-90<a.yaw&&0>=h||(90<a.yaw||-90>=a.yaw)&&0>=h)a.div.style.visibility="hidden";else{var l=Math.sin((-a.yaw+b.yaw)*Math.PI/180),k=Math.tan(b.hfov*Math.PI/
+360);a.div.style.visibility="visible";var m=C.getCanvas(),p=m.clientWidth,m=m.clientHeight,f=[-p/k*l*c/h/2,-p/k*(f*e-c*g*d)/h/2],c=Math.sin(b.roll*Math.PI/180),d=Math.cos(b.roll*Math.PI/180),f=[f[0]*d-f[1]*c,f[0]*c+f[1]*d];f[0]+=(p-a.div.offsetWidth)/2;f[1]+=(m-a.div.offsetHeight)/2;p="translate("+f[0]+"px, "+f[1]+"px) translateZ(9999px) rotate("+b.roll+"deg)";a.scale&&(p+=" scale("+ra/b.hfov/h+")");a.div.style.webkitTransform=p;a.div.style.MozTransform=p;a.div.style.transform=p}}function H(a){b=
+{};var f,c,d="haov vaov vOffset northOffset horizonPitch horizonRoll".split(" ");aa=[];for(f in Va)Va.hasOwnProperty(f)&&(b[f]=Va[f]);for(f in k.default)if(k.default.hasOwnProperty(f))if("strings"==f)for(c in k.default.strings)k.default.strings.hasOwnProperty(c)&&(b.strings[c]=D(k.default.strings[c]));else b[f]=k.default[f],0<=d.indexOf(f)&&aa.push(f);if(null!==a&&""!==a&&k.scenes&&k.scenes[a]){var e=k.scenes[a];for(f in e)if(e.hasOwnProperty(f))if("strings"==f)for(c in e.strings)e.strings.hasOwnProperty(c)&&
+(b.strings[c]=D(e.strings[c]));else b[f]=e[f],0<=d.indexOf(f)&&aa.push(f);b.scene=a}for(f in k)if(k.hasOwnProperty(f))if("strings"==f)for(c in k.strings)k.strings.hasOwnProperty(c)&&(b.strings[c]=D(k.strings[c]));else b[f]=k[f],0<=d.indexOf(f)&&aa.push(f)}function l(a){if((a=a?a:!1)&&"preview"in b){var c=b.preview;b.basePath&&!qa(c)&&(c=b.basePath+c);sa=g.createElement("div");sa.className="pnlm-preview-img";sa.style.backgroundImage="url('"+I(c).replace(/"/g,"%22").replace(/'/g,"%27")+"')";M.appendChild(sa)}var c=
+b.title,d=b.author;a&&("previewTitle"in b&&(b.title=b.previewTitle),"previewAuthor"in b&&(b.author=b.previewAuthor));b.hasOwnProperty("title")||(q.title.innerHTML="");b.hasOwnProperty("author")||(q.author.innerHTML="");b.hasOwnProperty("title")||b.hasOwnProperty("author")||(q.container.style.display="none");v.load.innerHTML="<p>"+b.strings.loadButtonLabel+"</p>";q.load.boxp.innerHTML=b.strings.loadingLabel;for(var e in b)if(b.hasOwnProperty(e))switch(e){case "title":q.title.innerHTML=D(b[e]);q.container.style.display=
+"inline";break;case "author":var h=D(b[e]);b.authorURL&&(h=g.createElement("a"),h.href=I(b.authorURL,!0),h.target="_blank",h.innerHTML=D(b[e]),h=h.outerHTML);q.author.innerHTML=b.strings.bylineLabel.replace("%s",h);q.container.style.display="inline";break;case "fallback":h=g.createElement("a");h.href=I(b[e],!0);h.target="_blank";h.textContent="Click here to view this panorama in an alternative viewer.";var k=g.createElement("p");k.textContent="Your browser does not support WebGL.";k.appendChild(g.createElement("br"));
+k.appendChild(h);q.errorMsg.innerHTML="";q.errorMsg.appendChild(k);break;case "hfov":x(Number(b[e]));break;case "autoLoad":!0===b[e]&&C===p&&(q.load.box.style.display="inline",v.load.style.display="none",oa());break;case "showZoomCtrl":v.zoom.style.display=b[e]&&!1!=b.showControls?"block":"none";break;case "showFullscreenCtrl":v.fullscreen.style.display=b[e]&&!1!=b.showControls&&("fullscreen"in g||"mozFullScreen"in g||"webkitIsFullScreen"in g||"msFullscreenElement"in g)?"block":"none";break;case "hotSpotDebug":Wa.style.display=
+b[e]?"block":"none";break;case "showControls":b[e]||(v.orientation.style.display="none",v.zoom.style.display="none",v.fullscreen.style.display="none");break;case "orientationOnByDefault":b[e]&&Ra()}a&&(c?b.title=c:delete b.title,d?b.author=d:delete b.author)}function h(){if(G&&!Na)if(Aa)g.exitFullscreen?g.exitFullscreen():g.mozCancelFullScreen?g.mozCancelFullScreen():g.webkitCancelFullScreen?g.webkitCancelFullScreen():g.msExitFullscreen&&g.msExitFullscreen();else try{s.requestFullscreen?s.requestFullscreen():
+s.mozRequestFullScreen?s.mozRequestFullScreen():s.msRequestFullscreen?s.msRequestFullscreen():s.webkitRequestFullScreen()}catch(a){}}function d(a){g.fullscreenElement||g.fullscreen||g.mozFullScreen||g.webkitIsFullScreen||g.msFullscreenElement?(v.fullscreen.classList.add("pnlm-fullscreen-toggle-button-active"),Aa=!0):(v.fullscreen.classList.remove("pnlm-fullscreen-toggle-button-active"),Aa=!1);"resize"!==a&&B("fullscreenchange",Aa);C.resize();x(b.hfov);F()}function u(a){var c=b.minHfov;"multires"==
+b.type&&C&&!b.multiResMinHfov&&(c=Math.min(c,C.getCanvas().width/(b.multiRes.cubeResolution/90*0.9)));if(c>b.maxHfov)return console.log("HFOV bounds do not make sense (minHfov > maxHfov)."),b.hfov;var d=b.hfov,d=a<c?c:a>b.maxHfov?b.maxHfov:a;b.avoidShowingBackground&&C&&(a=C.getCanvas(),d=Math.min(d,360*Math.atan(Math.tan((b.maxPitch-b.minPitch)/360*Math.PI)/a.height*a.width)/Math.PI));return d}function x(a){b.hfov=u(a);B("zoomchange",b.hfov)}function t(){O={};Z=b.autoRotate?b.autoRotate:Z;b.autoRotate=
+!1}function Ya(){Na&&(q.load.box.style.display="none",q.errorMsg.style.display="none",Na=!1,M.style.display="block",B("errorcleared"));G=!1;v.load.style.display="none";q.load.box.style.display="inline";oa()}function y(a,c,d,h,g){G||(g=!0);G=!1;O={};var m,q;if(b.sceneFadeDuration&&!g&&(m=C.render(b.pitch*Math.PI/180,b.yaw*Math.PI/180,b.hfov*Math.PI/180,{returnImage:!0}),m!==p)){g=new Image;g.className="pnlm-fade-img";g.style.transition="opacity "+b.sceneFadeDuration/1E3+"s";g.style.width="100%";g.style.height=
+"100%";g.onload=function(){y(a,c,d,h,!0)};g.src=m;M.appendChild(g);C.fadeImg=g;return}g="same"===c?b.pitch:c;m="same"===d?b.yaw:"sameAzimuth"===d?b.yaw+(b.northOffset||0)-(k.scenes[a].northOffset||0):d;q="same"===h?b.hfov:h;e();H(a);w.yaw=w.pitch=w.hfov=0;l();g!==p&&(b.pitch=g);m!==p&&(b.yaw=m);q!==p&&(b.hfov=q);B("scenechange",a);Ya()}function Da(){E.removeEventListener("deviceorientation",na);v.orientation.classList.remove("pnlm-orientation-button-active");X=!1}function Ra(){"function"===typeof DeviceMotionEvent.requestPermission?
+DeviceOrientationEvent.requestPermission().then(function(a){"granted"==a&&(X=1,E.addEventListener("deviceorientation",na),v.orientation.classList.add("pnlm-orientation-button-active"))}):(X=1,E.addEventListener("deviceorientation",na),v.orientation.classList.add("pnlm-orientation-button-active"))}function D(a){return k.escapeHTML?String(a).split(/&/g).join("&amp;").split('"').join("&quot;").split("'").join("&#39;").split("<").join("&lt;").split(">").join("&gt;").split("/").join("&#x2f;").split("\n").join("<br>"):
+String(a).split("\n").join("<br>")}function I(a,b){try{var c=decodeURIComponent(ab(a)).replace(/[^\w:]/g,"").toLowerCase()}catch(d){return"about:blank"}return 0===c.indexOf("javascript:")||0===c.indexOf("vbscript:")?(console.log("Script URL removed."),"about:blank"):b&&0===c.indexOf("data:")?(console.log("Data URI removed from link."),"about:blank"):a}function ab(a){return a.replace(/&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/ig,function(a,b){b=b.toLowerCase();return"colon"===b?":":"#"===b.charAt(0)?
+"x"===b.charAt(1)?String.fromCharCode(parseInt(b.substring(2),16)):String.fromCharCode(+b.substring(1)):""})}function B(a){if(a in T)for(var b=T[a].length;0<b;b--)T[a][T[a].length-b].apply(null,[].slice.call(arguments,1))}var da=this,b,C,sa,ha=!1,N=Date.now(),xa=0,ya=0,Ha=-1,Oa=0,Pa=0,r=Array(10),Aa=!1,G,Na=!1,Sa=!1,P,ba,w={yaw:0,pitch:0,hfov:0},Ta=!1,X=!1,$a=0,Qa,Z=0,ra,Ga,O={},T={},aa=[],Ma=!1,Ua=!1,Za=!1,Va={hfov:100,minHfov:50,multiResMinHfov:!1,maxHfov:120,pitch:0,minPitch:p,maxPitch:p,yaw:0,
+minYaw:-180,maxYaw:180,roll:0,haov:360,vaov:180,vOffset:0,autoRotate:!1,autoRotateInactivityDelay:-1,autoRotateStopDelay:p,type:"equirectangular",northOffset:0,showFullscreenCtrl:!0,dynamic:!1,dynamicUpdate:!1,doubleClickZoom:!0,keyboardZoom:!0,mouseZoom:!0,showZoomCtrl:!0,autoLoad:!1,showControls:!0,orientationOnByDefault:!1,hotSpotDebug:!1,backgroundColor:[0,0,0],avoidShowingBackground:!1,animationTimingFunction:function(a){return 0.5>a?2*a*a:-1+(4-2*a)*a},draggable:!0,disableKeyboardCtrl:!1,crossOrigin:"anonymous",
+touchPanSpeedCoeffFactor:1,capturedKeyNumbers:[16,17,27,37,38,39,40,61,65,68,83,87,107,109,173,187,189],friction:0.15,strings:{loadButtonLabel:"Click to<br>Load<br>Panorama",loadingLabel:"Loading...",bylineLabel:"by %s",noPanoramaError:"No panorama image was specified.",fileAccessError:"The file %s could not be accessed.",malformedURLError:"There is something wrong with the panorama URL.",iOS8WebGLError:"Due to iOS 8's broken WebGL implementation, only progressive encoded JPEGs work for your device (this panorama uses standard encoding).",
+genericWebGLError:"Your browser does not have the necessary WebGL support to display this panorama.",textureSizeError:"This panorama is too big for your device! It's %spx wide, but your device only supports images up to %spx wide. Try another device. (If you're the author, try scaling down the image.)",unknownError:"Unknown error. Check developer console."}};s="string"===typeof s?g.getElementById(s):s;s.classList.add("pnlm-container");s.tabIndex=0;var J=g.createElement("div");J.className="pnlm-ui";
+s.appendChild(J);var M=g.createElement("div");M.className="pnlm-render-container";s.appendChild(M);var W=g.createElement("div");W.className="pnlm-dragfix";J.appendChild(W);var fa=g.createElement("span");fa.className="pnlm-about-msg";fa.innerHTML='<a href="https://pannellum.org/" target="_blank">Pannellum</a> 2.5.6';J.appendChild(fa);W.addEventListener("contextmenu",ja);var q={},Wa=g.createElement("div");Wa.className="pnlm-sprite pnlm-hot-spot-debug-indicator";J.appendChild(Wa);q.container=g.createElement("div");
+q.container.className="pnlm-panorama-info";q.title=g.createElement("div");q.title.className="pnlm-title-box";q.container.appendChild(q.title);q.author=g.createElement("div");q.author.className="pnlm-author-box";q.container.appendChild(q.author);J.appendChild(q.container);q.load={};q.load.box=g.createElement("div");q.load.box.className="pnlm-load-box";q.load.boxp=g.createElement("p");q.load.box.appendChild(q.load.boxp);q.load.lbox=g.createElement("div");q.load.lbox.className="pnlm-lbox";q.load.lbox.innerHTML=
+'<div class="pnlm-loading"></div>';q.load.box.appendChild(q.load.lbox);q.load.lbar=g.createElement("div");q.load.lbar.className="pnlm-lbar";q.load.lbarFill=g.createElement("div");q.load.lbarFill.className="pnlm-lbar-fill";q.load.lbar.appendChild(q.load.lbarFill);q.load.box.appendChild(q.load.lbar);q.load.msg=g.createElement("p");q.load.msg.className="pnlm-lmsg";q.load.box.appendChild(q.load.msg);J.appendChild(q.load.box);q.errorMsg=g.createElement("div");q.errorMsg.className="pnlm-error-msg pnlm-info-box";
+J.appendChild(q.errorMsg);var v={};v.container=g.createElement("div");v.container.className="pnlm-controls-container";J.appendChild(v.container);v.load=g.createElement("div");v.load.className="pnlm-load-button";v.load.addEventListener("click",function(){l();Ya()});J.appendChild(v.load);v.zoom=g.createElement("div");v.zoom.className="pnlm-zoom-controls pnlm-controls";v.zoomIn=g.createElement("div");v.zoomIn.className="pnlm-zoom-in pnlm-sprite pnlm-control";v.zoomIn.addEventListener("click",function(){G&&
+(x(b.hfov-5),F())});v.zoom.appendChild(v.zoomIn);v.zoomOut=g.createElement("div");v.zoomOut.className="pnlm-zoom-out pnlm-sprite pnlm-control";v.zoomOut.addEventListener("click",function(){G&&(x(b.hfov+5),F())});v.zoom.appendChild(v.zoomOut);v.container.appendChild(v.zoom);v.fullscreen=g.createElement("div");v.fullscreen.addEventListener("click",h);v.fullscreen.className="pnlm-fullscreen-toggle-button pnlm-sprite pnlm-fullscreen-toggle-button-inactive pnlm-controls pnlm-control";(g.fullscreenEnabled||
+g.mozFullScreenEnabled||g.webkitFullscreenEnabled||g.msFullscreenEnabled)&&v.container.appendChild(v.fullscreen);v.orientation=g.createElement("div");v.orientation.addEventListener("click",function(a){X?Da():Ra()});v.orientation.addEventListener("mousedown",function(a){a.stopPropagation()});v.orientation.addEventListener("touchstart",function(a){a.stopPropagation()});v.orientation.addEventListener("pointerdown",function(a){a.stopPropagation()});v.orientation.className="pnlm-orientation-button pnlm-orientation-button-inactive pnlm-sprite pnlm-controls pnlm-control";
+var Xa=!1;E.DeviceOrientationEvent&&"https:"==location.protocol&&0<=navigator.userAgent.toLowerCase().indexOf("mobi")&&(v.container.appendChild(v.orientation),Xa=!0);var Ia=g.createElement("div");Ia.className="pnlm-compass pnlm-controls pnlm-control";J.appendChild(Ia);k.firstScene?H(k.firstScene):k.default&&k.default.firstScene?H(k.default.firstScene):H(null);l(!0);var ia=[],za=[];Y.prototype.multiply=function(a){return new Y(this.w*a.w-this.x*a.x-this.y*a.y-this.z*a.z,this.x*a.w+this.w*a.x+this.y*
+a.z-this.z*a.y,this.y*a.w+this.w*a.y+this.z*a.x-this.x*a.z,this.z*a.w+this.w*a.z+this.x*a.y-this.y*a.x)};Y.prototype.toEulerAngles=function(){var a=Math.atan2(2*(this.w*this.x+this.y*this.z),1-2*(this.x*this.x+this.y*this.y)),b=Math.asin(2*(this.w*this.y-this.z*this.x)),c=Math.atan2(2*(this.w*this.z+this.x*this.y),1-2*(this.y*this.y+this.z*this.z));return[a,b,c]};this.isLoaded=function(){return Boolean(G)};this.getPitch=function(){return b.pitch};this.setPitch=function(a,c,d,e){N=Date.now();if(1E-6>=
+Math.abs(a-b.pitch))return"function"==typeof d&&d(e),this;(c=c==p?1E3:Number(c))?(O.pitch={startTime:Date.now(),startPosition:b.pitch,endPosition:a,duration:c},"function"==typeof d&&setTimeout(function(){d(e)},c)):b.pitch=a;F();return this};this.getPitchBounds=function(){return[b.minPitch,b.maxPitch]};this.setPitchBounds=function(a){b.minPitch=Math.max(-90,Math.min(a[0],90));b.maxPitch=Math.max(-90,Math.min(a[1],90));return this};this.getYaw=function(){return(b.yaw+540)%360-180};this.setYaw=function(a,
+c,d,e){N=Date.now();if(1E-6>=Math.abs(a-b.yaw))return"function"==typeof d&&d(e),this;c=c==p?1E3:Number(c);a=(a+180)%360-180;c?(180<b.yaw-a?a+=360:180<a-b.yaw&&(a-=360),O.yaw={startTime:Date.now(),startPosition:b.yaw,endPosition:a,duration:c},"function"==typeof d&&setTimeout(function(){d(e)},c)):b.yaw=a;F();return this};this.getYawBounds=function(){return[b.minYaw,b.maxYaw]};this.setYawBounds=function(a){b.minYaw=Math.max(-360,Math.min(a[0],360));b.maxYaw=Math.max(-360,Math.min(a[1],360));return this};
+this.getHfov=function(){return b.hfov};this.setHfov=function(a,c,d,e){N=Date.now();if(1E-6>=Math.abs(a-b.hfov))return"function"==typeof d&&d(e),this;(c=c==p?1E3:Number(c))?(O.hfov={startTime:Date.now(),startPosition:b.hfov,endPosition:u(a),duration:c},"function"==typeof d&&setTimeout(function(){d(e)},c)):x(a);F();return this};this.getHfovBounds=function(){return[b.minHfov,b.maxHfov]};this.setHfovBounds=function(a){b.minHfov=Math.max(0,a[0]);b.maxHfov=Math.max(0,a[1]);return this};this.lookAt=function(a,
+c,d,e,g,h){e=e==p?1E3:Number(e);a!==p&&1E-6<Math.abs(a-b.pitch)&&(this.setPitch(a,e,g,h),g=p);c!==p&&1E-6<Math.abs(c-b.yaw)&&(this.setYaw(c,e,g,h),g=p);d!==p&&1E-6<Math.abs(d-b.hfov)&&(this.setHfov(d,e,g,h),g=p);"function"==typeof g&&g(h);return this};this.getNorthOffset=function(){return b.northOffset};this.setNorthOffset=function(a){b.northOffset=Math.min(360,Math.max(0,a));F();return this};this.getHorizonRoll=function(){return b.horizonRoll};this.setHorizonRoll=function(a){b.horizonRoll=Math.min(90,
+Math.max(-90,a));C.setPose(b.horizonPitch*Math.PI/180,b.horizonRoll*Math.PI/180);F();return this};this.getHorizonPitch=function(){return b.horizonPitch};this.setHorizonPitch=function(a){b.horizonPitch=Math.min(90,Math.max(-90,a));C.setPose(b.horizonPitch*Math.PI/180,b.horizonRoll*Math.PI/180);F();return this};this.startAutoRotate=function(a,c){a=a||Z||1;c=c===p?Ga:c;b.autoRotate=a;da.lookAt(c,p,ra,3E3);F();return this};this.stopAutoRotate=function(){Z=b.autoRotate?b.autoRotate:Z;b.autoRotate=!1;b.autoRotateInactivityDelay=
+-1;return this};this.stopMovement=function(){t();w={yaw:0,pitch:0,hfov:0}};this.getRenderer=function(){return C};this.setUpdate=function(a){Ma=!0===a;C===p?pa():F();return this};this.mouseEventToCoords=function(a){return ta(a)};this.loadScene=function(a,b,c,d){!1!==G&&y(a,b,c,d);return this};this.getScene=function(){return b.scene};this.addScene=function(a,b){k.scenes[a]=b;return this};this.removeScene=function(a){if(b.scene===a||!k.scenes.hasOwnProperty(a))return!1;delete k.scenes[a];return!0};this.toggleFullscreen=
+function(){h();return this};this.getConfig=function(){return b};this.getContainer=function(){return s};this.addHotSpot=function(a,c){if(c===p&&b.scene===p)b.hotSpots.push(a);else{var d=c!==p?c:b.scene;if(k.scenes.hasOwnProperty(d))k.scenes[d].hasOwnProperty("hotSpots")||(k.scenes[d].hotSpots=[],d==b.scene&&(b.hotSpots=k.scenes[d].hotSpots)),k.scenes[d].hotSpots.push(a);else throw"Invalid scene ID!";}if(c===p||b.scene==c)La(a),G&&Ca(a);return this};this.removeHotSpot=function(a,c){if(c===p||b.scene==
+c){if(!b.hotSpots)return!1;for(var d=0;d<b.hotSpots.length;d++)if(b.hotSpots[d].hasOwnProperty("id")&&b.hotSpots[d].id===a){for(var e=b.hotSpots[d].div;e.parentNode!=M;)e=e.parentNode;M.removeChild(e);delete b.hotSpots[d].div;b.hotSpots.splice(d,1);return!0}}else if(k.scenes.hasOwnProperty(c)){if(!k.scenes[c].hasOwnProperty("hotSpots"))return!1;for(d=0;d<k.scenes[c].hotSpots.length;d++)if(k.scenes[c].hotSpots[d].hasOwnProperty("id")&&k.scenes[c].hotSpots[d].id===a)return k.scenes[c].hotSpots.splice(d,
+1),!0}else return!1};this.resize=function(){C&&z()};this.isLoaded=function(){return G};this.isOrientationSupported=function(){return Xa||!1};this.stopOrientation=function(){Da()};this.startOrientation=function(){Xa&&Ra()};this.isOrientationActive=function(){return Boolean(X)};this.on=function(a,b){T[a]=T[a]||[];T[a].push(b);return this};this.off=function(a,b){if(!a)return T={},this;if(b){var c=T[a].indexOf(b);0<=c&&T[a].splice(c,1);0==T[a].length&&delete T[a]}else delete T[a];return this};this.destroy=
+function(){Za=!0;clearTimeout(Qa);C&&C.destroy();Sa&&(g.removeEventListener("mousemove",ua,!1),g.removeEventListener("mouseup",ma,!1),s.removeEventListener("mozfullscreenchange",d,!1),s.removeEventListener("webkitfullscreenchange",d,!1),s.removeEventListener("msfullscreenchange",d,!1),s.removeEventListener("fullscreenchange",d,!1),E.removeEventListener("resize",z,!1),E.removeEventListener("orientationchange",z,!1),s.removeEventListener("keydown",V,!1),s.removeEventListener("keyup",R,!1),s.removeEventListener("blur",
+$,!1),g.removeEventListener("mouseleave",ma,!1));s.innerHTML="";s.classList.remove("pnlm-container")}}return{viewer:function(g,k){return new Ba(g,k)}}}(window,document);
+
+</script>
+<script>
+window.ERAS_DATA = {
+  "appTitle": "大航海時代的臺灣時光機",
+  "appSubtitle": "360° 沉浸式探索大挑戰",
+  "brandTag": "社會五上・大航海時代的臺灣",
+  "homeBadge": "🌟 國小數位 360° 自主學習教材",
+  "homeDesc": "歡迎登上跨時代航海探險船！你將從現代高雄港出發，穿越回十六、十七世紀的歐亞海域與福爾摩沙，透過 360° 全景轉動尋找貿易與航行線索，破解大航海時代臺灣躍上世界舞臺的秘密挑戰！",
+  "startButtonText": "🚀 啟動航海探險機",
+  "timelineTitle": "⏱️ 大航海探索任務進度儀表板",
+  "issuer": "國小社會科數位互動教學團隊",
+  "certTitle": "小小大航海家",
+  "certSub": "🏆 闖 關 成 功 證 書 🏆",
+  "certTextLines": [
+    "勇敢穿越古今海洋航線，探索福爾摩沙的關鍵地理位置，",
+    "透過細緻觀察發現各時期貿易據點與商品線索，全數克服航海考驗，",
+    "深刻理解臺灣如何從區域交流走向世界貿易舞臺，展現卓越知能，",
+    "表現卓絕優異，特頒發此證書，以資鼓勵！"
+  ],
+  "eras": [
+    {
+      "id": "scene_1",
+      "name": "第一站：現代高雄港貨櫃樞紐",
+      "subtitle": "亞洲東部的全球海運心臟",
+      "years": "現代・21世紀",
+      "site": "臺灣南部・高雄港貨櫃碼頭",
+      "badgeTitle": "全球航運領航員",
+      "badgeEmoji": "🚢",
+      "intro": "探險第一站來到現代高雄港！快站在高處環視忙碌的貨櫃碼頭與外海航道，找出臺灣成為全球重要海運樞紐的線索吧！",
+      "captainHint": "轉動畫面看看四周，發光的圓點就是生活線索喔！把線索全部找出來，才能挑戰生存任務！",
+      "hotspots": [
+        {
+          "id": "c1",
+          "icon": "📦",
+          "title": "五顏六色的國際貨櫃",
+          "text": "碼頭上整齊堆疊著印有各國航運標誌的彩色貨櫃，貨櫃船是各國運輸的主要方式，展現高雄港驚人的貨物吞吐量。",
+          "yaw": -84.1,
+          "pitch": -3.1
+        },
+        {
+          "id": "c2",
+          "icon": "🏗️",
+          "title": "巨大的橋式起重機",
+          "text": "岸邊一排排高大的橋式起重機正忙著將貨櫃吊掛上停泊在岸邊的超大型貨櫃輪，讓跨國海運裝卸變得快速又有效率。",
+          "yaw": -74.8,
+          "pitch": 28.8
+        },
+        {
+          "id": "c3",
+          "icon": "🧭",
+          "title": "連接五大洲的海運航線",
+          "text": "港灣外海面寬闊，貨櫃輪正沿著東北亞、東南亞、美洲、紐澳及中東歐洲航線駛向世界各地，是全球重要的貨櫃港之一。",
+          "yaw": 82.9,
+          "pitch": -8.4
+        },
+        {
+          "id": "c4",
+          "icon": "🌊",
+          "title": "繁忙的臺灣海峽航道",
+          "text": "臺灣四面環海，西邊的臺灣海峽有大量貨櫃船通過，從史前時代與東南亞的玉器區域交流，演變成今日的亞洲東部交通樞紐。",
+          "yaw": 71.1,
+          "pitch": 2.9
+        }
+      ],
+      "quiz": [
+        {
+          "q": "為什麼現代的臺灣在世界海運體系中占有重要地位？",
+          "options": [
+            "位於亞洲東部交通樞紐，西邊的臺灣海峽是全球繁忙的海運航道",
+            "臺灣是全球唯一擁有深水貨櫃碼頭的島嶼",
+            "所有歐洲貨櫃船都必須經過臺灣內陸運河",
+            "臺灣四面環山，完全不受海洋氣候影響"
+          ],
+          "answer": 0,
+          "hint": "思考臺灣的地理位置以及西側海域的航運繁忙程度。",
+          "explain": "臺灣位於亞洲東部南北往來的必經之地，西邊的臺灣海峽有大量貨櫃船通過，是全球繁忙的海運航道之一。"
+        },
+        {
+          "q": "根據課本介紹，今日臺灣哪一個港口擁有通向世界各國的海運航線，更是全球重要的貨櫃港之一？",
+          "options": [
+            "蘇澳港",
+            "高雄港",
+            "安平港",
+            "馬公港"
+          ],
+          "answer": 1,
+          "hint": "課本第86頁地圖中用粉紅色標籤特別標示出的南部大港。",
+          "explain": "高雄港擁有東北亞、東南亞、美洲、紐澳及中東歐洲等國際航線，是全球重要的貨櫃港之一。"
+        },
+        {
+          "q": "在東南亞的許多考古遺址中曾發現來自臺灣的玉器，這代表什麼歷史意義？",
+          "options": [
+            "十七世紀荷蘭人將臺灣玉石大量銷往東南亞",
+            "早在史前時代，住在臺灣的人們就已經與島外進行跨海交流",
+            "鄭成功曾派船隊前往東南亞開採玉礦",
+            "臺灣的玉器是由歐洲商人從陸上絲路運來的"
+          ],
+          "answer": 1,
+          "hint": "注意「考古遺址」代表的是還沒有文字記載的早期時代。",
+          "explain": "臺灣四面環海，早在史前時代人們就與島外有跨海交流，但受限於當時航海技術，多為區域性交流。"
+        }
+      ],
+      "panorama": "assets/d50cfe1693c4e1e3.png",
+      "badge": "img/badges/paleolithic.png",
+      "dataUri": "assets/d50cfe1693c4e1e3.png"
+    },
+    {
+      "id": "scene_2",
+      "name": "第二站：17世紀荷蘭測繪船與古地圖",
+      "subtitle": "橫躺的臺灣與美麗之島「Formosa」",
+      "years": "西元16～17世紀",
+      "site": "臺灣西南部外海・荷蘭東印度公司帆船甲板",
+      "badgeTitle": "福爾摩沙測繪師",
+      "badgeEmoji": "🗺️",
+      "intro": "我們穿越回十七世紀的荷蘭測繪帆船甲板上！快環視桌上的古地圖草稿與遠方的臺灣海岸，解開地圖為什麼「橫躺」的秘密！",
+      "captainHint": "轉動畫面看看四周，發光的圓點就是生活線索喔！把線索全部找出來，才能挑戰生存任務！",
+      "hotspots": [
+        {
+          "id": "c1",
+          "icon": "📜",
+          "title": "桌上的橫躺臺灣古地圖",
+          "text": "十七世紀荷蘭人從海上望向臺灣西海岸繪製地圖，因為視角由西向東看（東方朝上），地圖上的臺灣看起來就像橫躺著一樣！",
+          "yaw": 18.6,
+          "pitch": -31.2
+        },
+        {
+          "id": "c2",
+          "icon": "⛰️",
+          "title": "雲霧繚繞的翠綠山脈",
+          "text": "遠方層疊的綠色高山與炊煙映入眼簾，十六世紀歐洲人航經臺灣時讚嘆為「Ilha Formosa（美麗之島）」，後來便常用 Formosa 代表臺灣。",
+          "yaw": 3,
+          "pitch": 26.7
+        },
+        {
+          "id": "c3",
+          "icon": "🏝️",
+          "title": "沙洲與潟湖海岸地形",
+          "text": "前方海岸分布著沙洲與潟湖（台江內海意象），能阻擋外海風浪，是大型帆船尋找安全港灣停靠與測繪的重要原因。",
+          "yaw": 108.3,
+          "pitch": 13.2
+        },
+        {
+          "id": "c4",
+          "icon": "🧭",
+          "title": "航海羅盤與澎湖群島航道",
+          "text": "甲板上的黃銅羅盤與望遠鏡見證了遠洋航海技術的提升；轉頭向後方臺灣海峽望去，古地圖下方還精細畫出了澎湖群島的輪廓。",
+          "yaw": 46.8,
+          "pitch": -50.7
+        }
+      ],
+      "quiz": [
+        {
+          "q": "課本第85頁展示的十七世紀荷蘭人所繪臺灣古地圖，為什麼臺灣的形狀看起來像是「橫躺」著？",
+          "options": [
+            "因為當時發生大地震讓臺灣轉了九十度",
+            "因為荷蘭人從海上由西向東觀察測繪，將東方畫在地圖上方",
+            "因為荷蘭畫家不小心把畫紙拿反了",
+            "因為當時臺灣與澎湖群島連成一條水平線"
+          ],
+          "answer": 1,
+          "hint": "想像你搭船從西邊的臺灣海峽往東邊的中央山脈看過去，山脈會在畫面的哪一邊？",
+          "explain": "荷蘭人從西方海域航向臺灣，以西方朝下、東方朝上的視角繪製海圖，因此南北狹長的臺灣在地圖上呈現橫躺的樣子。"
+        },
+        {
+          "q": "十六世紀歐洲人航行經過臺灣時，讚嘆臺灣為「Ilha Formosa」，這句話是什麼意思？",
+          "options": [
+            "美麗之島",
+            "香料之島",
+            "白銀之島",
+            "貿易之島"
+          ],
+          "answer": 0,
+          "hint": "參考課本第88頁「小百科：福爾摩沙」的說明。",
+          "explain": "十六世紀歐洲人航經臺灣時讚嘆其風景秀麗，稱之為「Ilha Formosa」（美麗之島），後來西方人就常用「Formosa」代表臺灣。"
+        },
+        {
+          "q": "西元十五到十七世紀之間，歐洲人遠洋航行的知識和技術提升，大規模探索世界並展開歐亞海上貿易，這個時期稱為什麼？",
+          "options": [
+            "大航海時代",
+            "蒸汽火車時代",
+            "史前玉器時代",
+            "太空探索時代"
+          ],
+          "answer": 0,
+          "hint": "這是本單元的單元名稱，也是第87頁小百科介紹的重要歷史名詞。",
+          "explain": "西元十五到十七世紀之間，歐洲遠洋航海技術提升，促進歐亞海上貿易密切往來，歷史上稱為「大航海時代」。"
+        }
+      ],
+      "panorama": "assets/0b63dc3c62a64ecf.png",
+      "badge": "img/badges/paleolithic.png",
+      "dataUri": "assets/0b63dc3c62a64ecf.png"
+    },
+    {
+      "id": "scene_3",
+      "name": "第三站：17世紀跨國貿易港口與鄭芝龍船隊",
+      "subtitle": "瓷器、絲綢、香料與東亞海上霸主",
+      "years": "西元17世紀初",
+      "site": "亞洲轉運港口與東亞貿易海域",
+      "badgeTitle": "東亞黃金貿易商",
+      "badgeEmoji": "🏺",
+      "intro": "歡迎來到十七世紀熱鬧的亞洲轉運港口！歐洲商人、華人海商與日本船隻都在這裡交易，快環視四周找出最搶手的商品與海上霸主線索！",
+      "captainHint": "轉動畫面看看四周，發光的圓點就是生活線索喔！把線索全部找出來，才能挑戰生存任務！",
+      "hotspots": [
+        {
+          "id": "c1",
+          "icon": "🥣",
+          "title": "精緻的中國青花瓷器",
+          "text": "打開剛從亞洲商船卸下的木箱，裡面裝滿了歐洲人非常喜愛的青花瓷碗，過去只能靠陸上運輸，價格非常昂貴。",
+          "yaw": -100.1,
+          "pitch": -33.1
+        },
+        {
+          "id": "c2",
+          "icon": "👘",
+          "title": "色彩鮮豔的中國絲綢",
+          "text": "成捆華麗柔軟的絲綢布匹正準備裝上歐洲商船，海上貿易新航路開啟後，成為歐洲與亞洲商品交流的重要通道。",
+          "yaw": 0.1,
+          "pitch": -49.4
+        },
+        {
+          "id": "c3",
+          "icon": "🌶️",
+          "title": "保存食物的亞洲香料",
+          "text": "麻布袋裡裝滿肉桂、八角與胡椒等香料，香料是保存食物與提升風味的重要原料，而亞洲正是全球主要產區之一。",
+          "yaw": 111.1,
+          "pitch": -33.1
+        },
+        {
+          "id": "c4",
+          "icon": "⚔️",
+          "title": "掌控東亞海域的鄭芝龍",
+          "text": "十六世紀以來許多中國與日本海商到臺灣交易；後來鄭芝龍在中國東南沿海、臺灣、日本與東南亞建立龐大商業船隊，手持權杖展現海上權威。",
+          "yaw": 10.7,
+          "pitch": -7.9
+        }
+      ],
+      "quiz": [
+        {
+          "q": "大航海時代以前，歐洲人非常喜愛亞洲的哪些商品，因為陸上運輸不易而價格非常昂貴？",
+          "options": [
+            "瓷器、絲綢、香料",
+            "鋼鐵、汽車、玻璃",
+            "玉米、馬鈴薯、番茄",
+            "茶葉、咖啡、可可"
+          ],
+          "answer": 0,
+          "hint": "課本第87頁特別用三張圓形小圖介紹這三樣亞洲熱門商品。",
+          "explain": "大航海時代以前，歐洲人非常喜愛亞洲的瓷器、絲綢與香料，為了取得這些商品而開啟海上貿易新航路。"
+        },
+        {
+          "q": "歐洲商人想要取得中國的瓷器和絲綢，為什麼會來到臺灣建立貿易據點？",
+          "options": [
+            "因為臺灣位在日本和東南亞之間，方便與中國、日本進行貿易",
+            "因為全世界的瓷器與絲綢都只在臺灣生產",
+            "因為歐洲商船無法在太平洋與印度洋航行",
+            "因為明帝國邀請歐洲人直接到北京做生意"
+          ],
+          "answer": 0,
+          "hint": "觀察第87頁航線圖中臺灣與中國、日本、東南亞的相對位置。",
+          "explain": "臺灣位在日本和東南亞之間，鄰近中國沿海，非常適合建立轉運據點，方便與中國、日本進行貿易。"
+        },
+        {
+          "q": "關於十七世紀海上人物「鄭芝龍」的敘述，下列哪一項是正確的？",
+          "options": [
+            "他建立龐大商業船隊，經營中國東南沿海、臺灣、日本與東南亞海域貿易，並與歐洲人、日本人交易",
+            "他是西班牙派駐臺灣北部的第一任總督",
+            "他曾率領船隊攻打荷蘭在印尼的據點巴達維亞",
+            "他反對海上貿易，禁止任何商船靠近臺灣海域"
+          ],
+          "answer": 0,
+          "hint": "參考課本第88頁「歷史人物：鄭芝龍」的介紹與插圖。",
+          "explain": "鄭芝龍長期經營東亞與東南亞海域的海上貿易，建立商業船隊與歐洲人、日本人交易，在荷蘭人眼中極具海上權威。"
+        }
+      ],
+      "panorama": "assets/a3f0f69beea59d13.png",
+      "badge": "img/badges/paleolithic.png",
+      "dataUri": "assets/a3f0f69beea59d13.png"
+    },
+    {
+      "id": "scene_4",
+      "name": "第四站：荷蘭與西班牙的南北據點",
+      "subtitle": "安平與雞籠的國際貿易競逐",
+      "years": "西元1624年以後",
+      "site": "臺灣南部安平 ＆ 北部雞籠",
+      "badgeTitle": "雙城貿易觀察家",
+      "badgeEmoji": "🏰",
+      "intro": "十七世紀，荷蘭人與西班牙人先後在臺灣南部與北部建立據點！站在城牆上環顧四周，找出他們各自的出發據點與貿易路線吧！",
+      "captainHint": "轉動畫面看看四周，發光的圓點就是生活線索喔！把線索全部找出來，才能挑戰生存任務！",
+      "hotspots": [
+        {
+          "id": "c1",
+          "icon": "🧱",
+          "title": "南部安平的荷蘭紅磚堡壘",
+          "text": "荷蘭人從亞洲據點巴達維亞出發先登陸澎湖，受明帝國武力驅趕後轉往臺灣南部安平，建立紅磚稜堡展開跨國貿易。",
+          "yaw": -132,
+          "pitch": 29.8
+        },
+        {
+          "id": "c2",
+          "icon": "⛵",
+          "title": "航行臺灣海峽的荷蘭商船",
+          "text": "荷蘭人掌控臺灣南部據點後，利用臺灣海峽航線，展開與中國、日本、東南亞之間的密切貿易。",
+          "yaw": 10.2,
+          "pitch": 13.2
+        },
+        {
+          "id": "scene_4-cmwdplv35",
+          "yaw": -152.6,
+          "pitch": -13,
+          "icon": "✨",
+          "title": "儲存與轉運貿易貨物",
+          "text": "臺灣位於東亞重要海上航線附近，有利於荷蘭人與中國、日本及其他亞洲地區進行貿易。"
+        },
+        {
+          "id": "scene_4-cmwdpm055",
+          "yaw": 38,
+          "pitch": -25.7,
+          "icon": "✨",
+          "title": "城牆上設置了許多大砲，以防禦敵人的攻擊",
+          "text": "請在此輸入此生活線索的詳細故事與說明內容。"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "荷蘭人在來到臺灣南部安平建立據點之前，曾經先在哪裡登陸，但後來受到明帝國武力驅趕？",
+          "options": [
+            "澎湖",
+            "雞籠",
+            "琉球",
+            "馬尼拉"
+          ],
+          "answer": 0,
+          "hint": "觀察第89頁地圖上綠色航線「① 荷蘭人航線」經過的島嶼。",
+          "explain": "荷蘭人從亞洲據點巴達維亞出發後先在澎湖登陸，因受到明帝國武力驅趕，便轉往臺灣南部安平建立據點。"
+        },
+        {
+          "q": "西班牙人是從哪一個亞洲據點出發，經由太平洋北上來到臺灣北部雞籠展開經營？",
+          "options": [
+            "印尼巴達維亞",
+            "菲律賓馬尼拉",
+            "中國澳門",
+            "日本長崎"
+          ],
+          "answer": 1,
+          "hint": "觀察第89頁地圖上橘色航線「② 西班牙人航線」的起點。",
+          "explain": "西班牙人從菲律賓馬尼拉北上來到臺灣北部，主要將中國的商品轉運至日本和菲律賓。"
+        },
+        {
+          "q": "十七世紀荷蘭人與西班牙人先後在臺灣南北設立貿易據點，這更確認了臺灣的什麼重要性？",
+          "options": [
+            "臺灣的地理位置在國際貿易、交通往來上的重要性",
+            "臺灣是當時全歐洲人口最稠密的地區",
+            "臺灣是清帝國最早設立省會的地方",
+            "臺灣完全不需要與周邊國家進行任何海上往來"
+          ],
+          "answer": 0,
+          "hint": "閱讀第89頁第一段課文的結論。",
+          "explain": "荷蘭人航行臺灣海峽經營南部，西班牙人經由太平洋經營北部，更確認了臺灣的地理位置在國際貿易與交通往來上的重要性。"
+        },
+        {
+          "q": "荷蘭人將城堡興建在靠近海港的位置，最可能是為了什麼？",
+          "options": [
+            "方便從事海上貿易與防禦",
+            "避免與其他地區接觸",
+            "方便在高山種植農作物",
+            "遠離所有船隻"
+          ],
+          "answer": 0,
+          "hint": "回想一下在場景中發現的金色生活線索！",
+          "explain": "答對了！這正是這個時代最關鍵的生活方式。"
+        }
+      ],
+      "panorama": "assets/0936cc42739cf616.png",
+      "badge": "img/badges/paleolithic.png",
+      "dataUri": "assets/0936cc42739cf616.png"
+    }
+  ],
+  "comparisonTable": {
+    "title": "📊 大航海時代臺灣各時期與據點綜合比較總表",
+    "markdown": "# 📊 大航海時代臺灣各時期與據點綜合比較總表\n\n| 比較項目 | 第一站：現代高雄港 | 第二站：16～17世紀福爾摩沙 | 第三站：東亞跨國貿易網 | 第四站：荷蘭與西班牙據點 |\n| :--- | :--- | :--- | :--- | :--- |\n| **代表時期** | 現代（21世紀） | 西元16～17世紀 | 西元17世紀初 | 西元1624年以後 |\n| **關鍵地點** | 臺灣南部・高雄港 | 臺灣海域與西南部海岸 | 中國東南沿海、臺灣、日本、東南亞 | 南部安平（荷）、北部雞籠（西） |\n| **航線與背景** | 連結東北亞、東南亞、美洲、紐澳等全球海運航線 | 歐洲遠洋帆船探索新航路，荷蘭人測繪橫躺臺灣古地圖 | 歐洲人渴望亞洲商品；鄭芝龍建立龐大商業船隊 | 荷蘭由「巴達維亞」經澎湖轉往安平；西班牙由「馬尼拉」北上雞籠 |\n| **核心貿易內容** | 大型貨櫃輪運輸全球進出口商品 | 測繪海圖、尋找沙洲潟湖安全港灣 | 中國瓷器、絲綢、亞洲香料（保存食物與提味） | 轉運中國、日本與東南亞商品的國際貿易據點 |\n\n> 💡 **核心重點歸納**：臺灣四面環海，位處亞洲東部南北往來的必經之地。從史前時代與東南亞的玉器區域交流、十六世紀歐洲人讚嘆的「Ilha Formosa（美麗之島）」，到十七世紀鄭芝龍船隊與荷蘭、西班牙先後在臺灣南北設立貿易據點，乃至今日全球繁忙的高雄港，都充分證明了臺灣憑藉優越的地理位置，成為國際貿易與交通往來的重要樞紐！",
+    "headers": [
+      "比較項目",
+      "第一站：現代高雄港",
+      "第二站：16～17世紀福爾摩沙",
+      "第三站：東亞跨國貿易網",
+      "第四站：荷蘭與西班牙據點"
+    ],
+    "rows": [
+      [
+        "代表時期",
+        "現代（21世紀）",
+        "西元16～17世紀",
+        "西元17世紀初",
+        "西元1624年以後"
+      ],
+      [
+        "關鍵地點",
+        "臺灣南部・高雄港",
+        "臺灣海域與西南部海岸",
+        "中國東南沿海、臺灣、日本、東南亞",
+        "南部安平（荷）、北部雞籠（西）"
+      ],
+      [
+        "航線與背景",
+        "連結東北亞、東南亞、美洲、紐澳等全球海運航線",
+        "歐洲遠洋帆船探索新航路，荷蘭人測繪橫躺臺灣古地圖",
+        "歐洲人渴望亞洲商品；鄭芝龍建立龐大商業船隊",
+        "荷蘭由「巴達維亞」經澎湖轉往安平；西班牙由「馬尼拉」北上雞籠"
+      ],
+      [
+        "核心貿易內容",
+        "大型貨櫃輪運輸全球進出口商品",
+        "測繪海圖、尋找沙洲潟湖安全港灣",
+        "中國瓷器、絲綢、亞洲香料（保存食物與提味）",
+        "轉運中國、日本與東南亞商品的國際貿易據點"
+      ]
+    ]
+  },
+  "finalBoss": {
+    "q": "【大航海時代終極綜合挑戰】小宇在整理「大航海時代的臺灣」重點筆記時，寫下了四個結論，請問哪一個結論「完全正確」？",
+    "options": [
+      "荷蘭人從馬尼拉出發先佔領雞籠，西班牙人則從巴達維亞出發佔領安平",
+      "歐洲人為了取得亞洲的瓷器、絲綢與香料開闢海上新航路，並看中臺灣位於東亞航線樞紐而先後來臺設立據點",
+      "十六世紀歐洲人航經臺灣時讚嘆為「Ilha Formosa」，意思是「神秘的香料之島」",
+      "臺灣直到十七世紀荷蘭人來了之後，才第一次與島外地區有任何跨海交流"
+    ],
+    "answer": 1,
+    "hint": "請逐一檢查四個選項：1. 史前時代是否有交流？ 2. Formosa 的原意是什麼？ 3. 荷蘭與西班牙各自的亞洲據點與來臺南北位置是否寫反了？",
+    "explain": "選項A將荷蘭（巴達維亞→安平）與西班牙（馬尼拉→雞籠）的出發地與據點完全寫反了；選項C的「Ilha Formosa」意思是「美麗之島」；選項D錯誤，因為早在史前時代臺灣就已與東南亞進行玉器等跨海區域交流。只有選項B完全正確！"
+  },
+  "panoData": {
+    "scene_1": "assets/d50cfe1693c4e1e3.png",
+    "scene_2": "assets/0b63dc3c62a64ecf.png",
+    "scene_3": "assets/a3f0f69beea59d13.png",
+    "scene_4": "assets/0936cc42739cf616.png"
+  },
+  "certBannerTitle": "🎉 恭喜完成全時代生存挑戰！",
+  "certBannerDesc": "你已經具備完整知識，準備好領取探險家證書了嗎？"
+};
+</script>
+<script>
+window.PANO_DATA = {
+  "metal": "assets/2d1b1de986a1b545.jpg",
+  "neolithic": "assets/330224aa6816df97.jpg",
+  "paleolithic": "assets/50ed507b4b9909f4.jpg",
+  "scene_1": "assets/d50cfe1693c4e1e3.png",
+  "scene_2": "assets/0b63dc3c62a64ecf.png",
+  "scene_3": "assets/a3f0f69beea59d13.png",
+  "scene_4": "assets/0936cc42739cf616.png"
+};
+</script>
+<script>
+window.CERT_ASSETS = {
+  "bg": "assets/0c0307e9dc187852.jpg",
+  "mascot": "assets/1d29b181514e9d63.png",
+  "metal": "assets/6af940d43caf6954.png",
+  "neolithic": "assets/3f4b762f7381dbaa.png",
+  "paleolithic": "assets/18feb4174533dbe4.png"
+};
+</script>
+<script>
+// js/markdown.js - 輕量純 JavaScript Markdown 解析器與表格雙向轉換器
+(function () {
+  'use strict';
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function inlineFormat(text) {
+    if (!text) return '';
+    let out = text;
+    // 粗體 **text** 或 __text__
+    out = out.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    out = out.replace(/__(.+?)__/g, '<strong>$1</strong>');
+    // 斜體 *text* 或 _text_
+    out = out.replace(/\*([^\*]+?)\*/g, '<em>$1</em>');
+    out = out.replace(/_([^_]+?)_/g, '<em>$1</em>');
+    // 刪除線 ~~text~~
+    out = out.replace(/~~(.+?)~~/g, '<del>$1</del>');
+    // 行內代碼 `code`
+    out = out.replace(/`([^`]+?)`/g, '<code class="md-inline-code">$1</code>');
+    // 連結 [text](url)
+    out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    // 醒目標籤 💡 [提示] 或 🔥
+    out = out.replace(/(💡|🔥|🌟|🏆|⚠️|🎯)/g, '<span class="md-emoji">$1</span>');
+    return out;
+  }
+
+  const MarkdownLite = {
+    /**
+     * 將 Markdown 字串解析為 HTML
+     */
+    parse(md) {
+      if (!md || typeof md !== 'string') return '';
+
+      const lines = md.replace(/\r\n/g, '\n').split('\n');
+      let html = [];
+      let inTable = false;
+      let tableRows = [];
+      let tableAligns = [];
+      let inList = false;
+      let listType = 'ul'; // 'ul' | 'ol'
+      let inBlockquote = false;
+      let quoteLines = [];
+
+      function flushTable() {
+        if (!inTable) return;
+        if (tableRows.length > 0) {
+          let tHtml = '<div class="md-table-wrap"><table class="md-table">';
+          // 第一列為表頭
+          const header = tableRows[0];
+          tHtml += '<thead><tr>';
+          header.forEach((cell, idx) => {
+            const align = tableAligns[idx] ? ` style="text-align: ${tableAligns[idx]};"` : '';
+            tHtml += `<th${align}>${inlineFormat(cell)}</th>`;
+          });
+          tHtml += '</tr></thead><tbody>';
+
+          for (let r = 1; r < tableRows.length; r++) {
+            const row = tableRows[r];
+            tHtml += '<tr>';
+            row.forEach((cell, idx) => {
+              const align = tableAligns[idx] ? ` style="text-align: ${tableAligns[idx]};"` : '';
+              // 若首欄為加粗標籤
+              if (idx === 0) {
+                tHtml += `<td${align}><strong>${inlineFormat(cell)}</strong></td>`;
+              } else {
+                tHtml += `<td${align}>${inlineFormat(cell)}</td>`;
+              }
+            });
+            tHtml += '</tr>';
+          }
+
+          tHtml += '</tbody></table></div>';
+          html.push(tHtml);
+        }
+        inTable = false;
+        tableRows = [];
+        tableAligns = [];
+      }
+
+      function flushList() {
+        if (!inList) return;
+        html.push(`</${listType}>`);
+        inList = false;
+      }
+
+      function flushBlockquote() {
+        if (!inBlockquote) return;
+        const qContent = quoteLines.map(l => inlineFormat(l)).join('<br>');
+        if (qContent.includes('💡') || qContent.includes('[!NOTE]') || qContent.includes('[!TIP]')) {
+          html.push(`<div class="md-alert info"><span class="md-alert-icon">💡</span><div>${qContent.replace(/\[!(NOTE|TIP|IMPORTANT)\]/i, '').trim()}</div></div>`);
+        } else if (qContent.includes('⚠️') || qContent.includes('[!WARNING]')) {
+          html.push(`<div class="md-alert warning"><span class="md-alert-icon">⚠️</span><div>${qContent.replace(/\[!WARNING\]/i, '').trim()}</div></div>`);
+        } else {
+          html.push(`<blockquote class="md-blockquote">${qContent}</blockquote>`);
+        }
+        inBlockquote = false;
+        quoteLines = [];
+      }
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const trimmed = line.trim();
+
+        // 1. 空行
+        if (!trimmed) {
+          flushTable();
+          flushList();
+          flushBlockquote();
+          continue;
+        }
+
+        // 2. 檢測表格列 (以 | 開頭或包含多個 |)
+        if (trimmed.startsWith('|') || (trimmed.includes('|') && trimmed.endsWith('|'))) {
+          flushList();
+          flushBlockquote();
+
+          // 解析儲存格
+          const cells = trimmed
+            .replace(/^\|/, '')
+            .replace(/\|$/, '')
+            .split('|')
+            .map(c => c.trim());
+
+          // 判斷是否為表格分隔列 (例如: | --- | :---: | ---: |)
+          const isSeparator = cells.every(c => /^:?-+:?$/.test(c));
+          if (isSeparator) {
+            tableAligns = cells.map(c => {
+              const left = c.startsWith(':');
+              const right = c.endsWith(':');
+              if (left && right) return 'center';
+              if (right) return 'right';
+              if (left) return 'left';
+              return 'left';
+            });
+            inTable = true;
+            continue;
+          }
+
+          if (!inTable) {
+            inTable = true;
+            tableRows = [cells];
+          } else {
+            tableRows.push(cells);
+          }
+          continue;
+        } else {
+          flushTable();
+        }
+
+        // 3. 標題 (#, ##, ###, ####)
+        const hMatch = trimmed.match(/^(#{1,4})\s+(.+)$/);
+        if (hMatch) {
+          flushList();
+          flushBlockquote();
+          const level = hMatch[1].length;
+          const text = inlineFormat(hMatch[2]);
+          html.push(`<h${level} class="md-h${level}">${text}</h${level}>`);
+          continue;
+        }
+
+        // 4. 分隔線 (---, ***, ___)
+        if (/^(\*{3,}|-{3,}|_{3,})$/.test(trimmed)) {
+          flushList();
+          flushBlockquote();
+          html.push('<hr class="md-hr">');
+          continue;
+        }
+
+        // 5. 引用或提示區塊 (> ...)
+        if (trimmed.startsWith('>')) {
+          flushList();
+          inBlockquote = true;
+          const qText = trimmed.replace(/^>\s*/, '');
+          quoteLines.push(qText);
+          continue;
+        } else {
+          flushBlockquote();
+        }
+
+        // 6. 無序清單 (- item, * item, + item)
+        const ulMatch = trimmed.match(/^[-*+]\s+(.+)$/);
+        if (ulMatch) {
+          if (!inList || listType !== 'ul') {
+            flushList();
+            inList = true;
+            listType = 'ul';
+            html.push('<ul class="md-ul">');
+          }
+          html.push(`<li>${inlineFormat(ulMatch[1])}</li>`);
+          continue;
+        }
+
+        // 7. 有序清單 (1. item, 2. item)
+        const olMatch = trimmed.match(/^(\d+)\.\s+(.+)$/);
+        if (olMatch) {
+          if (!inList || listType !== 'ol') {
+            flushList();
+            inList = true;
+            listType = 'ol';
+            html.push('<ol class="md-ol">');
+          }
+          html.push(`<li>${inlineFormat(olMatch[2])}</li>`);
+          continue;
+        }
+
+        flushList();
+
+        // 8. 一般段落
+        html.push(`<p class="md-p">${inlineFormat(trimmed)}</p>`);
+      }
+
+      flushTable();
+      flushList();
+      flushBlockquote();
+
+      return html.join('\n');
+    },
+
+    /**
+     * 從 Markdown 內容中擷取表格，轉為 { headers: string[], rows: string[][] }
+     */
+    extractTable(md) {
+      if (!md) return null;
+      const lines = md.replace(/\r\n/g, '\n').split('\n');
+      const tableLines = [];
+      let foundTable = false;
+
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (trimmed.startsWith('|') || (trimmed.includes('|') && trimmed.endsWith('|'))) {
+          foundTable = true;
+          tableLines.push(trimmed);
+        } else if (foundTable && trimmed === '') {
+          break;
+        }
+      }
+
+      if (tableLines.length < 2) return null;
+
+      const parseCells = l => l.replace(/^\|/, '').replace(/\|$/, '').split('|').map(c => c.trim().replace(/\*\*/g, ''));
+      const headers = parseCells(tableLines[0]);
+      const rows = [];
+
+      for (let i = 1; i < tableLines.length; i++) {
+        const cells = parseCells(tableLines[i]);
+        const isSep = cells.every(c => /^:?-+:?$/.test(c));
+        if (isSep) continue;
+        rows.push(cells);
+      }
+
+      return { headers, rows };
+    },
+
+    /**
+     * 將 { headers, rows } 結構轉換為標準 GFM Markdown 表格字串
+     */
+    toMarkdownTable(headers, rows) {
+      if (!headers || !headers.length) return '';
+      let md = [];
+      md.push('| ' + headers.join(' | ') + ' |');
+      md.push('| ' + headers.map(() => ':---').join(' | ') + ' |');
+      if (rows && rows.length) {
+        rows.forEach(row => {
+          const cells = headers.map((_, idx) => (row[idx] !== undefined ? String(row[idx]).replace(/\|/g, '\\|') : ''));
+          md.push('| ' + cells.join(' | ') + ' |');
+        });
+      }
+      return md.join('\n');
+    }
+  };
+
+  // 匯出全域
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = MarkdownLite;
+  }
+  if (typeof window !== 'undefined') {
+    window.MarkdownLite = MarkdownLite;
+  }
+})();
+
+</script>
+<script>
+// js/storage.js - 進度儲存與讀取模組
+(function () {
+  const STORAGE_KEY = 'taiwan_prehistoric_360_progress';
+
+  const defaultState = {
+    playerName: '',
+    unlockedEras: ['paleolithic'],
+    completedEras: [],
+    readClues: {
+      paleolithic: [],
+      neolithic: [],
+      metal: []
+    },
+    finalBossCompleted: false,
+    soundEnabled: true,
+    lastActiveEra: 'paleolithic',
+    completedDate: ''
+  };
+
+  window.GameStorage = {
+    get() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return { ...defaultState };
+        const parsed = JSON.parse(raw);
+        return {
+          ...defaultState,
+          ...parsed,
+          readClues: { ...defaultState.readClues, ...(parsed.readClues || {}) }
+        };
+      } catch (e) {
+        console.warn('localStorage access failed, fallback to memory', e);
+        return { ...defaultState };
+      }
+    },
+
+    save(state) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (e) {
+        console.warn('localStorage save failed', e);
+      }
+    },
+
+    setPlayerName(name) {
+      const state = this.get();
+      state.playerName = (name || '').trim().slice(0, 10);
+      this.save(state);
+      return state;
+    },
+
+    markClueRead(eraId, clueId) {
+      const state = this.get();
+      if (!state.readClues[eraId]) {
+        state.readClues[eraId] = [];
+      }
+      if (!state.readClues[eraId].includes(clueId)) {
+        state.readClues[eraId].push(clueId);
+      }
+      this.save(state);
+      return state;
+    },
+
+    isEraCompleted(eraId) {
+      const state = this.get();
+      return state.completedEras.includes(eraId);
+    },
+
+    isEraUnlocked(eraId) {
+      const state = this.get();
+      if (window.isTeacherMode) return true;
+      // 若是第一個時代，預設解鎖
+      if (window.ERAS_DATA && window.ERAS_DATA.eras && window.ERAS_DATA.eras.length > 0) {
+        if (eraId === window.ERAS_DATA.eras[0].id) return true;
+      }
+      return state.unlockedEras.includes(eraId);
+    },
+
+    completeEra(eraId) {
+      const state = this.get();
+      if (!state.completedEras.includes(eraId)) {
+        state.completedEras.push(eraId);
+      }
+
+      // 動態解鎖下一個關卡場景
+      if (window.ERAS_DATA && window.ERAS_DATA.eras) {
+        const eras = window.ERAS_DATA.eras;
+        const curIdx = eras.findIndex(e => e.id === eraId);
+        if (curIdx >= 0 && curIdx + 1 < eras.length) {
+          const nextId = eras[curIdx + 1].id;
+          if (!state.unlockedEras.includes(nextId)) {
+            state.unlockedEras.push(nextId);
+          }
+        }
+      }
+
+      const totalEras = window.ERAS_DATA && window.ERAS_DATA.eras ? window.ERAS_DATA.eras.length : 3;
+      if (state.completedEras.length >= totalEras && !state.completedDate) {
+        state.completedDate = new Date().toISOString();
+      }
+
+      this.save(state);
+      return state;
+    },
+
+    setFinalBossCompleted() {
+      const state = this.get();
+      state.finalBossCompleted = true;
+      if (!state.completedDate) {
+        state.completedDate = new Date().toISOString();
+      }
+      this.save(state);
+      return state;
+    },
+
+    toggleSound() {
+      const state = this.get();
+      state.soundEnabled = !state.soundEnabled;
+      this.save(state);
+      return state.soundEnabled;
+    },
+
+    resetAll() {
+      try {
+        localStorage.removeItem(STORAGE_KEY);
+      } catch (e) {
+        console.warn(e);
+      }
+      return { ...defaultState };
+    }
+  };
+})();
+
+</script>
+<script>
+// js/audio.js - 遊戲音效與語音朗讀合成器 (Web Audio API + SpeechSynthesis)
+(function () {
+  let audioCtx = null;
+
+  function getAudioContext() {
+    if (!audioCtx) {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (AudioContext) {
+        audioCtx = new AudioContext();
+      }
+    }
+    if (audioCtx && audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    return audioCtx;
+  }
+
+  window.AudioManager = {
+    isSoundEnabled() {
+      return window.GameStorage.get().soundEnabled;
+    },
+
+    playTone(freq, type, duration, startTime = 0, gainLevel = 0.15) {
+      if (!this.isSoundEnabled()) return;
+      try {
+        const ctx = getAudioContext();
+        if (!ctx) return;
+        const now = ctx.currentTime + startTime;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, now);
+
+        gain.gain.setValueAtTime(gainLevel, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(now);
+        osc.stop(now + duration);
+      } catch (e) {
+        // Audio error ignore
+      }
+    },
+
+    playClick() {
+      this.playTone(600, 'sine', 0.08, 0, 0.1);
+    },
+
+    playClue() {
+      // Sparkle arpeggio
+      const notes = [523.25, 659.25, 783.99, 1046.5]; // C5, E5, G5, C6
+      notes.forEach((freq, idx) => {
+        this.playTone(freq, 'triangle', 0.25, idx * 0.07, 0.15);
+      });
+    },
+
+    playCorrect() {
+      // Joyful high arpeggio
+      const notes = [440, 554.37, 659.25, 880]; // A4, C#5, E5, A5
+      notes.forEach((freq, idx) => {
+        this.playTone(freq, 'sine', 0.35, idx * 0.08, 0.18);
+      });
+    },
+
+    playWrong() {
+      // Gentle friendly bonk
+      this.playTone(260, 'sawtooth', 0.22, 0, 0.12);
+      this.playTone(200, 'sawtooth', 0.3, 0.12, 0.12);
+    },
+
+    playWin() {
+      // Grand celebratory fanfare
+      const melody = [
+        { f: 523.25, d: 0.18, t: 0 },
+        { f: 659.25, d: 0.18, t: 0.16 },
+        { f: 783.99, d: 0.18, t: 0.32 },
+        { f: 1046.5, d: 0.45, t: 0.48 },
+        { f: 880, d: 0.2, t: 0.8 },
+        { f: 1046.5, d: 0.6, t: 1.0 }
+      ];
+      melody.forEach(item => {
+        this.playTone(item.f, 'triangle', item.d, item.t, 0.22);
+      });
+    },
+
+    // 語音朗讀功能 (Web SpeechSynthesis API)
+    speak(text) {
+      if (!('speechSynthesis' in window)) {
+        alert('您的瀏覽器不支援語音朗讀功能');
+        return;
+      }
+
+      window.speechSynthesis.cancel(); // 停止先前的朗讀
+      const cleanText = text.replace(/[\u{1F300}-\u{1F9FF}]/gu, ''); // 過濾 emoji
+      const utterance = new SpeechSynthesisUtterance(cleanText);
+      utterance.lang = 'zh-TW';
+      utterance.rate = 0.95; // 稍慢節奏適合國小五年級學生
+      utterance.pitch = 1.05;
+
+      window.speechSynthesis.speak(utterance);
+    },
+
+    stopSpeaking() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    }
+  };
+})();
+
+</script>
+<script>
+// js/viewer.js - Pannellum 360° 全景檢視與熱點互動模組
+(function () {
+  let viewerInstance = null;
+  let currentEra = null;
+
+  window.ViewerManager = {
+    init(eraData, onClueReadCallback, onAllCluesFoundCallback) {
+      currentEra = eraData;
+      const container = document.getElementById('panorama');
+      if (!container) return;
+
+      // 銷毀舊的 viewer 實例
+      if (viewerInstance) {
+        try {
+          viewerInstance.destroy();
+        } catch (e) {
+          // ignore
+        }
+        viewerInstance = null;
+      }
+      container.innerHTML = '';
+
+      const state = window.GameStorage.get();
+      const readClues = state.readClues[eraData.id] || [];
+
+      // 建立熱點設定
+      const hotSpots = eraData.hotspots.map(h => {
+        const isRead = readClues.includes(h.id);
+        return {
+          id: h.id,
+          pitch: h.pitch,
+          yaw: h.yaw,
+          cssClass: `clue-hotspot ${isRead ? 'read' : 'unread'}`,
+          createTooltipFunc: (div) => {
+            div.className = `golden-marker ${isRead ? 'read' : 'unread'}`;
+            div.setAttribute('data-id', h.id);
+            div.innerHTML = `
+              <div class="marker-pulse-ring"></div>
+              <div class="marker-icon-box">
+                <span class="marker-icon">${h.icon}</span>
+              </div>
+              <div class="marker-label-tag">
+                <span class="marker-star">${isRead ? '✅' : '✨'}</span>
+                <span class="marker-text">${h.title}</span>
+              </div>
+            `;
+            div.onclick = (e) => {
+              e.stopPropagation();
+              window.AudioManager.playClick();
+              this.openClueModal(h, onClueReadCallback, onAllCluesFoundCallback);
+            };
+          },
+          clickHandlerFunc: () => {
+            window.AudioManager.playClick();
+            this.openClueModal(h, onClueReadCallback, onAllCluesFoundCallback);
+          }
+        };
+      });
+
+      const isDebug = new URLSearchParams(window.location.search).has('debug');
+
+      // 自動抓取 img/pano/ 最新圖片：
+      // 在 http 伺服器環境下直接載入實體圖片並附帶防快取戳記；在 file:/// 或包含 Base64 下則使用同步的 Base64 避開 CORS
+      let panoSrc = eraData.panorama;
+      if (eraData.dataUri && typeof eraData.dataUri === 'string' && eraData.dataUri.startsWith('data:image/')) {
+        panoSrc = eraData.dataUri;
+      } else if (eraData.panorama && typeof eraData.panorama === 'string' && eraData.panorama.startsWith('data:image/')) {
+        panoSrc = eraData.panorama;
+      } else if (location.protocol.startsWith('http')) {
+        panoSrc = (eraData.panorama && !eraData.panorama.startsWith('data:')) ? `${eraData.panorama}?t=${Date.now()}` : eraData.panorama;
+      } else if (window.PANO_DATA && window.PANO_DATA[eraData.id]) {
+        panoSrc = window.PANO_DATA[eraData.id];
+      }
+
+      try {
+        viewerInstance = pannellum.viewer('panorama', {
+          type: 'equirectangular',
+          panorama: panoSrc,
+          autoLoad: true,
+          autoRotate: -0.5, // 緩慢旋轉吸引注意力，操作時自動停止
+          showZoomCtrl: true,
+          showFullscreenCtrl: true,
+          compass: true,
+          hotSpotDebug: isDebug,
+          hfov: 95,
+          minHfov: 50,
+          maxHfov: 120,
+          pitch: -5,
+          yaw: 0,
+          hotSpots: hotSpots
+        });
+
+        // 監聽鍵盤方向鍵
+        container.setAttribute('tabindex', '0');
+
+        // 畫面尺寸自適應回調
+        setTimeout(() => {
+          if (viewerInstance) {
+            try {
+              viewerInstance.resize();
+            } catch (e) {
+              // ignore
+            }
+          }
+        }, 100);
+      } catch (err) {
+        console.error('Failed to init pannellum viewer', err);
+        container.innerHTML = `
+          <div class="pano-fallback">
+            <img src="${eraData.panorama}" alt="${eraData.name}" style="width:100%; height:100%; object-fit:cover;">
+            <p class="fallback-note">全景檢視器載入中...</p>
+          </div>
+        `;
+      }
+
+      // 綁定線索雷達下拉選單按鈕
+      const toggleBtn = document.getElementById('clue-radar-toggle-btn');
+      if (toggleBtn) {
+        toggleBtn.onclick = (e) => {
+          e.stopPropagation();
+          window.AudioManager.playClick();
+          this.toggleRadarMenu();
+        };
+      }
+
+      // 點擊選單外部自動收合（僅全域註冊一次）
+      if (!this._hasBoundRadarDismiss) {
+        document.addEventListener('click', (e) => {
+          const dropdown = document.getElementById('clue-radar-dropdown');
+          if (dropdown && !dropdown.contains(e.target)) {
+            this.closeRadarMenu();
+          }
+        });
+        this._hasBoundRadarDismiss = true;
+      }
+
+      this.closeRadarMenu();
+      this.updateProgressCounter();
+      this.updateRadarBar(onClueReadCallback, onAllCluesFoundCallback);
+    },
+
+    updateRadarBar(onClueReadCallback, onAllCluesFoundCallback) {
+      const radarContainer = document.getElementById('clue-radar-items');
+      if (!radarContainer || !currentEra) return;
+
+      radarContainer.innerHTML = '';
+      const state = window.GameStorage.get();
+      const readClues = state.readClues[currentEra.id] || [];
+
+      currentEra.hotspots.forEach(h => {
+        const isRead = readClues.includes(h.id);
+        const item = document.createElement('button');
+        item.type = 'button';
+        item.className = `menu-clue-item ${isRead ? 'read' : 'unread'}`;
+        item.innerHTML = `
+          <div class="clue-item-left">
+            <span class="clue-status-icon">${isRead ? '✅' : '✨'}</span>
+            <span class="clue-item-icon">${h.icon}</span>
+            <span class="clue-item-title">${h.title}</span>
+          </div>
+          <span class="clue-item-tag">${isRead ? '已探索' : '點擊轉向 ➔'}</span>
+        `;
+        item.onclick = (e) => {
+          e.stopPropagation();
+          this.closeRadarMenu();
+          this.navigateToClue(h, onClueReadCallback, onAllCluesFoundCallback);
+        };
+        radarContainer.appendChild(item);
+      });
+    },
+
+    toggleRadarMenu() {
+      const menu = document.getElementById('clue-radar-menu');
+      const toggleBtn = document.getElementById('clue-radar-toggle-btn');
+      if (!menu) return;
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
+      } else {
+        menu.classList.add('hidden');
+        if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    },
+
+    closeRadarMenu() {
+      const menu = document.getElementById('clue-radar-menu');
+      const toggleBtn = document.getElementById('clue-radar-toggle-btn');
+      if (menu) menu.classList.add('hidden');
+      if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+    },
+
+    navigateToClue(clue, onClueReadCallback, onAllCluesFoundCallback) {
+      window.AudioManager.playClick();
+      if (viewerInstance) {
+        viewerInstance.lookAt(clue.pitch, clue.yaw, 75, 1000);
+      }
+      setTimeout(() => {
+        this.openClueModal(clue, onClueReadCallback, onAllCluesFoundCallback);
+      }, 500);
+    },
+
+    openClueModal(clue, onClueReadCallback, onAllCluesFoundCallback) {
+      const modal = document.getElementById('clue-modal');
+      const titleEl = document.getElementById('clue-title');
+      const iconEl = document.getElementById('clue-icon');
+      const textEl = document.getElementById('clue-text');
+      const speakBtn = document.getElementById('clue-speak-btn');
+      const closeBtn = document.getElementById('clue-close-btn');
+
+      if (!modal) return;
+
+      iconEl.textContent = clue.icon;
+      titleEl.textContent = clue.title;
+      textEl.textContent = clue.text;
+
+      // 語音朗讀事件綁定
+      speakBtn.onclick = () => {
+        window.AudioManager.speak(`${clue.title}。${clue.text}`);
+      };
+
+      // 關閉小卡
+      closeBtn.onclick = () => {
+        window.AudioManager.stopSpeaking();
+        window.AudioManager.playClick();
+        modal.classList.add('hidden');
+      };
+
+      modal.classList.remove('hidden');
+
+      // 標記為已讀
+      const state = window.GameStorage.markClueRead(currentEra.id, clue.id);
+      window.AudioManager.playClue();
+
+      // 更新 hotspot 樣式
+      this.refreshHotspotStyles();
+      this.updateProgressCounter();
+
+      if (typeof onClueReadCallback === 'function') {
+        onClueReadCallback(clue, state);
+      }
+
+      // 檢查是否全部線索都讀過了
+      const requiredClues = currentEra.hotspots.filter(h => !h.id.includes('egg')).map(h => h.id);
+      const userReadList = state.readClues[currentEra.id] || [];
+      const allFound = requiredClues.every(id => userReadList.includes(id));
+
+      if (allFound && typeof onAllCluesFoundCallback === 'function') {
+        onAllCluesFoundCallback();
+      }
+    },
+
+    refreshHotspotStyles() {
+      if (!currentEra) return;
+      const state = window.GameStorage.get();
+      const readClues = state.readClues[currentEra.id] || [];
+
+      currentEra.hotspots.forEach(h => {
+        const isRead = readClues.includes(h.id);
+        document.querySelectorAll(`.golden-marker[data-id="${h.id}"]`).forEach(m => {
+          m.classList.toggle('read', isRead);
+          m.classList.toggle('unread', !isRead);
+          const star = m.querySelector('.marker-star');
+          if (star) star.textContent = isRead ? '✅' : '✨';
+        });
+      });
+      this.updateRadarBar();
+    },
+
+    updateProgressCounter() {
+      if (!currentEra) return;
+      const state = window.GameStorage.get();
+      const readClues = state.readClues[currentEra.id] || [];
+      const requiredHotspots = currentEra.hotspots.filter(h => !h.id.includes('egg'));
+      const total = requiredHotspots.length;
+      const found = requiredHotspots.filter(h => readClues.includes(h.id)).length;
+
+      const badge = document.getElementById('radar-progress-badge');
+      if (badge) {
+        badge.textContent = `${found} / ${total}`;
+      }
+
+      const counterEl = document.getElementById('clue-counter');
+      if (counterEl) {
+        counterEl.innerHTML = `<span>🔍 生活線索</span> <strong>${found} / ${total}</strong>`;
+      }
+
+      const challengeBtn = document.getElementById('start-challenge-btn');
+      if (challengeBtn) {
+        if (found >= total) {
+          challengeBtn.classList.remove('disabled');
+          challengeBtn.removeAttribute('disabled');
+          challengeBtn.classList.add('pulse-glow');
+        } else {
+          challengeBtn.classList.add('disabled');
+          challengeBtn.setAttribute('disabled', 'true');
+          challengeBtn.classList.remove('pulse-glow');
+        }
+      }
+    },
+
+    // 找不到線索輔助指引功能：平滑轉向最近一個未讀線索
+    guideToNextUnread() {
+      if (!viewerInstance || !currentEra) return;
+      const state = window.GameStorage.get();
+      const readClues = state.readClues[currentEra.id] || [];
+
+      // 優先找主要線索
+      const unread = currentEra.hotspots.find(h => !readClues.includes(h.id) && !h.id.includes('egg'));
+      if (unread) {
+        window.AudioManager.playTone(520, 'sine', 0.15);
+        viewerInstance.lookAt(unread.pitch, unread.yaw, 80, 1200);
+        
+        // 小隊長提示
+        window.App.updateCaptainSpeech(`發現線索方向！正在幫你轉過去，快看「${unread.title}」！`);
+      } else {
+        // 如果全部都找到了
+        window.App.updateCaptainSpeech('太厲害了！這個時代的所有生活線索你都找齊了，快點擊右下角開始「生存挑戰」吧！');
+      }
+    },
+
+    destroy() {
+      this.closeRadarMenu();
+      if (viewerInstance) {
+        try {
+          viewerInstance.destroy();
+        } catch (e) {
+          // ignore
+        }
+        viewerInstance = null;
+      }
+    }
+  };
+})();
+
+</script>
+<script>
+// js/quiz.js - 史前生存問答挑戰邏輯
+(function () {
+  let currentEra = null;
+  let currentQuestions = [];
+  let currentIndex = 0;
+  let isFinalBoss = false;
+
+  window.QuizManager = {
+    startEraQuiz(eraData) {
+      currentEra = eraData;
+      currentQuestions = eraData.quiz;
+      currentIndex = 0;
+      isFinalBoss = false;
+      this.renderQuestion();
+    },
+
+    startFinalBoss(finalBossData) {
+      currentEra = { name: '史前時光終極試煉', id: 'finalBoss', badgeTitle: '臺灣史前時光探險家' };
+      currentQuestions = [finalBossData];
+      currentIndex = 0;
+      isFinalBoss = true;
+      this.renderQuestion();
+    },
+
+    renderQuestion() {
+      const q = currentQuestions[currentIndex];
+      if (!q) return;
+
+      const titleEl = document.getElementById('quiz-era-name');
+      const progressEl = document.getElementById('quiz-progress');
+      const questionTextEl = document.getElementById('quiz-question-text');
+      const optionsContainer = document.getElementById('quiz-options-container');
+      const feedbackContainer = document.getElementById('quiz-feedback');
+      const feedbackTextEl = document.getElementById('quiz-feedback-text');
+      const nextBtn = document.getElementById('quiz-next-btn');
+      const speakBtn = document.getElementById('quiz-speak-btn');
+
+      if (titleEl) {
+        titleEl.textContent = isFinalBoss ? '🌟 終極大挑戰' : `🔥 ${currentEra.name}・生存問答挑戰`;
+      }
+      if (progressEl) {
+        progressEl.textContent = `第 ${currentIndex + 1} / ${currentQuestions.length} 題`;
+      }
+      if (questionTextEl) {
+        questionTextEl.textContent = q.q;
+      }
+
+      // 語音朗讀題目
+      if (speakBtn) {
+        speakBtn.onclick = () => {
+          const optionsText = q.options.map((opt, i) => `選項 ${String.fromCharCode(65 + i)}：${opt}`).join('。');
+          window.AudioManager.speak(`${q.q}。${optionsText}`);
+        };
+      }
+
+      // 重設反饋區
+      feedbackContainer.classList.add('hidden');
+      feedbackContainer.className = 'quiz-feedback-box hidden';
+      nextBtn.classList.add('hidden');
+
+      // 渲染選項按鈕
+      optionsContainer.innerHTML = '';
+      const optionLetters = ['A', 'B', 'C', 'D'];
+
+      q.options.forEach((optText, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-option-btn';
+        btn.innerHTML = `
+          <span class="option-letter">${optionLetters[idx]}</span>
+          <span class="option-text">${optText}</span>
+        `;
+
+        btn.onclick = () => {
+          this.handleAnswer(idx, q, btn, optionsContainer, feedbackContainer, feedbackTextEl, nextBtn);
+        };
+
+        optionsContainer.appendChild(btn);
+      });
+    },
+
+    handleAnswer(selectedIdx, q, selectedBtn, optionsContainer, feedbackContainer, feedbackTextEl, nextBtn) {
+      const isCorrect = selectedIdx === q.answer;
+
+      if (isCorrect) {
+        window.AudioManager.playCorrect();
+        selectedBtn.classList.add('correct');
+
+        // 禁用其他選項
+        const allBtns = optionsContainer.querySelectorAll('.quiz-option-btn');
+        allBtns.forEach(btn => btn.setAttribute('disabled', 'true'));
+
+        feedbackContainer.className = 'quiz-feedback-box success-box';
+        feedbackContainer.classList.remove('hidden');
+        feedbackTextEl.innerHTML = `
+          <div class="feedback-badge-tag">🎉 答對了！</div>
+          <p>${q.explain}</p>
+        `;
+
+        const isLastQuestion = currentIndex + 1 >= currentQuestions.length;
+        nextBtn.textContent = isLastQuestion ? (isFinalBoss ? '🏆 榮耀登頂！領取探險家證書' : '✨ 通關！領取榮譽徽章') : '下一題 ➔';
+        nextBtn.classList.remove('hidden');
+
+        nextBtn.onclick = () => {
+          window.AudioManager.playClick();
+          window.AudioManager.stopSpeaking();
+          if (isLastQuestion) {
+            this.handleQuizCompleted();
+          } else {
+            currentIndex++;
+            this.renderQuestion();
+          }
+        };
+      } else {
+        window.AudioManager.playWrong();
+        selectedBtn.classList.add('shake', 'wrong');
+        setTimeout(() => selectedBtn.classList.remove('shake'), 600);
+
+        feedbackContainer.className = 'quiz-feedback-box hint-box';
+        feedbackContainer.classList.remove('hidden');
+        feedbackTextEl.innerHTML = `
+          <div class="feedback-badge-tag hint">💡 提示一下</div>
+          <p>${q.hint}</p>
+          <small class="hint-small">別灰心，回想一下剛剛在 360° 場景看到的線索，再試一次！</small>
+        `;
+      }
+    },
+
+    handleQuizCompleted() {
+      if (isFinalBoss) {
+        window.GameStorage.setFinalBossCompleted();
+        window.AudioManager.playWin();
+        window.App.showScreen('certificate-screen');
+        window.CertificateManager.render();
+      } else {
+        // 完成一個時代
+        window.GameStorage.completeEra(currentEra.id);
+        window.AudioManager.playWin();
+        window.App.showEraVictoryModal(currentEra);
+      }
+    }
+  };
+})();
+
+</script>
+<script>
+// js/certificate.js - 探險家闖關證書 Canvas 繪製與匯出
+(function () {
+  const CANVAS_WIDTH = 1754;
+  const CANVAS_HEIGHT = 1240;
+
+  window.CertificateManager = {
+    canvas: null,
+    ctx: null,
+
+    init() {
+      this.canvas = document.getElementById('certificate-canvas');
+      if (this.canvas) {
+        this.canvas.width = CANVAS_WIDTH;
+        this.canvas.height = CANVAS_HEIGHT;
+        this.ctx = this.canvas.getContext('2d');
+      }
+    },
+
+    async render() {
+      if (!this.canvas) this.init();
+      if (!this.ctx) return;
+
+      const ctx = this.ctx;
+      const state = window.GameStorage.get();
+      const playerName = state.playerName || '小小探險家';
+      const erasData = window.ERAS_DATA || {};
+      const issuer = erasData.issuer || '新北市國小 五年級 社會學習領域教學團隊';
+
+      // 取得日期
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = now.getMonth() + 1;
+      const day = now.getDate();
+      const dateStr = `${year} 年 ${month} 月 ${day} 日`;
+
+      // 1. 繪製背景底圖
+      ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+      try {
+        let bgSrc = 'img/certificate-bg.png';
+        if (window.CERT_ASSETS && window.CERT_ASSETS.bg) {
+          bgSrc = window.CERT_ASSETS.bg;
+        }
+        const bgImg = await this.loadImage(bgSrc);
+        ctx.drawImage(bgImg, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+      } catch (e) {
+        // Fallback 米色紙紋背景
+        ctx.fillStyle = '#fcf8f0';
+        ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+        ctx.lineWidth = 14;
+        ctx.strokeStyle = '#b25d2e';
+        ctx.strokeRect(30, 30, CANVAS_WIDTH - 60, CANVAS_HEIGHT - 60);
+      }
+
+      // 繪製內層古典飾框
+      ctx.strokeStyle = '#d79b5c';
+      ctx.lineWidth = 4;
+      ctx.strokeRect(70, 70, CANVAS_WIDTH - 140, CANVAS_HEIGHT - 140);
+
+      // 2. 標題：闖關成功證書
+      ctx.textAlign = 'center';
+      ctx.fillStyle = '#bf360c';
+      ctx.font = 'bold 56px "Noto Sans TC", "Microsoft JhengHei", sans-serif';
+      ctx.letterSpacing = '6px';
+      ctx.fillText(erasData.certSub || '🏆  闖  關  成  功  證  書  🏆', CANVAS_WIDTH / 2, 175);
+
+      // 3. 稱號：臺灣史前時光探險家
+      ctx.fillStyle = '#3e2723';
+      ctx.font = 'bold 78px "Noto Sans TC", "Microsoft JhengHei", sans-serif';
+      ctx.letterSpacing = '8px';
+      ctx.fillText(erasData.certTitle || '臺灣史前時光探險家', CANVAS_WIDTH / 2, 275);
+
+      // 4. 金色分割線
+      const grad = ctx.createLinearGradient(CANVAS_WIDTH / 2 - 400, 0, CANVAS_WIDTH / 2 + 400, 0);
+      grad.addColorStop(0, 'rgba(215, 155, 92, 0)');
+      grad.addColorStop(0.5, 'rgba(191, 54, 12, 0.85)');
+      grad.addColorStop(1, 'rgba(215, 155, 92, 0)');
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(CANVAS_WIDTH / 2 - 450, 315);
+      ctx.lineTo(CANVAS_WIDTH / 2 + 450, 315);
+      ctx.stroke();
+
+      // 5. 恭喜學生姓名
+      ctx.fillStyle = '#271912';
+      ctx.font = 'normal 46px "Noto Sans TC", "Microsoft JhengHei", sans-serif';
+      ctx.letterSpacing = '3px';
+      ctx.fillText(`恭喜`, CANVAS_WIDTH / 2, 400);
+
+      // 學生姓名底線與加重
+      ctx.font = 'bold 56px "Noto Sans TC", "Microsoft JhengHei", sans-serif';
+      ctx.fillStyle = '#b71c1c';
+      ctx.fillText(`【  ${playerName}  】 同學`, CANVAS_WIDTH / 2, 475);
+
+      // 6. 表揚內文 (四行詩意敘述)
+      ctx.fillStyle = '#4e342e';
+      ctx.font = '500 36px "Noto Sans TC", "Microsoft JhengHei", sans-serif';
+      ctx.letterSpacing = '2px';
+      const lineHeight = 55;
+      const startY = 565;
+      const textLines = erasData.certTextLines || [
+        '勇敢搭乘時光機，深入探索史前時代，',
+        '透過細膩觀察發現豐富生活線索，並全數克服生存大挑戰，',
+        '深刻理解史前人類利用環境與開創文明的智慧與歷史延續性，',
+        '表現卓絕優異，特頒發此證書，以資鼓勵！'
+      ];
+      textLines.forEach((line, idx) => {
+        ctx.fillText(line, CANVAS_WIDTH / 2, startY + lineHeight * idx);
+      });
+
+      // 7. 動態繪製榮譽勳章 (依據場景數量平均分佈)
+      const eras = erasData.eras || [];
+      const badgeCount = eras.length;
+      const badgeY = 870;
+      const badgeSize = badgeCount > 3 ? 130 : 160;
+
+      for (let i = 0; i < badgeCount; i++) {
+        const era = eras[i];
+        const badgeX = (CANVAS_WIDTH / (badgeCount + 1)) * (i + 1);
+
+        try {
+          let badgeSrc = era.badge || `img/badges/${era.id}.png`;
+          if (window.CERT_ASSETS && window.CERT_ASSETS[era.id]) {
+            badgeSrc = window.CERT_ASSETS[era.id];
+          }
+          const img = await this.loadImage(badgeSrc);
+          ctx.drawImage(img, badgeX - badgeSize / 2, badgeY - badgeSize / 2, badgeSize, badgeSize);
+        } catch (e) {
+          // Fallback circle with emoji
+          ctx.beginPath();
+          ctx.arc(badgeX, badgeY, badgeSize / 2, 0, Math.PI * 2);
+          ctx.fillStyle = '#ff9800';
+          ctx.fill();
+          ctx.font = '54px sans-serif';
+          ctx.fillText(era.badgeEmoji || '🏅', badgeX, badgeY + 18);
+        }
+
+        // 勳章下方字樣
+        ctx.fillStyle = '#5d4037';
+        ctx.font = `bold ${badgeCount > 3 ? 22 : 26}px "Noto Sans TC", "Microsoft JhengHei", sans-serif`;
+        ctx.fillText(era.name, badgeX, badgeY + badgeSize / 2 + 32);
+        ctx.fillStyle = '#bf360c';
+        ctx.font = `bold ${badgeCount > 3 ? 20 : 24}px "Noto Sans TC", "Microsoft JhengHei", sans-serif`;
+        ctx.fillText(era.badgeTitle || '探險小達人', badgeX, badgeY + badgeSize / 2 + (badgeCount > 3 ? 56 : 65));
+      }
+
+      // 8. 頒發單位與日期
+      ctx.textAlign = 'right';
+      ctx.fillStyle = '#4e342e';
+      ctx.font = 'bold 28px "Noto Sans TC", "Microsoft JhengHei", sans-serif';
+      ctx.fillText(`頒發單位：${issuer}`, CANVAS_WIDTH - 150, 1140);
+      ctx.font = '26px "Noto Sans TC", "Microsoft JhengHei", sans-serif';
+      ctx.fillText(`認證日期：${dateStr}`, CANVAS_WIDTH - 150, 1180);
+
+      // 左下角：時光機認證編號
+      ctx.textAlign = 'left';
+      ctx.fillStyle = '#8d6e63';
+      ctx.font = '22px monospace';
+      ctx.fillText(`認證序號：TW-TIME-${now.getTime().toString(36).toUpperCase()}`, 150, 1160);
+    },
+
+    loadImage(src) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = () => reject(new Error('Image load failed ' + src));
+        img.src = src;
+      });
+    },
+
+    download() {
+      if (!this.canvas) this.init();
+      if (!this.canvas) return;
+      const state = window.GameStorage.get();
+      const playerName = state.playerName || '臺灣史前時光探險家';
+      const filename = `臺灣史前時光探險家證書_${playerName}.png`;
+
+      const triggerDownload = (url) => {
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(() => {
+          if (a.parentNode) {
+            document.body.removeChild(a);
+          }
+        }, 300);
+      };
+
+      try {
+        if (this.canvas.toBlob) {
+          this.canvas.toBlob((blob) => {
+            if (blob) {
+              const url = URL.createObjectURL(blob);
+              triggerDownload(url);
+              setTimeout(() => URL.revokeObjectURL(url), 10000);
+            } else {
+              try {
+                const dataUrl = this.canvas.toDataURL('image/png');
+                triggerDownload(dataUrl);
+              } catch (e) {
+                console.warn('toDataURL fallback failed:', e);
+              }
+            }
+          }, 'image/png');
+          return;
+        }
+      } catch (err) {
+        console.warn('toBlob threw error, trying toDataURL...', err);
+      }
+
+      try {
+        const dataUrl = this.canvas.toDataURL('image/png');
+        triggerDownload(dataUrl);
+      } catch (err2) {
+        console.error('All download methods failed:', err2);
+        alert('瀏覽器安全性限制下載圖片，請點擊「🖨️ 列印證書 (A4)」按鈕直接列印或另存為 PDF 喔！');
+      }
+    },
+
+    print() {
+      window.print();
+    }
+  };
+})();
+
+</script>
+<script>
+// js/app.js - 主要流程控制與畫面切換
+(function () {
+  let erasData = null;
+  let activeEraId = null;
+
+  window.App = {
+    async init() {
+      // 1. 檢查是否有教師模式
+      const urlParams = new URLSearchParams(window.location.search);
+      window.isTeacherMode = urlParams.has('teacher') || urlParams.get('mode') === 'teacher';
+
+      // 2. 載入資料 (優先讀取 window.ERAS_DATA 避免 file:/// CORS 限制，若無則 fetch eras.json)
+      if (window.ERAS_DATA) {
+        erasData = window.ERAS_DATA;
+      } else {
+        try {
+          const resp = await fetch('data/eras.json');
+          erasData = await resp.json();
+          window.ERAS_DATA = erasData;
+        } catch (e) {
+          console.error('Failed to load eras.json', e);
+        }
+      }
+
+      // 3. 初始化音效按鈕狀態
+      this.updateSoundButtonUI();
+
+      // 4. 動態套用教師設定之所有標題與文案
+      this.applyAppTexts();
+
+      // 4b. 確保吉祥物隊長圖示離線正常（免破圖備援）
+      this.ensureMascotImages();
+
+      // 5. 綁定按鈕事件
+      this.bindEvents();
+
+      // 6. 根據進度顯示首頁
+      this.showScreen('home-screen');
+      this.refreshHomeScreen();
+    },
+
+    applyAppTexts() {
+      if (!erasData) return;
+      if (erasData.appTitle) {
+        document.title = `${erasData.appTitle}：${erasData.appSubtitle || '360° 生存大挑戰'}｜數位 360° 教材`;
+        const brandTitle = document.querySelector('.brand-title');
+        if (brandTitle) brandTitle.textContent = erasData.appTitle;
+      }
+      if (erasData.brandTag) {
+        const brandTag = document.querySelector('.brand-tag');
+        if (brandTag) brandTag.textContent = erasData.brandTag;
+      }
+      if (erasData.homeBadge) {
+        const homeBadge = document.querySelector('.home-badge-tag');
+        if (homeBadge) homeBadge.textContent = erasData.homeBadge;
+      }
+      if (erasData.appTitle || erasData.appSubtitle) {
+        const homeTitle = document.querySelector('.home-title');
+        if (homeTitle) {
+          homeTitle.innerHTML = `${erasData.appTitle || '360° 探險'}<br>${erasData.appSubtitle || '生存大挑戰'}`;
+        }
+      }
+      if (erasData.homeDesc) {
+        const homeDesc = document.querySelector('.home-desc');
+        if (homeDesc) homeDesc.textContent = erasData.homeDesc;
+      }
+      if (erasData.startButtonText) {
+        const startBtn = document.getElementById('start-adventure-btn');
+        if (startBtn) startBtn.textContent = erasData.startButtonText;
+      }
+      if (erasData.timelineTitle) {
+        const timelineH2 = document.querySelector('.timeline-header h2');
+        if (timelineH2) timelineH2.textContent = erasData.timelineTitle;
+      }
+      if (erasData.certBannerTitle) {
+        const bannerH3 = document.querySelector('.cert-banner-text h3');
+        if (bannerH3) bannerH3.textContent = erasData.certBannerTitle;
+      }
+      if (erasData.certBannerDesc) {
+        const bannerP = document.querySelector('.cert-banner-text p');
+        if (bannerP) bannerP.textContent = erasData.certBannerDesc;
+      }
+      this.renderComparisonTable();
+    },
+
+    ensureMascotImages() {
+      if (window.CERT_ASSETS && window.CERT_ASSETS.mascot) {
+        document.querySelectorAll('.hero-mascot-img, .captain-avatar-img').forEach(img => {
+          const src = img.getAttribute('src') || '';
+          if (!src || src === 'img/mascot.png' || src.endsWith('/img/mascot.png')) {
+            img.src = window.CERT_ASSETS.mascot;
+          }
+          img.addEventListener('error', () => {
+            img.src = window.CERT_ASSETS.mascot;
+          });
+        });
+      }
+    },
+
+    renderComparisonTable() {
+      const container = document.getElementById('comparison-modal');
+      if (!container || !erasData || !erasData.comparisonTable) return;
+      const tableData = erasData.comparisonTable;
+      const card = container.querySelector('.comparison-card');
+      if (!card) return;
+
+      const h2 = card.querySelector('h2');
+      if (h2 && tableData.title) h2.textContent = tableData.title;
+
+      // 若有 Markdown 內容且載入了 MarkdownLite 解析器，優先進行完整 Markdown 渲染
+      if (tableData.markdown && window.MarkdownLite) {
+        let contentWrap = card.querySelector('.comparison-dynamic-content');
+        if (!contentWrap) {
+          const oldTable = card.querySelector('.comparison-table');
+          contentWrap = document.createElement('div');
+          contentWrap.className = 'comparison-dynamic-content';
+          if (oldTable) {
+            oldTable.parentNode.replaceChild(contentWrap, oldTable);
+          } else {
+            const closeBtnWrap = card.querySelector('div[style*="text-align: center"]');
+            if (closeBtnWrap) card.insertBefore(contentWrap, closeBtnWrap);
+            else card.appendChild(contentWrap);
+          }
+        }
+        contentWrap.innerHTML = window.MarkdownLite.parse(tableData.markdown);
+        return;
+      }
+
+      // 回退相容：以原始 tableData.headers 與 rows 渲染
+      const table = card.querySelector('.comparison-table') || card.querySelector('table');
+      if (table && tableData.headers && tableData.rows) {
+        let theadHtml = '<thead><tr>';
+        tableData.headers.forEach(h => { theadHtml += `<th>${h}</th>`; });
+        theadHtml += '</tr></thead>';
+
+        let tbodyHtml = '<tbody>';
+        tableData.rows.forEach(row => {
+          tbodyHtml += '<tr>';
+          if (row.length === 2 && row[1].startsWith('💡')) {
+            tbodyHtml += `<td><strong>${row[0]}</strong></td><td colspan="${tableData.headers.length - 1}" style="text-align: center; color: var(--color-primary); font-weight: bold; background: #fff8e1;">${row[1]}</td>`;
+          } else {
+            row.forEach((cell, idx) => {
+              if (idx === 0) tbodyHtml += `<td><strong>${cell}</strong></td>`;
+              else tbodyHtml += `<td>${cell}</td>`;
+            });
+          }
+          tbodyHtml += '</tr>';
+        });
+        tbodyHtml += '</tbody>';
+        table.innerHTML = theadHtml + tbodyHtml;
+      }
+    },
+
+    bindEvents() {
+      // 首頁：啟動時光機
+      const startBtn = document.getElementById('start-adventure-btn');
+      const nameInput = document.getElementById('player-name-input');
+      const resetBtn = document.getElementById('reset-progress-btn');
+
+      if (startBtn && nameInput) {
+        startBtn.onclick = () => {
+          const name = nameInput.value.trim();
+          if (!name) {
+            alert('請先輸入你的探險家大名喔！');
+            nameInput.focus();
+            return;
+          }
+          window.AudioManager.playClick();
+          window.GameStorage.setPlayerName(name);
+          this.showScreen('timeline-screen');
+          this.refreshTimeline();
+        };
+
+        nameInput.onkeydown = (e) => {
+          if (e.key === 'Enter') {
+            startBtn.click();
+          }
+        };
+      }
+
+      // 首頁：重設進度
+      if (resetBtn) {
+        resetBtn.onclick = () => {
+          if (confirm('確定要清除所有探險紀錄，重新開始嗎？')) {
+            window.GameStorage.resetAll();
+            window.AudioManager.playClick();
+            if (nameInput) nameInput.value = '';
+            this.refreshHomeScreen();
+            alert('進度已重設！可以重新啟動時光機囉。');
+          }
+        };
+      }
+
+      // 音效切換按鈕（全域綁定）
+      document.querySelectorAll('.sound-toggle-btn').forEach(btn => {
+        btn.onclick = () => {
+          const enabled = window.GameStorage.toggleSound();
+          window.AudioManager.playClick();
+          this.updateSoundButtonUI();
+        };
+      });
+
+      // 360 場景：返回選單
+      const backToTimelineBtn = document.getElementById('back-to-timeline-btn');
+      if (backToTimelineBtn) {
+        backToTimelineBtn.onclick = () => {
+          window.AudioManager.playClick();
+          window.ViewerManager.destroy();
+          this.showScreen('timeline-screen');
+          this.refreshTimeline();
+        };
+      }
+
+      // 360 場景：找不到線索輔助指引
+      const guideClueBtn = document.getElementById('guide-clue-btn');
+      if (guideClueBtn) {
+        guideClueBtn.onclick = () => {
+          window.ViewerManager.guideToNextUnread();
+        };
+      }
+
+      // 360 場景：開始生存挑戰按鈕
+      const startChallengeBtn = document.getElementById('start-challenge-btn');
+      if (startChallengeBtn) {
+        startChallengeBtn.onclick = () => {
+          window.AudioManager.playClick();
+          this.launchQuizForCurrentEra();
+        };
+      }
+
+      // 問答畫面：回場景看看線索
+      const quizBackToSceneBtn = document.getElementById('quiz-back-to-scene-btn');
+      if (quizBackToSceneBtn) {
+        quizBackToSceneBtn.onclick = () => {
+          window.AudioManager.playClick();
+          this.openEraScene(activeEraId);
+        };
+      }
+
+      // 勝利彈窗：繼續前進
+      const victoryNextBtn = document.getElementById('victory-next-btn');
+      if (victoryNextBtn) {
+        victoryNextBtn.onclick = () => {
+          window.AudioManager.playClick();
+          document.getElementById('victory-modal').classList.add('hidden');
+          
+          const state = window.GameStorage.get();
+          const totalEras = erasData && erasData.eras ? erasData.eras.length : 3;
+          // 如果所有關卡都完成了
+          if (state.completedEras.length >= totalEras) {
+            // 前往大魔王題或證書
+            if (!state.finalBossCompleted && erasData.finalBoss) {
+              this.launchFinalBoss();
+            } else {
+              this.showScreen('certificate-screen');
+              window.CertificateManager.render();
+            }
+          } else {
+            this.showScreen('timeline-screen');
+            this.refreshTimeline();
+          }
+        };
+      }
+
+      // 證書畫面按鈕
+      const downloadCertBtn = document.getElementById('download-cert-btn');
+      if (downloadCertBtn) {
+        downloadCertBtn.onclick = () => {
+          window.AudioManager.playClick();
+          window.CertificateManager.download();
+        };
+      }
+
+      const printCertBtn = document.getElementById('print-cert-btn');
+      if (printCertBtn) {
+        printCertBtn.onclick = () => {
+          window.AudioManager.playClick();
+          window.CertificateManager.print();
+        };
+      }
+
+      const certBackHomeBtn = document.getElementById('cert-back-home-btn');
+      if (certBackHomeBtn) {
+        certBackHomeBtn.onclick = () => {
+          window.AudioManager.playClick();
+          this.showScreen('timeline-screen');
+          this.refreshTimeline();
+        };
+      }
+
+      // 時代生活比較表彈窗開關
+      const openComparisonBtns = document.querySelectorAll('.open-comparison-btn');
+      openComparisonBtns.forEach(btn => {
+        btn.onclick = () => {
+          window.AudioManager.playClick();
+          document.getElementById('comparison-modal').classList.remove('hidden');
+        };
+      });
+
+      const closeComparisonBtn = document.getElementById('close-comparison-btn');
+      if (closeComparisonBtn) {
+        closeComparisonBtn.onclick = () => {
+          window.AudioManager.playClick();
+          document.getElementById('comparison-modal').classList.add('hidden');
+        };
+      }
+    },
+
+    showScreen(screenId) {
+      document.querySelectorAll('.screen').forEach(screen => {
+        screen.classList.add('hidden');
+      });
+      const target = document.getElementById(screenId);
+      if (target) {
+        target.classList.remove('hidden');
+      }
+      window.scrollTo(0, 0);
+    },
+
+    refreshHomeScreen() {
+      const state = window.GameStorage.get();
+      const nameInput = document.getElementById('player-name-input');
+      if (nameInput && state.playerName) {
+        nameInput.value = state.playerName;
+      }
+
+      const statusTag = document.getElementById('home-progress-tag');
+      const totalEras = erasData && erasData.eras ? erasData.eras.length : 3;
+      if (statusTag) {
+        if (state.completedEras.length >= totalEras) {
+          statusTag.innerHTML = `🏆 恭喜已獲得${erasData.certTitle || '探險家'}稱號！`;
+          statusTag.classList.remove('hidden');
+        } else if (state.completedEras.length > 0) {
+          statusTag.innerHTML = `⭐ 目前進度：已通過 ${state.completedEras.length} / ${totalEras} 個時代挑戰`;
+          statusTag.classList.remove('hidden');
+        } else {
+          statusTag.classList.add('hidden');
+        }
+      }
+    },
+
+    refreshTimeline() {
+      const state = window.GameStorage.get();
+      const playerNameSpan = document.getElementById('timeline-player-name');
+      if (playerNameSpan) {
+        playerNameSpan.textContent = state.playerName || '探險家';
+      }
+
+      const timelineContainer = document.getElementById('era-cards-container');
+      if (!timelineContainer || !erasData || !erasData.eras) return;
+
+      // 動態更新頂部時間軸節點標籤
+      const timelineBar = document.querySelector('.timeline-bar');
+      if (timelineBar) {
+        timelineBar.innerHTML = '';
+        const total = erasData.eras.length;
+        erasData.eras.forEach((era, idx) => {
+          const pct = Math.round(((idx + 0.4) / (total + 0.5)) * 90);
+          const node = document.createElement('div');
+          node.className = 'timeline-node';
+          node.style.left = `${pct}%`;
+          node.innerHTML = `
+            <div class="node-dot"></div>
+            <span class="node-label">${era.name}</span>
+          `;
+          timelineBar.appendChild(node);
+        });
+        const endNode = document.createElement('div');
+        endNode.className = 'timeline-node';
+        endNode.style.left = '98%';
+        endNode.innerHTML = `
+          <div class="node-dot" style="border-color: #1976d2;"></div>
+          <span class="node-label">現代</span>
+        `;
+        timelineBar.appendChild(endNode);
+      }
+
+      timelineContainer.innerHTML = '';
+
+      erasData.eras.forEach((era, idx) => {
+        const isUnlocked = window.GameStorage.isEraUnlocked(era.id);
+        const isCompleted = window.GameStorage.isEraCompleted(era.id);
+
+        const card = document.createElement('div');
+        card.className = `era-card ${isCompleted ? 'completed' : isUnlocked ? 'unlocked' : 'locked'}`;
+
+        let statusBadgeHtml = '';
+        if (isCompleted) {
+          statusBadgeHtml = `<div class="era-status-badge completed"><span style="font-size:20px;">${era.badgeEmoji || '🏅'}</span> 已過關・榮獲「${era.badgeTitle || '探險達人'}」</div>`;
+        } else if (isUnlocked) {
+          statusBadgeHtml = `<div class="era-status-badge unlocked">🔓 目前關卡・點擊啟動探索</div>`;
+        } else {
+          statusBadgeHtml = `<div class="era-status-badge locked">🔒 尚未解鎖（請先通過前一關）</div>`;
+        }
+
+        // 讀取的線索統計
+        const readCount = (state.readClues[era.id] || []).length;
+        const totalClues = era.hotspots.filter(h => !h.id.includes('egg')).length;
+
+        card.innerHTML = `
+          <div class="era-card-thumb">
+            <img src="${location.protocol.startsWith('http') ? era.panorama + '?t=' + Date.now() : (window.PANO_DATA && window.PANO_DATA[era.id] ? window.PANO_DATA[era.id] : era.panorama)}" alt="${era.name}">
+            <div class="era-years-pill">${era.years}</div>
+          </div>
+          <div class="era-card-body">
+            <div class="era-card-title-row">
+              <h3>${era.name}</h3>
+              <span class="era-culture">${era.subtitle || ''}</span>
+            </div>
+            <p class="era-site">📍 遺址：${era.site}</p>
+            <p class="era-intro-short">${(era.intro || '').slice(0, 52)}...</p>
+            <div class="era-clue-stat">
+              <span>🔍 線索進度：${readCount} / ${totalClues}</span>
+            </div>
+            ${statusBadgeHtml}
+          </div>
+        `;
+
+        if (isUnlocked) {
+          card.onclick = () => {
+            window.AudioManager.playClick();
+            this.openEraScene(era.id);
+          };
+        } else {
+          card.onclick = () => {
+            window.AudioManager.playWrong();
+            alert('這一段時光隧道還沒開啟喔！請先完成上一關的生存挑戰吧。');
+          };
+        }
+
+        timelineContainer.appendChild(card);
+      });
+
+      // 檢查是否可查看大魔王題與證書
+      const certBanner = document.getElementById('timeline-cert-banner');
+      if (certBanner) {
+        const totalEras = erasData.eras.length;
+        if (state.completedEras.length >= totalEras) {
+          certBanner.classList.remove('hidden');
+          const certBtn = document.getElementById('view-final-cert-btn');
+          if (certBtn) {
+            certBtn.onclick = () => {
+              window.AudioManager.playClick();
+              if (!state.finalBossCompleted && erasData.finalBoss) {
+                this.launchFinalBoss();
+              } else {
+                this.showScreen('certificate-screen');
+                window.CertificateManager.render();
+              }
+            };
+          }
+        } else {
+          certBanner.classList.add('hidden');
+        }
+      }
+    },
+
+    openEraScene(eraId) {
+      if (!erasData) return;
+      const era = erasData.eras.find(e => e.id === eraId);
+      if (!era) return;
+
+      activeEraId = eraId;
+      this.showScreen('viewer-screen');
+
+      // 更新頂部資訊
+      const titleEl = document.getElementById('scene-era-title');
+      const infoEl = document.getElementById('scene-era-info');
+      if (titleEl) titleEl.textContent = era.name;
+      if (infoEl) {
+        const shortSite = era.site.replace(/（.*）/, '');
+        infoEl.textContent = `${era.subtitle ? era.subtitle + ' ｜ ' : ''}${shortSite}（${era.years}）`;
+      }
+
+      // 小隊長初始引導
+      this.updateCaptainSpeech(era.captainHint || era.intro);
+
+      // 初始化 Pannellum 360 Viewer
+      window.ViewerManager.init(era, (clue, state) => {
+        // 點開線索回饋
+        const count = (state.readClues[era.id] || []).length;
+        const total = era.hotspots.filter(h => !h.id.includes('egg')).length;
+        if (count < total) {
+          this.updateCaptainSpeech(`找到新線索「${clue.title}」！還有 ${total - count} 個線索藏在附近，往旁邊或後面找找看！`);
+        } else {
+          this.updateCaptainSpeech(`太厲害了！你把「${era.name}」的線索全都找齊了！請點擊右下角開始「生存挑戰」！`);
+        }
+      }, () => {
+        // 全部線索找齊事件
+        window.AudioManager.playTone(880, 'sine', 0.3);
+      });
+    },
+
+    updateCaptainSpeech(text) {
+      const bubble = document.getElementById('captain-speech-text');
+      if (bubble) {
+        bubble.textContent = text;
+      }
+    },
+
+    launchQuizForCurrentEra() {
+      if (!erasData || !activeEraId) return;
+      const era = erasData.eras.find(e => e.id === activeEraId);
+      if (!era) return;
+
+      window.ViewerManager.destroy();
+      this.showScreen('quiz-screen');
+      window.QuizManager.startEraQuiz(era);
+    },
+
+    launchFinalBoss() {
+      if (!erasData || !erasData.finalBoss) return;
+      this.showScreen('quiz-screen');
+      window.QuizManager.startFinalBoss(erasData.finalBoss);
+    },
+
+    showEraVictoryModal(era) {
+      const modal = document.getElementById('victory-modal');
+      const badgeImg = document.getElementById('victory-badge-img');
+      const badgeTitle = document.getElementById('victory-badge-title');
+      const speech = document.getElementById('victory-speech-text');
+
+      if (!modal) return;
+
+      if (badgeImg) {
+        if (window.CERT_ASSETS && window.CERT_ASSETS[era.id]) {
+          badgeImg.src = window.CERT_ASSETS[era.id];
+        } else if (era.badge) {
+          badgeImg.src = era.badge;
+        }
+      }
+      if (badgeTitle) badgeTitle.textContent = `${era.badgeEmoji} 榮獲「${era.badgeTitle}」徽章！`;
+      if (speech) speech.textContent = `恭喜你！成功通過了${era.name}的生存大挑戰，掌握了當時人類的生活技能！`;
+
+      modal.classList.remove('hidden');
+    },
+
+    updateSoundButtonUI() {
+      const isSound = window.GameStorage.get().soundEnabled;
+      document.querySelectorAll('.sound-toggle-btn').forEach(btn => {
+        btn.innerHTML = isSound ? '🔊 音效開' : '🔇 靜音中';
+        btn.classList.toggle('muted', !isSound);
+      });
+    }
+  };
+
+  // DOM 載入後啟動
+  window.addEventListener('DOMContentLoaded', () => {
+    window.App.init();
+  });
+})();
+
+</script>
+
+
+</body>
+</html>
